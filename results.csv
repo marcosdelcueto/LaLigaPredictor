@@ -1,0 +1,381 @@
+Season,MatchDay,TeamHome,Result,TeamAway,Stadium,Date,Time,Spectators,Referee,YellowCards,RedCards
+2017,1,C. D. Leganés ,1 – 0 ,Deportivo Alavés ,Butarque ,18 de agosto ,20:15 ,9.231,Munuera Montero ,1,0
+2017,1,Valencia C. F. ,1 – 0 ,U. D. Las Palmas ,Mestalla ,18 de agosto ,22:15 ,36.019,Gil Manzano ,6,1
+2017,1,R. C. Celta de Vigo ,2 – 3 ,Real Sociedad ,Balaídos ,19 de agosto ,18:15 ,16.207,Mateu Lahoz ,4,0
+2017,1,Girona F. C. ,2 – 2 ,Atlético de Madrid ,Montilivi ,19 de agosto ,20:15 ,11.342,Martínez Munuera ,6,1
+2017,1,Sevilla F. C. ,1 – 1 ,R. C. D. Español ,Sánchez Pizjuán ,19 de agosto ,22:15 ,30.506,Hernández Hernández ,6,1
+2017,1,Athletic Club ,0 – 0 ,Getafe C. F. ,San Mamés ,20 de agosto ,18:15 ,38.11,Melero López ,4,1
+2017,1,F. C. Barcelona ,2 – 0 ,Real Betis ,Camp Nou ,20 de agosto ,20:15 ,54.56,Trujillo Suárez ,3,0
+2017,1,R. C. Deportivo de La Coruña ,0 – 3 ,Real Madrid C. F. ,Abanca Riazor ,20 de agosto ,22:15 ,27.801,González González ,6,1
+2017,1,Levante U. D. ,1 – 0 ,Villarreal C. F. ,Ciudad de València ,21 de agosto ,20:15 ,12.942,Álvarez Izquierdo ,4,0
+2017,1,Málaga C. F. ,0 – 1 ,S. D. Eibar ,La Rosaleda ,21 de agosto ,22:00 ,24.838,Medié Jiménez ,5,0
+2017,2,Real Sociedad ,3 – 0 ,Villarreal C. F. ,Anoeta ,25 de agosto ,20:15 ,19.792,Estrada Fernández ,4,0
+2017,2,Real Betis ,2 – 1 ,R. C. Celta de Vigo ,Villamarín ,25 de agosto ,22:00 ,43.801,De Burgos Bengoetxea ,4,0
+2017,2,Deportivo Alavés ,0 – 2 ,F. C. Barcelona ,Mendizorroza ,26 de agosto ,18:15 ,14.932,Del Cerro Grande ,5,0
+2017,2,Girona F. C. ,1 – 0 ,Málaga C. F. ,Montilivi ,26 de agosto ,20:15 ,9.748,Jaime Latre ,7,0
+2017,2,Levante U. D. ,2 – 2 ,R. C. Deportivo de La Coruña ,Ciudad de València ,26 de agosto ,20:15 ,16.345,Alberola Rojas ,4,0
+2017,2,U. D. Las Palmas ,1 – 5 ,Atlético de Madrid ,Gran Canaria ,26 de agosto ,22:15 ,20.31,Iglesias Villanueva ,5,0
+2017,2,S. D. Eibar ,0 – 1 ,Athletic Club ,Ipurúa ,27 de agosto ,18:15 ,5.948,Sánchez Martínez ,4,0
+2017,2,R. C. D. Español ,0 – 1 ,C. D. Leganés ,RCDE Stadium ,27 de agosto ,18:15 ,17.895,González Fuertes ,6,0
+2017,2,Getafe C. F. ,0 – 1 ,Sevilla F. C. ,Alfonso Pérez ,27 de agosto ,20:15 ,9.427,Undiano Mallenco ,1,0
+2017,2,Real Madrid C. F. ,2 – 2 ,Valencia C. F. ,Bernabéu ,27 de agosto ,22:15 ,61.739,Fernández Borbalán ,8,0
+2017,3,C. D. Leganés ,1 – 2 ,Getafe C. F. ,Butarque ,8 de septiembre ,21:00 ,11.454,Álvarez Izquierdo ,3,0
+2017,3,Real Madrid C. F. ,1 – 1 ,Levante U. D. ,Bernabéu ,9 de septiembre ,13:00 ,67.789,Hernández Hernández ,5,1
+2017,3,Valencia C. F. ,0 – 0 ,Atlético de Madrid ,Mestalla ,9 de septiembre ,16:15 ,43.859,González González ,1,0
+2017,3,Sevilla F. C. ,3 – 0 ,S. D. Eibar ,Sánchez Pizjuán ,9 de septiembre ,18:30 ,32.469,Mateu Lahoz ,2,0
+2017,3,F. C. Barcelona ,5 – 0 ,R. C. D. Español ,Camp Nou ,9 de septiembre ,20:45 ,72.857,Gil Manzano ,6,0
+2017,3,R. C. Deportivo de La Coruña ,2 – 4 ,Real Sociedad ,Abanca Riazor ,10 de septiembre ,12:00 ,21.942,Munuera Montero ,4,0
+2017,3,Athletic Club ,2 – 0 ,Girona F. C. ,San Mamés ,10 de septiembre ,16:15 ,39.952,Trujillo Suárez ,10,0
+2017,3,R. C. Celta de Vigo ,1 – 0 ,Deportivo Alavés ,Balaídos ,10 de septiembre ,18:30 ,6.133,Melero López ,8,0
+2017,3,Villarreal C. F. ,3 – 1 ,Real Betis ,La Cerámica ,10 de septiembre ,20:45 ,18.638,Medié Jiménez ,3,0
+2017,3,Málaga C. F. ,1 – 3 ,U. D. Las Palmas ,La Rosaleda ,11 de septiembre ,21:00 ,22.697,Estrada Fernández ,6,0
+2017,4,S. D. Eibar ,1 – 0 ,C. D. Leganés ,Ipurúa ,15 de septiembre ,21:00 ,4.967,Martínez Munuera ,7,0
+2017,4,Levante U. D. ,1 – 1 ,Valencia C. F. ,Ciudad de València ,16 de septiembre ,13:00 ,21.77,Del Cerro Grande ,3,0
+2017,4,Getafe C. F. ,1 – 2 ,F. C. Barcelona ,Alfonso Pérez ,16 de septiembre ,16:15 ,14.922,Fernández Borbalán ,6,0
+2017,4,Real Betis ,2 – 1 ,R. C. Deportivo de La Coruña ,Villamarín ,16 de septiembre ,18:30 ,46.267,Undiano Mallenco ,5,0
+2017,4,Atlético de Madrid ,1 – 0 ,Málaga C. F. ,Wanda Metropolitano ,16 de septiembre ,20:45 ,62.906,Sánchez Martínez ,5,0
+2017,4,Deportivo Alavés ,0 – 3 ,Villarreal C. F. ,Mendizorroza ,17 de septiembre ,12:00 ,13.887,Jaime Latre ,4,0
+2017,4,Girona F. C. ,0 – 1 ,Sevilla F. C. ,Montilivi ,17 de septiembre ,16:15 ,10.872,De Burgos Bengoetxea ,7,0
+2017,4,U. D. Las Palmas ,1 – 0 ,Athletic Club ,Gran Canaria ,17 de septiembre ,18:30 ,19.149,González Fuertes ,5,0
+2017,4,Real Sociedad ,1 – 3 ,Real Madrid C. F. ,Anoeta ,17 de septiembre ,20:45 ,24.675,Iglesias Villanueva ,5,0
+2017,4,R. C. D. Español ,2 – 1 ,R. C. Celta de Vigo ,RCDE Stadium ,18 de septiembre ,21:00 ,14.853,Alberola Rojas ,5,0
+2017,5,Valencia C. F. ,5 – 0 ,Málaga C. F. ,Mestalla ,19 de septiembre ,20:00 ,36.215,Álvarez Izquierdo ,1,0
+2017,5,F. C. Barcelona ,6 – 1 ,S. D. Eibar ,Camp Nou ,19 de septiembre ,22:00 ,51.645,Hernández Hernández ,2,0
+2017,5,Athletic Club ,1 – 2 ,Atlético de Madrid ,San Mamés ,20 de septiembre ,20:00 ,43.381,Estrada Fernández ,2,0
+2017,5,C. D. Leganés ,0 – 0 ,Girona F. C. ,Butarque ,20 de septiembre ,20:00 ,9.781,Melero López ,5,0
+2017,5,R. C. Deportivo de La Coruña ,1 – 0 ,Deportivo Alavés ,Abanca Riazor ,20 de septiembre ,21:00 ,15.518,Medié Jiménez ,2,0
+2017,5,Sevilla F. C. ,1 – 0 ,U. D. Las Palmas ,Sánchez Pizjuán ,20 de septiembre ,22:00 ,35.317,González González ,4,0
+2017,5,Real Madrid C. F. ,0 – 1 ,Real Betis ,Bernabéu ,20 de septiembre ,22:00 ,65.102,Mateu Lahoz ,3,0
+2017,5,Villarreal C. F. ,0 – 0 ,R. C. D. Español ,La Cerámica ,21 de septiembre ,20:00 ,17.094,Munuera Montero ,7,0
+2017,5,R. C. Celta de Vigo ,1 – 1 ,Getafe C. F. ,Balaídos ,21 de septiembre ,21:00 ,15.068,Trujillo Suárez ,6,0
+2017,5,Levante U. D. ,3 – 0 ,Real Sociedad ,Ciudad de València ,21 de septiembre ,22:00 ,17.632,Gil Manzano ,3,0
+2017,6,Atlético de Madrid ,2 – 0 ,Sevilla F. C. ,Wanda Metropolitano ,23 de septiembre ,13:00 ,60.823,Martínez Munuera ,7,0
+2017,6,Deportivo Alavés ,1 – 2 ,Real Madrid C. F. ,Mendizorroza ,23 de septiembre ,16:15 ,19.559,Undiano Mallenco ,7,0
+2017,6,Málaga C. F. ,3 – 3 ,Athletic Club ,La Rosaleda ,23 de septiembre ,18:30 ,23.423,Del Cerro Grande ,8,0
+2017,6,Girona F. C. ,0 – 3 ,F. C. Barcelona ,Montilivi ,23 de septiembre ,20:45 ,13.305,Sánchez Martínez ,3,0
+2017,6,R. C. D. Español ,4 – 1 ,R. C. Deportivo de La Coruña ,RCDE Stadium ,24 de septiembre ,12:00 ,19.585,De Burgos Bengoetxea ,3,0
+2017,6,Getafe C. F. ,4 – 0 ,Villarreal C. F. ,Alfonso Pérez ,24 de septiembre ,16:15 ,10.874,Iglesias Villanueva ,5,0
+2017,6,U. D. Las Palmas ,0 – 2 ,C. D. Leganés ,Gran Canaria ,24 de septiembre ,18:30 ,17.56,Alberola Rojas ,4,0
+2017,6,S. D. Eibar ,0 – 4 ,R. C. Celta de Vigo ,Ipurúa ,24 de septiembre ,18:30 ,5.345,Fernández Borbalán ,3,0
+2017,6,Real Sociedad ,2 – 3 ,Valencia C. F. ,Anoeta ,24 de septiembre ,20:45 ,20.266,Jaime Latre ,8,0
+2017,6,Real Betis ,4 – 0 ,Levante U. D. ,Villamarín ,25 de septiembre ,21:00 ,48.237,González Fuertes ,1,0
+2017,7,R. C. Celta de Vigo ,3 – 3 ,Girona F. C. ,Balaídos ,29 de septiembre ,21:00 ,16.126,González Fuertes ,7,0
+2017,7,R. C. Deportivo de La Coruña ,2 – 1 ,Getafe C. F. ,Abanca Riazor ,30 de septiembre ,13:00 ,19.329,Estrada Fernández ,9,0
+2017,7,Sevilla F. C. ,2 – 0 ,Málaga C. F. ,Sánchez Pizjuán ,30 de septiembre ,16:15 ,34.43,Trujillo Suárez ,3,0
+2017,7,Levante U. D. ,0 – 2 ,Deportivo Alavés ,Ciudad de Valencia ,30 de septiembre ,18:30 ,18.528,Fernández Borbalán ,6,0
+2017,7,C. D. Leganés ,0 – 0 ,Atlético de Madrid ,Butarque ,30 de septiembre ,20:45 ,11.454,Gil Manzano ,3,0
+2017,7,Real Sociedad ,4 – 4 ,Real Betis ,Anoeta ,1 de octubre ,12:00 ,19.669,Álvarez Izquierdo ,6,0
+2017,7,F. C. Barcelona ,3 – 0 ,U. D. Las Palmas ,Camp Nou ,1 de octubre ,16:15 ,0,Munuera Montero ,6,0
+2017,7,Valencia C. F. ,3 – 2 ,Athletic Club ,Mestalla ,1 de octubre ,18:30 ,42.07,Hernández Hernández ,7,0
+2017,7,Villarreal C. F. ,3 – 0 ,S. D. Eibar ,La Cerámica ,1 de octubre ,18:30 ,17.09,Melero López ,3,0
+2017,7,Real Madrid C. F. ,2 – 0 ,R. C. D. Español ,Bernabéu ,1 de octubre ,20:45 ,71.205,González González ,4,0
+2017,8,R. C. D. Español ,0 – 0 ,Levante U. D. ,RCDE Stadium ,13 de octubre ,21:00 ,19.365,Undiano Mallenco ,5,0
+2017,8,Athletic Club ,1 – 0 ,Sevilla F. C. ,San Mamés ,14 de octubre ,13:00 ,40.197,Iglesias Villanueva ,9,0
+2017,8,Getafe C. F. ,1 – 2 ,Real Madrid C. F. ,Alfonso Pérez ,14 de octubre ,16:15 ,15.35,Martínez Munuera ,5,0
+2017,8,Deportivo Alavés ,0 – 2 ,Real Sociedad ,Mendizorroza ,14 de octubre ,18:30 ,19.84,Alberola Rojas ,2,0
+2017,8,Atlético de Madrid ,1 – 1 ,F. C. Barcelona ,Wanda Metropolitano ,14 de octubre ,20:45 ,64.393,Mateu Lahoz ,5,0
+2017,8,S. D. Eibar ,0 – 0 ,R. C. Deportivo de La Coruña ,Ipurúa ,15 de octubre ,12:00 ,5.125,Jaime Latre ,4,0
+2017,8,Girona F. C. ,1 – 2 ,Villarreal C. F. ,Montilivi ,15 de octubre ,16:15 ,9.935,Del Cerro Grande ,7,0
+2017,8,Málaga C. F. ,0 – 2 ,C. D. Leganés ,La Rosaleda ,15 de octubre ,18:30 ,23.951,González González ,6,0
+2017,8,Real Betis ,3 – 6 ,Valencia C. F. ,Villamarín ,15 de octubre ,20:45 ,48.792,Sánchez Martínez ,5,0
+2017,8,U. D. Las Palmas ,2 – 5 ,R. C. Celta de Vigo ,Gran Canaria ,16 de octubre ,21:00 ,15.799,Medié Jiménez ,3,1
+2017,9,Levante U. D. ,1 – 1 ,Getafe C. F. ,Ciudad de Valencia ,21 de octubre ,13:00 ,18.064,De Burgos Bengoetxea ,4,0
+2017,9,Real Betis ,2 – 0 ,Deportivo Alavés ,Villamarín ,21 de octubre ,16:15 ,49.243,Trujillo Suárez ,4,0
+2017,9,Valencia C. F. ,4 – 0 ,Sevilla F. C. ,Mestalla ,21 de octubre ,18:30 ,44.307,Estrada Fernández ,6,0
+2017,9,F. C. Barcelona ,2 – 0 ,Málaga C. F. ,Camp Nou ,21 de octubre ,20:45 ,74.397,González Fuertes ,5,0
+2017,9,Villarreal C. F. ,4 – 0 ,U. D. Las Palmas ,La Cerámica ,22 de octubre ,12:00 ,16.606,Fernández Borbalán ,6,0
+2017,9,R. C. Celta de Vigo ,0 – 1 ,Atlético de Madrid ,Balaídos ,22 de octubre ,16:15 ,12.978,Munuera Montero ,8,0
+2017,9,C. D. Leganés ,1 – 0 ,Athletic Club ,Butarque ,22 de octubre ,18:30 ,11.454,Mateu Lahoz ,7,0
+2017,9,Real Madrid C. F. ,3 – 0 ,S. D. Eibar ,Bernabéu ,22 de octubre ,20:45 ,66.781,Álvarez Izquierdo ,2,0
+2017,9,Real Sociedad ,1 – 1 ,R. C. D. Español ,Anoeta ,23 de octubre ,20:00 ,18.515,Melero López ,8,0
+2017,9,R. C. Deportivo de La Coruña ,1 – 2 ,Girona F. C. ,Abanca Riazor ,23 de octubre ,21:00 ,17.463,Gil Manzano ,11,0
+2017,10,Deportivo Alavés ,1 – 2 ,Valencia C. F. ,Mendizorroza ,28 de octubre ,13:00 ,18.638,González González ,6,0
+2017,10,Atlético de Madrid ,1 – 1 ,Villarreal C. F. ,Wanda Metropolitano ,28 de octubre ,18:30 ,61.421,Undiano Mallenco ,4,0
+2017,10,Athletic Club ,0 – 2 ,F. C. Barcelona ,San Mamés ,28 de octubre ,20:45 ,43.57,Martínez Munuera ,5,0
+2017,10,Sevilla F. C. ,2 – 1 ,C. D. Leganés ,Sánchez Pizjuán ,28 de octubre ,22:30 ,32.097,Medié Jiménez ,3,0
+2017,10,Getafe C. F. ,2 – 1 ,Real Sociedad ,Alfonso Pérez ,29 de octubre ,12:00 ,11.01,Sánchez Martínez ,5,0
+2017,10,Girona F. C. ,2 – 1 ,Real Madrid ,Montilivi ,29 de octubre ,16:15 ,13.382,Hernández Hernández ,3,0
+2017,10,S. D. Eibar ,2 – 2 ,Levante U. D. ,Ipurúa ,29 de octubre ,18:30 ,5.131,Alberola Rojas ,4,0
+2017,10,Málaga C. F. ,2 – 1 ,R. C. Celta de Vigo ,La Rosaleda ,29 de octubre ,20:45 ,19.541,Jaime Latre ,5,0
+2017,10,U. D. Las Palmas ,1 – 3 ,R. C. Deportivo de La Coruña ,Gran Canaria ,30 de octubre ,21:00 ,14.805,Del Cerro Grande ,2,0
+2017,10,R. C. D. Español ,1 – 0 ,Real Betis ,RCDE Stadium ,30 de octubre ,21:00 ,17.856,Iglesias Villanueva ,7,0
+2017,11,Real Betis ,2 – 2 ,Getafe C. F. ,Villamarín ,3 de noviembre ,21:00 ,42.323,Mateu Lahoz ,8,0
+2017,11,Valencia C. F. ,3 – 0 ,C. D. Léganés ,Mestalla ,4 de noviembre ,13:00 ,39.694,De Burgos Bengoetxea ,3,0
+2017,11,R. C. Deportivo de La Coruña ,0 – 1 ,Atlético de Madrid ,Abanca Riazor ,4 de noviembre ,16:15 ,22.733,Álvarez Izquierdo ,6,0
+2017,11,Deportivo Alavés ,1 – 0 ,R. C. D. Español ,Mendizorroza ,4 de noviembre ,18:30 ,19.368,González Fuertes ,9,0
+2017,11,F. C. Barcelona ,2 – 1 ,Sevilla F. C. ,Camp Nou ,4 de noviembre ,20:45 ,70.723,González González ,1,0
+2017,11,Levante U. D. ,1 – 2 ,Girona F. C. ,Ciudad de València ,5 de noviembre ,12:00 ,18.324,Munuera Montero ,7,0
+2017,11,R. C. Celta de Vigo ,3 – 1 ,Athletic Club ,Balaídos ,5 de noviembre ,16:15 ,19.779,Gil Manzano ,5,0
+2017,11,Villarreal C. F. ,2 – 0 ,Málaga C. F. ,La Cerámica ,5 de noviembre ,18:30 ,17.755,Estrada Fernández ,6,0
+2017,11,Real Sociedad ,3 – 1 ,S. D. Eibar ,Anoeta ,5 de noviembre ,18:30 ,20.387,Trujillo Suárez ,3,0
+2017,11,Real Madrid C. F. ,3 – 0 ,U. D. Las Palmas ,Bernabéu ,5 de noviembre ,20:45 ,67.12,Sánchez Martínez ,3,0
+2017,12,Girona F. C. ,1 – 1 ,Real Sociedad ,Montilivi ,17 de noviembre ,21:00 ,10.136,Iglesias Villanueva ,6,0
+2017,12,Getafe C. F. ,4 – 1 ,Deportivo Alavés ,Alfonso Pérez ,18 de noviembre ,13:00 ,10.014,Jaime Latre ,6,0
+2017,12,C. D. Leganés ,0 – 3 ,F. C. Barcelona ,Butarque ,18 de noviembre ,16:15 ,11.454,Undiano Mallenco ,3,0
+2017,12,Sevilla F. C. ,2 – 1 ,R. C. Celta de Vigo ,Sánchez Pizjuán ,18 de noviembre ,18:30 ,35.03,Del Cerro Grande ,5,0
+2017,12,Atlético de Madrid ,0 – 0 ,Real Madrid C. F. ,Wanda Metropolitano ,18 de noviembre ,20:45 ,66.496,Fernández Borbalán ,8,0
+2017,12,Málaga C. F. ,3 – 2 ,R. C. Deportivo de La Coruña ,La Rosaleda ,19 de noviembre ,12:00 ,24.563,Martínez Munuera ,9,0
+2017,12,R. C. D. Español ,0 – 2 ,Valencia C. F. ,RCDE Stadium ,19 de noviembre ,16:15 ,25.529,Hernández Hernández ,4,0
+2017,12,U. D. Las Palmas ,0 – 2 ,Levante U. D. ,Gran Canaria ,19 de noviembre ,18:30 ,26.212,Melero López ,5,0
+2017,12,Athletic Club ,1 – 1 ,Villarreal C. F. ,San Mamés ,19 de noviembre ,20:45 ,36.666,Medié Jiménez ,4,0
+2017,12,S. D. Eibar ,5 – 0 ,Real Betis ,Ipurúa ,20 de noviembre ,21:00 ,4.638,González González ,4,1
+2017,13,R. C. Celta de Vigo ,1 – 0 ,C. D. Leganés ,Balaídos ,24 de noviembre ,21:00 ,10.611,Hernández Hernández ,5,0
+2017,13,Deportivo Alavés ,1 – 2 ,S. D. Eibar ,Mendizorroza ,25 de noviembre ,13:00 ,19.272,Munuera Montero ,9,1
+2017,13,Real Madrid C. F. ,3 – 2 ,Málaga C. F. ,Bernabéu ,25 de noviembre ,16:15 ,75.671,Gil Manzano ,3,0
+2017,13,Real Betis ,2 – 2 ,Girona F. C. ,Villamarín ,25 de noviembre ,18:30 ,45.681,Del Cerro Grande ,3,0
+2017,13,Levante U. D. ,0 – 5 ,Atlético de Madrid ,Ciudad de València ,25 de noviembre ,20:45 ,21.549,Trujillo Suárez ,3,0
+2017,13,R. C. Deportivo de La Coruña ,2 – 2 ,Athletic Club ,Abanca Riazor ,26 de noviembre ,12:00 ,30.879,González González ,5,0
+2017,13,Real Sociedad ,2 – 2 ,U. D. Las Palmas ,Anoeta ,26 de noviembre ,16:15 ,19.78,González Fuertes ,7,0
+2017,13,Villarreal C. F. ,2 – 3 ,Sevilla F. C. ,La Cerámica ,26 de noviembre ,18:30 ,16.698,Alberola Rojas ,7,0
+2017,13,Valencia C. F. ,1 – 1 ,F. C. Barcelona ,Mestalla ,26 de noviembre ,20:45 ,47.775,Iglesias Villanueva ,4,0
+2017,13,R. C. D. Español ,1 – 0 ,Getafe C. F. ,RCDE Stadium ,27 de noviembre ,21:00 ,11.659,Martínez Munuera ,10,0
+2017,14,Málaga C. F. ,0 – 0 ,Levante U. D. ,La Rosaleda ,1 de diciembre ,21:00 ,17.886,De Burgos Bengoetxea ,4,0
+2017,14,F. C. Barcelona ,2 – 2 ,R. C. Celta de Vigo ,Camp Nou ,2 de diciembre ,13:00 ,63.208,Melero López ,9,0
+2017,14,Atlético de Madrid ,2 – 1 ,Real Sociedad ,Wanda Metropolitano ,2 de diciembre ,16:15 ,57.394,Jaime Latre ,3,0
+2017,14,Sevilla F. C. ,2 – 0 ,R. C. Deportivo de La Coruña ,Sánchez Pizjuán ,2 de diciembre ,18:30 ,32.017,Sánchez Martínez ,4,0
+2017,14,Athletic Club ,0 – 0 ,Real Madrid C. F. ,San Mamés ,2 de diciembre ,20:45 ,44.884,Mateu Lahoz ,7,0
+2017,14,C. D. Leganés ,3 – 1 ,Villarreal C. F. ,Butarque ,3 de diciembre ,12:00 ,10.017,Fernández Borbalán ,6,0
+2017,14,Getafe C. F. ,1 – 0 ,Valencia C. F. ,Alfonso Pérez ,3 de diciembre ,16:15 ,12.48,Medié Jiménez ,12,0
+2017,14,S. D. Eibar ,3 – 1 ,R. C. D. Español ,Ipurúa ,3 de diciembre ,18:30 ,4.693,Undiano Mallenco ,6,0
+2017,14,U. D. Las Palmas ,1 – 0 ,Real Betis ,Gran Canaria ,3 de diciembre ,20:45 ,16.313,Estrada Fernández ,8,0
+2017,14,Girona F. C. ,2 – 3 ,Deportivo Alavés ,Montilivi ,4 de diciembre ,21:00 ,7.316,Alberola Rojas ,3,0
+2017,15,Deportivo Alavés ,2 – 0 ,U. D. Las Palmas ,Mendizorroza ,8 de diciembre ,21:00 ,18.567,Medié Jiménez ,2,0
+2017,15,Getafe C. F. ,0 – 0 ,S. D. Eibar ,Alfonso Pérez ,9 de diciembre ,13:00 ,9.317,Alberola Rojas ,5,0
+2017,15,Real Madrid C. F. ,5 – 0 ,Sevilla F. C. ,Bernabéu ,9 de diciembre ,16:15 ,76.924,Martínez Munuera ,2,0
+2017,15,R. C. Deportivo de La Coruña ,1 – 0 ,C. D. Leganés ,Abanca Riazor ,9 de diciembre ,18:30 ,18.366,Melero López ,8,0
+2017,15,Valencia C. F. ,2 – 1 ,R. C. Celta de Vigo ,Mestalla ,9 de diciembre ,20:45 ,35.633,Munuera Montero ,6,0
+2017,15,Real Sociedad ,0 – 2 ,Málaga C. F. ,Anoeta ,10 de diciembre ,12:00 ,16.834,Del Cerro Grande ,2,0
+2017,15,Real Betis ,0 – 1 ,Atlético de Madrid ,Villamarín ,10 de diciembre ,16:15 ,45.517,Hernández Hernández ,7,0
+2017,15,Levante U. D. ,1 – 2 ,Athletic Club ,Ciudad de València ,10 de diciembre ,18:30 ,18.005,Estrada Fernández ,6,0
+2017,15,Villarreal C. F. ,0 – 2 ,F. C. Barcelona ,La Cerámica ,10 de diciembre ,20:45 ,21.087,De Burgos Bengoetxea ,3,1
+2017,15,R. C. D. Español ,0 – 1 ,Girona F. C. ,RCDE Stadium ,11 de diciembre ,21:00 ,13.846,González González ,4,0
+2017,16,Sevilla F. C. ,0 – 0 ,Levante U. D. ,Sánchez Pizjuán ,15 de diciembre ,21:00 ,25.803,Iglesias Villanueva ,5,0
+2017,16,Athletic Club ,0 – 0 ,Real Sociedad ,San Mamés ,16 de diciembre ,16:15 ,45.504,Fernández Borbalán ,3,0
+2017,16,S. D. Eibar ,2 – 1 ,Valencia C. F. ,Ipurúa ,16 de diciembre ,18:30 ,5.219,González Fuertes ,5,0
+2017,16,Atlético de Madrid ,1 – 0 ,Deportivo Alavés ,Wanda Metropolitano ,16 de diciembre ,20:45 ,49.937,Gil Manzano ,7,0
+2017,16,Girona F. C. ,1 – 0 ,Getafe C. F. ,Montilivi ,17 de diciembre ,12:00 ,10.095,Undiano Mallenco ,8,0
+2017,16,R. C. Celta de Vigo ,0 – 1 ,Villarreal C. F. ,Balaídos ,17 de diciembre ,16:15 ,18.215,Estrada Fernández ,4,0
+2017,16,U. D. Las Palmas ,2 – 2 ,R. C. D. Español ,Gran Canaria ,17 de diciembre ,18:30 ,14.02,Sánchez Martínez ,6,0
+2017,16,F. C. Barcelona ,4 – 0 ,R. C. Deportivo de La Coruña ,Camp Nou ,17 de diciembre ,20:45 ,53.607,Mateu Lahoz ,1,0
+2017,16,Málaga C. F. ,0 – 2 ,Real Betis ,La Rosaleda ,18 de diciembre ,21:00 ,22.488,Alberola Rojas ,4,1
+2017,16,C. D. Leganés ,1 – 3 ,Real Madrid C. F. ,Butarque ,21 de febrero ,18:45 ,11.423,González González ,3,0
+2017,17,Levante U. D. ,0 – 0 ,C. D. Leganés ,Ciudad de València ,19 de diciembre ,21:30 ,14.639,Jaime Latre ,12,0
+2017,17,Getafe C. F. ,2 – 0 ,U. D. Las Palmas ,Alfonso Pérez ,20 de diciembre ,19:30 ,9.231,De Burgos Bengoetxea ,4,0
+2017,17,Real Sociedad ,3 – 1 ,Sevilla F. C. ,Anoeta ,20 de diciembre ,21:30 ,17.205,Hernández Hernández ,6,0
+2017,17,S. D. Eibar ,4 – 1 ,Girona F. C. ,Ipurúa ,21 de diciembre ,19:30 ,4.867,Iglesias Villanueva ,3,0
+2017,17,Deportivo Alavés ,1 – 0 ,Málaga C. F. ,Mendizorroza ,21 de diciembre ,21:30 ,18.733,Álvarez Izquierdo ,7,0
+2017,17,Real Betis ,0 – 2 ,Athletic Club ,Villamarín ,22 de diciembre ,19:30 ,42.713,Martínez Munuera ,3,1
+2017,17,R. C. D. Español ,1 – 0 ,Atlético de Madrid ,RCDE Stadium ,22 de diciembre ,21:30 ,19.327,Melero López ,7,0
+2017,17,Real Madrid C. F. ,0 – 3 ,F. C. Barcelona ,Bernabéu ,23 de diciembre ,13:00 ,80.264,Sánchez Martínez ,4,1
+2017,17,Valencia C. F. ,0 – 1 ,Villarreal C. F. ,Mestalla ,23 de diciembre ,16:15 ,39.181,Trujillo Suárez ,12,0
+2017,17,R. C. Deportivo de La Coruña ,1 – 3 ,R. C. Celta de Vigo ,Abanca Riazor ,23 de diciembre ,18:30 ,27.877,Undiano Mallenco ,4,0
+2017,18,Atlético de Madrid ,2 – 0 ,Getafe C. F. ,Wanda Metropolitano ,6 de enero ,13:00 ,47.023,Munuera Montero ,10,0
+2017,18,Valencia C. F. ,2 – 1 ,Girona F. C. ,Mestalla ,6 de enero ,16:15 ,27.749,Fernández Borbalán ,9,0
+2017,18,U. D. Las Palmas ,1 – 2 ,S. D. Eibar ,Gran Canaria ,6 de enero ,18:30 ,12.059,González González ,6,0
+2017,18,Sevilla F. C. ,3 – 5 ,Real Betis ,Sánchez Pizjuán ,6 de enero ,20:45 ,40.282,Gil Manzano ,9,0
+2017,18,C. D. Leganés ,1 – 0 ,Real Sociedad ,Butarque ,7 de enero ,12:00 ,7.523,Estrada Fernández ,1,0
+2017,18,F. C. Barcelona ,3 – 0 ,Levante U. D. ,Camp Nou ,7 de enero ,16:15 ,56.38,Del Cerro Grande ,4,0
+2017,18,Villarreal C. F. ,1 – 1 ,R. C. Deportivo de La Coruña ,La Cerámica ,7 de enero ,18:30 ,15.442,Medié Jiménez ,7,0
+2017,18,Athletic Club ,2 – 0 ,Deportivo Alavés ,San Mamés ,7 de enero ,18:30 ,41,González Fuertes ,6,0
+2017,18,R. C. Celta de Vigo ,2 – 2 ,Real Madrid C. F. ,Balaídos ,7 de enero ,20:45 ,20.872,Jaime Latre ,4,0
+2017,18,Málaga C. F. ,0 – 1 ,R. C. D. Español ,La Rosaleda ,8 de enero ,21:00 ,12.149,Mateu Lahoz ,5,0
+2017,19,Getafe C. F. ,1 – 0 ,Málaga C. F. ,Alfonso Pérez ,12 de enero ,21:00 ,9.513,Martínez Munuera ,4,0
+2017,19,Girona F. C. ,6 – 0 ,U. D. Las Palmas ,Montilivi ,13 de enero ,13:00 ,10.037,Melero López ,7,0
+2017,19,Real Madrid C. F. ,0 – 1 ,Villarreal C. F. ,Bernabéu ,13 de enero ,16:15 ,63.403,Undiano Mallenco ,3,0
+2017,19,S. D. Eibar ,0 – 1 ,Atlético de Madrid ,Ipurúa ,13 de enero ,18:30 ,6.186,Mateu Lahoz ,3,0
+2017,19,R. C. Deportivo de La Coruña ,1 – 2 ,Valencia C. F. ,Abanca Riazor ,13 de enero ,20:45 ,19.031,Alberola Rojas ,3,0
+2017,19,Levante U. D. ,0 – 1 ,R. C. Celta de Vigo ,Ciudad de València ,14 de enero ,12:00 ,17.007,Álvarez Izquierdo ,7,0
+2017,19,Deportivo Alavés ,1 – 0 ,Sevilla F. C. ,Mendizorroza ,14 de enero ,16:15 ,19.413,Sánchez Martínez ,7,0
+2017,19,R. C. D. Español ,1 – 1 ,Athletic Club ,RCDE Stadium ,14 de enero ,18:30 ,20.228,Trujillo Suárez ,6,0
+2017,19,Real Sociedad ,2 – 4 ,F. C. Barcelona ,Anoeta ,14 de enero ,20:45 ,23.277,González González ,4,0
+2017,19,Real Betis ,3 – 2 ,C. D. Leganés ,Villamarín ,15 de enero ,21:00 ,41.777,Iglesias Villanueva ,5,0
+2017,20,Getafe C. F. ,2 – 2 ,Athletic Club ,Alfonso Pérez ,19 de enero ,21:00 ,11.457,Gil Manzano ,6,0
+2017,20,R. C. D. Español ,0 – 3 ,Sevilla F. C. ,RCDE Stadium ,20 de enero ,13:00 ,19.607,Undiano Mallenco ,6,0
+2017,20,Atlético de Madrid ,1 – 1 ,Girona F. C. ,Wanda Metropolitano ,20 de enero ,16:15 ,55.076,De Burgos Bengoetxea ,7,0
+2017,20,Villarreal C. F. ,2 – 1 ,Levante U. D. ,La Cerámica ,20 de enero ,18:30 ,16.773,González González ,4,0
+2017,20,U. D. Las Palmas ,2 – 1 ,Valencia C. F. ,Gran Canaria ,20 de enero ,20:45 ,20.242,Munuera Montero ,11,0
+2017,20,Deportivo Alavés ,2 – 2 ,C. D. Leganés ,Mendizorroza ,21 de enero ,12:00 ,19.637,Trujillo Suárez ,6,0
+2017,20,Real Madrid C. F. ,7 – 1 ,R. C. Deportivo de La Coruña ,Bernabéu ,21 de enero ,16:15 ,63.504,Fernández Borbalán ,2,0
+2017,20,Real Sociedad ,1 – 2 ,R. C. Celta de Vigo ,Anoeta ,21 de enero ,18:30 ,19.081,Mateu Lahoz ,3,0
+2017,20,Real Betis ,0 – 5 ,F. C. Barcelona ,Villamarín ,21 de enero ,20:45 ,53.426,Jaime Latre ,4,0
+2017,20,S. D. Eibar ,1 – 1 ,Málaga C. F. ,Ipurúa ,22 de enero ,21:00 ,4.52,Medié Jiménez ,4,0
+2017,21,Athletic Club ,1 – 1 ,S. D. Eibar ,San Mamés ,26 de enero ,21:00 ,39.331,Melero López ,0,0
+2017,21,R. C. Deportivo de La Coruña ,2 – 2 ,Levante U. D. ,Abanca Riazor ,27 de enero ,13:00 ,20.151,González Fuertes ,12,0
+2017,21,Valencia C. F. ,1 – 4 ,Real Madrid C. F. ,Mestalla ,27 de enero ,16:15 ,47.034,Estrada Fernández ,5,0
+2017,21,Málaga C. F. ,0 – 0 ,Girona F. C. ,La Rosaleda ,27 de enero ,18:30 ,22.125,Undiano Mallenco ,3,0
+2017,21,Villarreal C. F. ,4 – 2 ,Real Sociedad ,La Cerámica ,27 de enero ,20:45 ,15.052,Del Cerro Grande ,2,0
+2017,21,C. D. Leganés ,3 – 2 ,R. C. D. Español ,Butarque ,28 de enero ,12:00 ,10.132,Martínez Munuera ,6,0
+2017,21,Atlético de Madrid ,3 – 0 ,U. D. Las Palmas ,Wanda Metropolitano ,28 de enero ,16:15 ,55.363,Álvarez Izquierdo ,3,0
+2017,21,Sevilla F. C. ,1 – 1 ,Getafe C. F. ,Sánchez Pizjuán ,28 de enero ,18:30 ,34.011,Alberola Rojas ,6,0
+2017,21,F. C. Barcelona ,2 – 1 ,Deportivo Alavés ,Camp Nou ,28 de enero ,20:45 ,62.369,Iglesias Villanueva ,2,0
+2017,21,R. C. Celta de Vigo ,3 – 2 ,Real Betis ,Balaídos ,29 de enero ,21:00 ,14.667,Sánchez Martínez ,6,0
+2017,22,Real Sociedad ,5 – 0 ,R. C. Deportivo de La Coruña ,Anoeta ,2 de febrero ,21:00 ,15.626,Undiano Mallenco ,1,0
+2017,22,S. D. Eibar ,5 – 1 ,Sevilla F. C. ,Ipurúa ,3 de febrero ,13:00 ,5.311,Trujillo Suárez ,3,0
+2017,22,Real Betis ,2 – 1 ,Villarreal C. F. ,Villamarín ,3 de febrero ,16:15 ,50.102,Alberola Rojas ,3,1
+2017,22,Deportivo Alavés ,2 – 1 ,R. C. Celta de Vigo ,Mendizorroza ,3 de febrero ,18:30 ,19.437,Martínez Munuera ,5,0
+2017,22,Levante U. D. ,2 – 2 ,Real Madrid C. F. ,Ciudad de València ,3 de febrero ,20:45 ,23.542,Melero López ,6,0
+2017,22,Getafe C. F. ,0 – 0 ,C. D. Leganés ,Alfonso Pérez ,4 de febrero ,12:00 ,10.657,Álvarez Izquierdo ,8,0
+2017,22,R. C. D. Español ,1 – 1 ,F. C. Barcelona ,RCDE Stadium ,4 de febrero ,16:15 ,23.287,Gil Manzano ,7,0
+2017,22,Girona F. C. ,2 – 0 ,Athletic Club ,Montilivi ,4 de febrero ,18:30 ,9.602,Munuera Montero ,2,0
+2017,22,Atlético de Madrid ,1 – 0 ,Valencia C. F. ,Wanda Metropolitano ,4 de febrero ,20:45 ,49.596,Iglesias Villanueva ,2,0
+2017,22,U. D. Las Palmas ,1 – 0 ,Málaga C. F. ,Gran Canaria ,5 de febrero ,21:00 ,17.424,De Burgos Bengoetxea ,5,0
+2017,23,Athletic Club ,0 – 0 ,U. D. Las Palmas ,San Mamés ,9 de febrero ,21:00 ,33.679,Estrada Fernández ,8,0
+2017,23,Villarreal C. F. ,1 – 2 ,Deportivo Alavés ,La Cerámica ,10 de febrero ,13:00 ,14.984,Trujillo Suárez ,8,0
+2017,23,Málaga C. F. ,0 – 1 ,Atlético de Madrid ,La Rosaleda ,10 de febrero ,16:15 ,25.482,Sánchez Martínez ,5,0
+2017,23,C. D. Leganés ,0 – 1 ,S. D. Eibar ,Butarque ,10 de febrero ,18:30 ,9.327,González Fuertes ,6,0
+2017,23,Real Madrid C. F. ,5 – 2 ,Real Sociedad ,Bernabéu ,10 de febrero ,20:45 ,63.811,Hernández Hernández ,3,0
+2017,23,Sevilla F. C. ,1 – 0 ,Girona F. C. ,Sánchez Pizjuán ,11 de febrero ,12:00 ,33.129,Jaime Latre ,4,0
+2017,23,F. C. Barcelona ,0 – 0 ,Getafe C. F. ,Camp Nou ,11 de febrero ,16:15 ,75.681,Fernández Borbalán ,5,0
+2017,23,R. C. Celta de Vigo ,2 – 2 ,R. C. D. Español ,Balaídos ,11 de febrero ,18:30 ,15.649,González González ,7,0
+2017,23,Valencia C. F. ,3 – 1 ,Levante U. D. ,Mestalla ,11 de febrero ,20:45 ,38.199,Medié Jiménez ,7,0
+2017,23,R. C. Deportivo de La Coruña ,0 - 1 ,Real Betis ,Abanca Riazor ,12 de febrero ,21:00 ,20.49,Del Cerro Grande ,2,0
+2017,24,Girona F. C. ,3 – 0 ,C. D. Leganés ,Montilivi ,16 de febrero ,21:00 ,9.142,Mateu Lahoz ,8,0
+2017,24,U. D. Las Palmas ,1 – 2 ,Sevilla F. C. ,Gran Canaria ,17 de febrero ,13:00 ,19.161,Iglesias Villanueva ,7,0
+2017,24,S. D. Eibar ,0 – 2 ,F. C. Barcelona ,Ipurúa ,17 de febrero ,16:15 ,6.76,Hernández Hernández ,4,0
+2017,24,Deportivo Alavés ,1 – 0 ,R. C. Deportivo de La Coruña ,Mendizorroza ,17 de febrero ,18:30 ,19.453,Melero López ,5,0
+2017,24,Málaga C. F. ,1 – 2 ,Valencia C. F. ,La Rosaleda ,17 de febrero ,20:45 ,21.134,Trujillo Suárez ,6,1
+2017,24,Real Sociedad ,3 – 0 ,Levante U. D. ,Anoeta ,18 de febrero ,12:00 ,18.189,Jaime Latre ,2,0
+2017,24,Atlético de Madrid ,2 – 0 ,Athletic Club ,Wanda Metropolitano ,18 de febrero ,16:15 ,60.022,González González ,5,0
+2017,24,R. C. D. Español ,1 – 1 ,Villarreal C. F. ,RCDE Stadium ,18 de febrero ,18:30 ,19.688,Munuera Montero ,6,0
+2017,24,Real Betis ,3 – 5 ,Real Madrid C. F. ,Villamarín ,18 de febrero ,20:45 ,53.486,Gil Manzano ,8,0
+2017,24,Getafe C. F. ,3 – 0 ,R. C. Celta de Vigo ,Alfonso Pérez ,19 de febrero ,21:00 ,8.367,González Fuertes ,7,0
+2017,25,R. C. Deportivo de La Coruña ,0 – 0 ,R. C. D. Español ,Abanca Riazor ,23 de febrero ,21:00 ,18.028,Fernández Borbalán ,6,0
+2017,25,R. C. Celta de Vigo ,2 – 0 ,S. D. Eibar ,Balaídos ,24 de febrero ,13:00 ,15.383,Del Cerro Grande ,5,0
+2017,25,Real Madrid C. F. ,4 – 0 ,Deportivo Alavés ,Bernabéu ,24 de febrero ,16:15 ,75.181,Estrada Fernández ,3,0
+2017,25,C. D. Leganés ,0 – 0 ,U. D. Las Palmas ,Butarque ,24 de febrero ,18:30 ,9.325,Jaime Latre ,9,0
+2017,25,F. C. Barcelona ,6 – 1 ,Girona F. C. ,Camp Nou ,24 de febrero ,20:45 ,85.417,Alberola Rojas ,2,0
+2017,25,Villarreal C. F. ,1 – 0 ,Getafe C. F. ,La Cerámica ,25 de febrero ,12:00 ,16.125,Sánchez Martínez ,8,0
+2017,25,Athletic Club ,2 – 1 ,Málaga C. F. ,San Mamés ,25 de febrero ,16:15 ,37.518,Hernández Hernández ,6,0
+2017,25,Valencia C. F. ,2 – 1 ,Real Sociedad ,Mestalla ,25 de febrero ,18:30 ,37.195,González Fuertes ,5,0
+2017,25,Sevilla F. C. ,2 – 5 ,Atlético de Madrid ,Sánchez Pizjuán ,25 de febrero ,20:45 ,37.884,Martínez Munuera ,6,0
+2017,25,Levante U. D. ,0 – 2 ,Real Betis ,Ciudad de València ,26 de febrero ,21:00 ,16.545,De Burgos Bengoetxea ,7,0
+2017,26,R. C. D. Español ,1 – 0 ,Real Madrid C. F. ,RCDE Stadium ,27 de febrero ,20:00 ,19.805,Sánchez Martínez ,2,0
+2017,26,Girona F. C. ,1 – 0 ,R. C. Celta de Vigo ,Montilivi ,27 de febrero ,21:30 ,6.392,Trujillo Suárez ,5,0
+2017,26,Athletic Club ,1 – 1 ,Valencia C. F. ,San Mamés ,28 de febrero ,19:30 ,34.382,Gil Manzano ,3,0
+2017,26,Málaga C. F. ,0 – 1 ,Sevilla F. C. ,La Rosaleda ,28 de febrero ,19:30 ,15.516,Del Cerro Grande ,4,0
+2017,26,Getafe C. F. ,3 – 0 ,R. C. Deportivo de La Coruña ,Alfonso Pérez ,28 de febrero ,19:30 ,5.097,Munuera Montero ,6,0
+2017,26,Atlético de Madrid ,4 – 0 ,C. D. Leganés ,Wanda Metropolitano ,28 de febrero ,21:30 ,35.033,Estrada Fernández ,4,0
+2017,26,S. D. Eibar ,1 – 0 ,Villarreal C. F. ,Ipurúa ,28 de febrero ,21:30 ,4.056,Melero López ,6,0
+2017,26,Real Betis ,0 – 0 ,Real Sociedad ,Villamarín ,1 de marzo ,19:30 ,40.288,González González ,2,0
+2017,26,U. D. Las Palmas ,1 – 1 ,F. C. Barcelona ,Gran Canaria ,1 de marzo ,21:00 ,,Mateu Lahoz ,9,0
+2017,26,Deportivo Alavés ,1 – 0 ,Levante U. D. ,Mendizorroza ,1 de marzo ,21:30 ,16.812,Fernández Borbalán ,7,1
+2017,27,Villarreal C. F. ,0 – 2 ,Girona F. C. ,La Cerámica ,3 de marzo ,13:00 ,14.54,González Fuertes ,5,0
+2017,27,Sevilla F. C. ,2 – 0 ,Athletic Club ,Sánchez Pizjuán ,3 de marzo ,16:15 ,25.185,Undiano Mallenco ,5,0
+2017,27,C. D. Leganés ,2 – 0 ,Málaga C. F. ,Butarque ,3 de marzo ,18:30 ,6.937,Iglesias Villanueva ,2,0
+2017,27,R. C. Deportivo de La Coruña ,1 – 1 ,S. D. Eibar ,Abanca Riazor ,3 de marzo ,18:30 ,19.417,Jaime Latre ,3,1
+2017,27,Real Madrid C. F. ,3 – 1 ,Getafe C. F. ,Bernabéu ,3 de marzo ,20:45 ,55.106,Melero López ,4,0
+2017,27,Levante U. D. ,1 – 1 ,R. C. D. Español ,Ciudad de València ,4 de marzo ,12:00 ,17.143,Alberola Rojas ,3,0
+2017,27,F. C. Barcelona ,1 – 0 ,Atlético de Madrid ,Camp Nou ,4 de marzo ,16:15 ,90.356,Gil Manzano ,4,0
+2017,27,Real Sociedad ,2 – 1 ,Deportivo Alavés ,Anoeta ,4 de marzo ,18:30 ,21.445,Martínez Munuera ,1,0
+2017,27,Valencia C. F. ,2 – 0 ,Real Betis ,Mestalla ,4 de marzo ,20:45 ,35.565,Hernández Hernández ,5,0
+2017,27,R. C. Celta de Vigo ,2 – 1 ,U. D. Las Palmas ,Balaídos ,5 de marzo ,21:00 ,11.276,De Burgos Bengoetxea ,3,0
+2017,28,Girona F. C. ,2 – 0 ,R. C. Deportivo de La Coruña ,Montilivi ,9 de marzo ,21:00 ,10.663,Undiano Mallenco ,5,0
+2017,28,S. D. Eibar ,1 – 2 ,Real Madrid C. F. ,Ipurúa ,10 de marzo ,13:00 ,6.707,Munuera Montero ,2,0
+2017,28,Sevilla F. C. ,0 – 2 ,Valencia C. F. ,Sánchez Pizjuán ,10 de marzo ,16:15 ,33.287,De Burgos Bengoetxea ,6,0
+2017,28,Getafe C. F. ,0 – 1 ,Levante U. D. ,Alfonso Pérez ,10 de marzo ,18:30 ,8.136,Trujillo Suárez ,12,1
+2017,28,Málaga C. F. ,0 – 2 ,F. C. Barcelona ,La Rosaleda ,10 de marzo ,20:45 ,26.667,Martínez Munuera ,2,1
+2017,28,R. C. D. Español ,2 – 1 ,Real Sociedad ,RCDE Stadium ,11 de marzo ,12:00 ,20.314,Mateu Lahoz ,2,0
+2017,28,Atlético de Madrid ,3 – 0 ,R. C. Celta de Vigo ,Wanda Metropolitano ,11 de marzo ,16:15 ,55.076,Alberola Rojas ,3,0
+2017,28,U. D. Las Palmas ,0 – 2 ,Villarreal C. F. ,Gran Canaria ,11 de marzo ,18:30 ,18.907,Medié Jiménez ,2,1
+2017,28,Athletic Club ,2 – 0 ,C. D. Leganés ,San Mamés ,11 de marzo ,20:45 ,30.787,Sánchez Martínez ,7,0
+2017,28,Deportivo Alavés ,1 – 3 ,Real Betis ,Mendizorroza ,12 de marzo ,21:00 ,17.239,Del Cerro Grande ,5,0
+2017,29,Levante U. D. ,2 – 1 ,S. D. Eibar ,Ciudad de València ,16 de marzo ,21:00 ,16.028,Iglesias Villanueva ,7,0
+2017,29,R. C. Deportivo de La Coruña ,1 – 1 ,U. D. Las Palmas ,Abanca Riazor ,17 de marzo ,13:00 ,18.942,Martínez Munuera ,6,0
+2017,29,Valencia C. F. ,3 – 1 ,Deportivo Alavés ,Mestalla ,17 de marzo ,16:15 ,35.264,Munuera Montero ,2,0
+2017,29,Real Sociedad ,1 – 2 ,Getafe C. F. ,Anoeta ,17 de marzo ,18:30 ,17.509,Estrada Fernández ,10,0
+2017,29,Real Betis ,3 – 0 ,R. C. D. Español ,Villamarín ,17 de marzo ,20:45 ,31.23,De Burgos Bengoetxea ,4,0
+2017,29,C. D. Leganés ,2 – 1 ,Sevilla F. C. ,Butarque ,18 de marzo ,12:00 ,10.037,Alberola Rojas ,6,0
+2017,29,F. C. Barcelona   ,2 – 0 ,Athletic Club ,Camp Nou ,18 de marzo ,16:15 ,84.053,Jaime Latre ,4,0
+2017,29,R. C. Celta de Vigo ,0 – 0 ,Málaga C. F. ,Balaídos ,18 de marzo ,18:30 ,17.23,Undiano Mallenco ,5,0
+2017,29,Villarreal C. F. ,2 – 1 ,Atlético de Madrid ,La Cerámica ,18 de marzo ,18:30 ,19.385,Fernández Borbalán ,8,1
+2017,29,Real Madrid C. F. ,6 – 3 ,Girona F. C. ,Bernabéu ,18 de marzo ,20:45 ,59.097,Gil Manzano ,3,0
+2017,30,Girona F. C. ,1 – 1 ,Levante U. D. ,Montilivi ,31 de marzo ,13:00 ,11.391,De Burgos Bengoetxea ,4,0
+2017,30,Athletic Club ,1 – 1 ,R. C. Celta de Vigo ,San Mamés ,31 de marzo ,16:15 ,33.657,Del Cerro Grande ,4,0
+2017,30,U. D. Las Palmas ,0 – 3 ,Real Madrid C. F. ,Gran Canaria ,31 de marzo ,18:30 ,22.942,González Fuertes ,3,0
+2017,30,Sevilla F. C. ,2 – 2 ,F. C. Barcelona ,Sánchez Pizjuán ,31 de marzo ,20:45 ,37.588,González González ,2,0
+2017,30,R. C. D. Español ,0 – 0 ,Deportivo Alavés ,RCDE Stadium ,1 de abril ,12:00 ,15.448,Iglesias Villanueva ,5,0
+2017,30,C. D. Leganés ,0 – 1 ,Valencia C. F. ,Butarque ,1 de abril ,16:15 ,10.697,Melero López ,7,0
+2017,30,S. D. Eibar ,0 – 0 ,Real Sociedad ,Ipurúa ,1 de abril ,18:30 ,6.233,Sánchez Martínez ,6,0
+2017,30,Málaga C. F. ,1 – 0 ,Villarreal C. F. ,La Rosaleda ,1 de abril ,18:30 ,19.142,Álvarez Izquierdo ,5,0
+2017,30,Atlético de Madrid ,1 – 0 ,R. C. Deportivo de La Coruña ,Wanda Metropolitano ,1 de abril ,20:45 ,49.351,Trujillo Suárez ,5,0
+2017,30,Getafe C. F. ,0 – 1 ,Real Betis ,Alfonso Pérez ,2 de abril ,21:00 ,10.628,Undiano Mallenco ,6,0
+2017,31,R. C. Deportivo de La Coruña ,3 – 2 ,Málaga C. F. ,Abanca Riazor ,6 de abril ,21:00 ,16.932,Mateu Lahoz ,7,0
+2017,31,Deportivo Alavés ,2 – 0 ,Getafe C. F. ,Mendizorroza ,7 de abril ,13:00 ,18.241,Jaime Latre ,5,0
+2017,31,R. C. Celta de Vigo ,4 – 0 ,Sevilla F. C. ,Balaídos ,7 de abril ,16:15 ,16.919,Álvarez Izquierdo ,3,0
+2017,31,Real Betis ,2 – 0 ,S. D. Eibar ,Villamarín ,7 de abril ,18:30 ,50.194,Medié Jiménez ,4,0
+2017,31,F. C. Barcelona ,3 – 1 ,C. D. Leganés ,Camp Nou ,7 de abril ,20:45 ,72.126,De Burgos Bengoetxea ,6,0
+2017,31,Levante U. D. ,2 – 1 ,U. D. Las Palmas ,Ciudad de València ,8 de abril ,12:00 ,18.402,Fernández Borbalán ,9,1
+2017,31,Real Madrid C. F. ,1 – 1 ,Atlético de Madrid ,Bernabéu ,8 de abril ,16:15 ,78.769,Estrada Fernández ,5,0
+2017,31,Real Sociedad ,5 – 0 ,Girona F. C. ,Anoeta ,8 de abril ,18:30 ,18.027,Munuera Montero ,4,0
+2017,31,Valencia C. F. ,1 – 0 ,R. C. D. Español ,Mestalla ,8 de abril ,20:45 ,36.296,Gil Manzano ,5,0
+2017,31,Villarreal C. F. ,1 – 3 ,Athletic Club ,La Cerámica ,9 de abril ,21:00 ,14.869,Iglesias Villanueva ,10,0
+2017,32,Girona F. C. ,0 – 1 ,Real Betis ,Montilivi ,13 de abril ,21:00 ,11.286,Jaime Latre ,12,0
+2017,32,Sevilla F. C. ,2 – 2 ,Villarreal C. F. ,Sánchez Pizjuán ,14 de abril ,13:00 ,32.192,González Fuertes ,8,0
+2017,32,F. C. Barcelona ,2 – 1 ,Valencia C. F. ,Camp Nou ,14 de abril ,16:15 ,69.544,Del Cerro Grande ,4,0
+2017,32,U. D. Las Palmas ,0 – 1 ,Real Sociedad ,Gran Canaria ,14 de abril ,18:30 ,10.531,Álvarez Izquierdo ,2,0
+2017,32,C. D. Leganés ,1 – 0 ,R. C. Celta de Vigo ,Butarque ,14 de abril ,18:30 ,10.393,Hernández Hernández ,6,0
+2017,32,Athletic Club ,2 – 3 ,R. C. Deportivo de La Coruña ,San Mamés ,14 de abril ,20:45 ,37.715,González González ,3,0
+2017,32,S. D. Eibar ,0 – 1 ,Deportivo Alavés ,Ipurúa ,15 de abril ,12:00 ,5.754,Undiano Mallenco ,3,0
+2017,32,Atlético de Madrid   ,3 – 0 ,Levante U. D. ,Wanda Metropolitano ,15 de abril ,16:15 ,58.043,Gil Manzano ,3,0
+2017,32,Getafe C. F. ,1 – 0 ,R. C. D. Español ,Alfonso Pérez ,15 de abril ,18:30 ,10.593,Melero López ,8,0
+2017,32,Málaga C. F. ,1 – 2 ,Real Madrid C. F. ,La Rosaleda ,15 de abril ,20:45 ,27.112,De Burgos Bengoetxea ,4,0
+2017,33,R. C. Deportivo de La Coruña ,0 – 0 ,Sevilla F. C. ,Abanca Riazor ,17 de abril ,19:30 ,24.374,Medié Jiménez ,2,0
+2017,33,R. C. Celta de Vigo ,2 – 2 ,F. C. Barcelona ,Balaídos ,17 de abril ,21:00 ,20.347,Fernández Borbalán ,3,1
+2017,33,Villarreal C. F. ,2 – 1 ,C. D. Leganés ,La Cerámica ,17 de abril ,21:30 ,12.556,Trujillo Suárez ,2,0
+2017,33,Valencia C. F. ,1 – 2 ,Getafe C. F. ,Mestalla ,18 de abril ,19:30 ,35.829,De Burgos Bengoetxea ,7,1
+2017,33,R. C. D. Español ,0 – 1 ,S. D. Eibar ,RCDE Stadium ,18 de abril ,19:30 ,12.113,Hernández Hernández ,5,0
+2017,33,Real Madrid C. F. ,1 – 1 ,Athletic Club ,Bernabéu ,18 de abril ,21:30 ,59.193,Martínez Munuera ,6,0
+2017,33,Deportivo Alavés ,1 – 2 ,Girona F. C. ,Mendizorroza ,19 de abril ,19:30 ,18.366,González Fuertes ,7,0
+2017,33,Real Sociedad ,3 – 0 ,Atlético de Madrid ,Anoeta ,19 de abril ,19:30 ,21.404,Alberola Rojas ,1,0
+2017,33,Levante U. D. ,1 – 0 ,Málaga C. F.   ,Ciudad de València ,19 de abril ,21:30 ,17.372,Jaime Latre ,2,0
+2017,33,Real Betis ,1 – 0 ,U. D. Las Palmas ,Villamarín ,19 de abril ,21:30 ,45.151,Sánchez Martínez ,8,0
+2017,34,C. D. Leganés ,0 – 0 ,R. C. Deportivo de La Coruña ,Butarque ,20 de abril ,21:00 ,10.124,Álvarez Izquierdo ,2,0
+2017,34,S. D. Eibar ,0 – 1 ,Getafe C. F. ,Ipurúa ,21 de abril ,13:00 ,4.86,Iglesias Villanueva ,5,0
+2017,34,R. C. Celta de Vigo ,1 – 1 ,Valencia C. F. ,Balaídos ,21 de abril ,16:15 ,17.316,Undiano Mallenco ,3,0
+2017,34,Girona F. C. ,0 – 2 ,R. C. D. Español ,Montilivi ,22 de abril ,12:00 ,12.313,Alberola Rojas ,3,0
+2017,34,Málaga C. F. ,2 – 0 ,Real Sociedad ,La Rosaleda ,22 de abril ,16:15 ,14.102,Estrada Fernández ,5,0
+2017,34,U. D. Las Palmas   ,0 – 4 ,Deportivo Alavés ,Gran Canaria ,22 de abril ,18:30 ,7.143,Melero López ,3,0
+2017,34,Atlético de Madrid ,0 – 0 ,Real Betis ,Wanda Metropolitano ,22 de abril ,20:45 ,54.594,Martínez Munuera ,7,0
+2017,34,Athletic Club ,1 – 3 ,Levante U. D. ,San Mamés ,23 de abril ,21:00 ,24.587,Munuera Montero ,6,0
+2017,34,F. C. Barcelona ,5 – 1 ,Villarreal C. F. ,Camp Nou ,9 de mayo ,20:00 ,54.743,Sánchez Martínez ,3,0
+2017,34,Sevilla F. C. ,3 – 2 ,Real Madrid C. F.   ,Sánchez Pizjuán ,9 de mayo ,21:30 ,38.524,Mateu Lahoz ,4,0
+2017,35,Levante U. D. ,2 – 1 ,Sevilla F. C. ,Ciudad de València ,27 de abril ,21:00 ,17.24,González González ,2,0
+2017,35,R. C. D. Español ,1 – 1 ,U. D. Las Palmas ,RCDE Stadium ,28 de abril ,13:00 ,13.589,González Fuertes ,6,0
+2017,35,Real Sociedad ,3 – 1 ,Athletic Club ,Anoeta ,28 de abril ,16:15 ,23.878,Sánchez Martínez ,9,1
+2017,35,Real Madrid C. F. ,2 – 1 ,C. D. Leganés ,Bernabéu ,28 de abril ,18:30 ,59.905,Iglesias Villanueva ,1,1
+2017,35,Villarreal C. F. ,4 – 1 ,R. C. Celta de Vigo ,La Cerámica ,28 de abril ,20:45 ,14.135,Alberola Rojas ,2,0
+2017,35,Getafe C. F. ,1 – 1 ,Girona F. C. ,Alfonso Pérez ,29 de abril ,12:00 ,8.011,Hernández Hernández ,10,1
+2017,35,Deportivo Alavés ,0 – 1 ,Atlético de Madrid ,Mendizorroza ,29 de abril ,16:15 ,18.944,Fernández Borbalán ,10,0
+2017,35,Valencia C. F. ,0 – 0 ,S. D. Eibar ,Mestalla ,29 de abril ,18:30 ,40.328,Jaime Latre ,5,0
+2017,35,R. C. Deportivo de La Coruña   ,2 – 4 ,F. C. Barcelona (C) ,Abanca Riazor ,29 de abril ,20:45 ,25.721,De Burgos Bengoetxea ,2,0
+2017,35,Real Betis ,2 – 1 ,Málaga C. F. ,Villamarín ,30 de abril ,21:00 ,53.163,Del Cerro Grande ,5,0
+2017,36,Sevilla F. C. ,1 – 0 ,Real Sociedad ,Sánchez Pizjuán ,4 de mayo ,21:00 ,34.733,Jaime Latre ,6,0
+2017,36,Girona F. C. ,1 – 4 ,S. D. Eibar ,Montilivi ,5 de mayo ,13:00 ,9.706,Trujillo Suárez ,6,0
+2017,36,Athletic Club ,2 – 0 ,Real Betis   ,San Mamés ,5 de mayo ,16:15 ,34.491,Alberola Rojas ,1,0
+2017,36,R. C. Celta de Vigo ,1 – 1 ,R. C. Deportivo de La Coruña ,Balaídos ,5 de mayo ,18:30 ,20.816,Del Cerro Grande ,6,0
+2017,36,Villarreal C. F. ,1 – 0 ,Valencia C. F.   ,La Cerámica ,5 de mayo ,20:45 ,19.079,Gil Manzano ,8,0
+2017,36,Málaga C. F. ,0 – 3 ,Deportivo Alavés ,La Rosaleda ,6 de mayo ,12:00 ,14.024,González González ,3,0
+2017,36,Atlético de Madrid ,0 – 2 ,R. C. D. Español ,Wanda Metropolitano ,6 de mayo ,16:15 ,49.834,Munuera Montero ,4,0
+2017,36,U. D. Las Palmas ,0 – 1 ,Getafe C. F. ,Gran Canaria ,6 de mayo ,18:30 ,4.624,Undiano Mallenco ,2,0
+2017,36,F. C. Barcelona ,2 – 2 ,Real Madrid C. F. ,Camp Nou ,6 de mayo ,20:45 ,97.939,Hernández Hernández ,8,1
+2017,36,C. D. Leganés ,0 – 3 ,Levante U. D. ,Butarque ,7 de mayo ,21:00 ,7.832,Sánchez Martínez ,6,1
+2017,37,Real Sociedad ,3 – 2 ,C. D. Leganés ,Anoeta ,12 de mayo ,16:15 ,19.981,Medié Jiménez ,3,0
+2017,37,R. C. Deportivo de La Coruña ,2 – 4 ,Villarreal C. F.    ,Abanca Riazor ,12 de mayo ,18:30 ,12.885,Hernández Hernández ,3,0
+2017,37,Real Betis ,2 – 2 ,Sevilla F. C.   ,Villamarín ,12 de mayo ,18:30 ,55.058,Álvarez Izquierdo ,5,0
+2017,37,Deportivo Alavés ,3 – 1 ,Athletic Club ,Mendizorroza ,12 de mayo ,18:30 ,19.458,Estrada Fernández ,7,0
+2017,37,Getafe C. F. ,0 – 1 ,Atlético de Madrid ,Alfonso Pérez ,12 de mayo ,18:30 ,12.187,Alberola Rojas ,5,0
+2017,37,S. D. Eibar ,1 – 0 ,U. D. Las Palmas ,Ipurúa ,12 de mayo ,18:30 ,5.107,Mateu Lahoz ,4,0
+2017,37,Girona F. C. ,0 – 1 ,Valencia C. F. ,Montilivi ,12 de mayo ,18:30 ,10.85,Iglesias Villanueva ,4,0
+2017,37,Real Madrid C. F. ,6 – 0 ,R. C. Celta de Vigo ,Bernabéu ,12 de mayo ,20:45 ,56.474,González Fuertes ,1,0
+2017,37,R. C. D. Español ,4 – 1 ,Málaga C. F. ,RCDE Stadium ,13 de mayo ,16:15 ,15.004,Martínez Munuera ,2,0
+2017,37,Levante U. D. ,5 – 4 ,F. C. Barcelona ,Ciudad de València ,13 de mayo ,20:45 ,22.384,Melero López ,12,0
+2017,38,R. C. Celta de Vigo ,4 – 2 ,Levante U. D. ,Balaídos ,19 de mayo ,13:00 ,10.48,De Burgos Bengoetxea ,4,0
+2017,38,C. D. Leganés ,3 – 2 ,Real Betis ,Butarque ,19 de mayo ,16:15 ,10.813,Gil Manzano ,2,0
+2017,38,Sevilla F. C. ,1 – 0 ,Deportivo Alavés ,Sánchez Pizjuán ,19 de mayo ,18:30 ,22.513,Del Cerro Grande ,4,0
+2017,38,Málaga C. F. ,0 – 1 ,Getafe C. F. ,La Rosaleda ,19 de mayo ,18:30 ,9.57,Trujillo Suárez ,5,0
+2017,38,U. D. Las Palmas ,1 – 2 ,Girona F. C. ,Gran Canaria ,19 de mayo ,18:30 ,6.362,Jaime Latre ,3,0
+2017,38,Villarreal C. F. ,2 – 2 ,Real Madrid C. F. ,La Cerámica ,19 de mayo ,20:45 ,18.891,Sánchez Martínez ,7,0
+2017,38,Valencia C. F. ,2 – 1 ,R. C. Deportivo de La Coruña ,Mestalla ,20 de mayo ,12:00 ,35.376,Medié Jiménez ,0,0
+2017,38,Athletic Club ,0 – 1 ,R. C. D. Español ,San Mamés ,20 de mayo ,16:15 ,28.492,Fernández Borbalán ,1,0
+2017,38,Atlético de Madrid ,2 – 2 ,S. D. Eibar ,Wanda Metropolitano ,20 de mayo ,18:30 ,63.229,Álvarez Izquierdo ,8,0
+2017,38,F. C. Barcelona ,1 – 0 ,Real Sociedad ,Camp Nou ,20 de mayo ,20:45 ,84.168,Munuera Montero ,5,0
