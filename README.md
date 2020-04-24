@@ -1,5 +1,5 @@
 # LaLigaPredictor
 
-As of now, training data (direct matches info for seasons 2017/18 - 2018/19) is in <i>train.csv</i>. Some data for testing is in <i>test.csv</i>
+As of now, all data is in <i>data.csv</i>. Train will (N-10) all samples, and predict outcome for last 10 samples.
 
-Main program, <i>testNN.py</i> processes and cleans data. Ready to be fed to a NN
+Main program, <i>LaLigaPredictor.py</i> processes, cleans data and use a MLP classifier to decide outcome of unknown matches. We run the classifier several times to try different random-states, so we end up with a probability of each outcome (1, X, 0). If the probability of one of them is larger than a threshold confidence value, we accept result
