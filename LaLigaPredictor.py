@@ -89,7 +89,7 @@ def MLP(X,y):
     for nodes in nodes_list:
         accu_per_node=[]
         result_1 = [[] for j in range(len(y_test))] # TeamHome wins
-        result_0 = [[] for j in range(len(y_test))] # TeamHome loses
+        result_2 = [[] for j in range(len(y_test))] # TeamHome loses
         result_X = [[] for j in range(len(y_test))] # Draw
         for j in range(Samples):
             clf = MLPClassifier(hidden_layer_sizes=(nodes), max_iter=10000, alpha=1e-4, solver='adam',  random_state=None,tol=0.0001)
@@ -99,16 +99,16 @@ def MLP(X,y):
             print('Progress %.1f%s' %(j*100/Samples, '%'))
             for i in range(len(y_pred)):
                 if y_pred[i] ==  1: result_1[i].append(1)
-                if y_pred[i] == -1: result_0[i].append(1)
+                if y_pred[i] == -1: result_2[i].append(1)
                 if y_pred[i] ==  0: result_X[i].append(1)
             accu=accuracy_score(y_test, y_pred)
             accu_per_node.append(accu)
         for i in range(len(y_pred)):
             best = 'N/A'
-            if sum(result_1[i]) >= sum(result_X[i]) and sum(result_1[i]) >= sum(result_0[i]) and sum(result_1[i])/Samples >= threshold: best = '1'
-            if sum(result_X[i]) >= sum(result_1[i]) and sum(result_X[i]) >= sum(result_0[i]) and sum(result_X[i])/Samples >= threshold: best = 'X'
-            if sum(result_0[i]) >= sum(result_X[i]) and sum(result_0[i]) >= sum(result_1[i]) and sum(result_0[i])/Samples >= threshold: best = '0'
-            print('BET: Match %i. Final: %s ## 1: %.2f. X: %.2f. 0: %.2f' %(i,best,sum(result_1[i])/Samples,sum(result_X[i])/Samples,sum(result_0[i])/Samples))
+            if sum(result_1[i]) >= sum(result_X[i]) and sum(result_1[i]) >= sum(result_2[i]) and sum(result_1[i])/Samples >= threshold: best = '1'
+            if sum(result_X[i]) >= sum(result_1[i]) and sum(result_X[i]) >= sum(result_2[i]) and sum(result_X[i])/Samples >= threshold: best = 'X'
+            if sum(result_2[i]) >= sum(result_X[i]) and sum(result_2[i]) >= sum(result_1[i]) and sum(result_2[i])/Samples >= threshold: best = '2'
+            print('BET: Match %i. Final: %s ## 1: %.2f. X: %.2f. 2: %.2f' %(i,best,sum(result_1[i])/Samples,sum(result_X[i])/Samples,sum(result_2[i])/Samples))
         print('Nodes: %s. Mean: %.3f. Median: %.3f. Stdev: %.3f' % (str(nodes),statistics.mean(accu_per_node),statistics.median(accu_per_node),statistics.stdev(accu_per_node)))
 ### End function MLP
 ########################
