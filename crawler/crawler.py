@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 data = []
 base_url = 'https://www.bdfutbol.com/en/p/p.php?id='
 # Loop over all indeces
-for id_index in range(29720,29721):
+for id_index in range(25600,25605):
     # Assign corresponding season
     if id_index >= 25600 and id_index <= 25979:
         Season = 2009
@@ -34,6 +34,7 @@ for id_index in range(29720,29721):
         Season = 2019
     else:
         continue
+    print('New point. Index:', id_index)
     # Parse html with BeautifulSoup
     url = base_url + str(id_index)
     #print('#########')
@@ -117,8 +118,8 @@ for id_index in range(29720,29721):
                     #break ### this is just for testing 1 players
                     #####################
             counter = counter + 1
-    print(player_name)
-
+    #print(player_name)
+    #print('### START bdfutbol ###')
     # Get bdfutbol ID from each player
     player_id_bdfutbol = []
     player_name_complete = []
@@ -134,6 +135,7 @@ for id_index in range(29720,29721):
 
     # For each player
     for p in range(len(player_name)):
+    #for p in range(30):
         # go to the player page on bdfutbol
         url_player_bdfutbol = base_url_player_bdfutbol + str(player_id_bdfutbol[p]) + ".html"
         #print('#########################3')
@@ -150,19 +152,109 @@ for id_index in range(29720,29721):
                 player_complete_name = re.findall(r",.+-",str(player_complete_name))
                 # if we get the complete name of the player:
                 if player_complete_name: 
-                    print(player_name[p],"##",player_complete_name[0][2:-2])
+                    #print(player_name[p],"##",player_complete_name[0][2:-2])
                     player_name_complete.append(player_complete_name[0][2:-2])
 
-    print(player_name_complete)
+    #print(player_name_complete)
+    #print('#### END bdfutbol ####')
+    #print('')
+    #print('### START sofifa ###')
+    player_rating = []
+    player_potential = []
+    fifa_year = int(str(Season)[-2:]) + 1
+    #print('FIFA year:', fifa_year)
+    base_url_sofifa_search = 'https://sofifa.com/players?keyword='
+    base_url_sofifa_player = 'https://sofifa.com/player/'
+    # For each player, look in sofifa and get player info
+    for p in player_name_complete:
+        url = base_url_sofifa_search + str(p)
+        #print('TEST url:',url)
+        res = requests.get(url)
+        html_page = res.content
+        soup = BeautifulSoup(html_page, 'html.parser')
+        #text = soup.find_all(text=True)
+        #print(soup)
+        for line in soup:
+            player_id = re.findall(r"href=\"/player/[0-9]+",str(line))
+            player_id = re.findall(r"[0-9]+",str(player_id))
+            if player_id:
+                player_sofifa_id = player_id
+        if len(player_sofifa_id) == 1:
+            #print(p,player_sofifa_id)
+            pass
+        elif len(player_sofifa_id) > 1:
+            print('####################################################################')
+            print('ERROR: More than 1 possible ID when looking in sofifa for:', player_name)
+            print('####################################################################')
+        elif len(player_sofifa_id) < 1:
+            print('####################################################################')
+            print('ERROR: No ID found when looking in sofifa for:', player_name)
+            print('####################################################################')
+
+        # Once we have one unique ID, get data from that player at corresponding time
+        time_label = str(fifa_year) + "0001"
+        url = base_url_sofifa_player + str(player_sofifa_id[0]) + "/" + str(time_label)
+        #print('TEST url:',url)
+        res = requests.get(url)
+        html_page = res.content
+        soup = BeautifulSoup(html_page, 'html.parser')
+        text = soup.find_all(text=True)
+        #print(soup)
+        counter_line=0
+        counter_placeholder=-100
+        for line in text:
+            if line.rstrip():
+                #print(line)
+                player_lbs = re.findall(r"lbs$",str(line))
+                if player_lbs: counter_placeholder=counter
+                counter = counter+1
+                if counter == counter_placeholder+2: rating = line
+                if counter == counter_placeholder+4:
+                    try:
+                        int(line)
+                        potential = line
+                    except:
+                        potential = None
+                        pass
+                if counter == counter_placeholder+5 and potential == None:
+                    try:
+                        int(line)
+                        potential = line
+                    except:
+                        pass
+                    #potential = line
+                if counter > counter_placeholder+5 and counter_placeholder > 0: break
+        player_rating.append(int(rating))
+        player_potential.append(int(potential))
+        #print(p, '. Rating:',int(rating),'. Potential:',int(potential))
+    #print('#### END sofifa ####')
+
+    PlayersHome = player_name[0:18]
+    PlayersAway = player_name[18:36]
+    ratingHome = player_rating[0:18]
+    ratingAway = player_rating[18:36]
+    RatingHome = sum(ratingHome)
+    RatingAway = sum(ratingAway)
+    potentialHome = player_potential[0:18]
+    potentialAway = player_potential[18:36]
+    PotentialHome = sum(potentialHome)
+    PotentialAway = sum(potentialAway)
+
+    #print('Rating Home:', ratingHome)
+    #print('SUM Rating Home:', RatingHome)
+    #print('Rating Away:', ratingAway)
+    #print('SUM Rating Away:', RatingAway)
+    #print('Potential Home:', potentialHome)
+    #print('SUM Potential Home:', PotentialHome)
+    #print('Potential Away:', potentialAway)
+    #print('SUM Potential Away:', PotentialAway)
 
 
-
-
-    data_row = [Season,Round,Date,TeamHome,Result,TeamAway,Stadium,Referee]
+    data_row = [Season,Round,Date,TeamHome,Result,TeamAway,Stadium,Referee,PlayersHome,RatingHome,PotentialHome,PlayersAway,RatingAway,PotentialAway]
     data.append(data_row)
 
-df = pd.DataFrame(data,columns=['Season','Round','Date','TeamHome','Result','TeamAway','Stadium','Referee'])
+df = pd.DataFrame(data,columns=['Season','Round','Date','TeamHome','Result','TeamAway','Stadium','Referee','PlayersHome','RatingHome','PotentialHome','PlayersAway','RatingAway','PotentialAway'])
 
-#print(df.to_string())
+print(df.to_string())
 
 df.to_csv (r'test_dataframe.csv', index = False, header=True)
