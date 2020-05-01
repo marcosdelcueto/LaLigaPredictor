@@ -45,7 +45,6 @@ for id_index in range(29720,29721):
     # Loop over each line to extract data
     counter=0
     counter_holder = -1000
-    player_name = []
     for line in text:
         if line.rstrip():
             place_holder = re.findall(r"Round+",line)
@@ -74,7 +73,7 @@ for id_index in range(29720,29721):
             # Get Referee
             if counter > counter_holder+4 and counter <= counter_holder+5:
                 Referee = line.strip()
-            # Get short names Players
+            # Get Players
             if counter > counter_holder+7 and counter_holder > 0:
                 test = line.strip()
                 # stop looking for players after string 'Manager' is found
@@ -88,9 +87,13 @@ for id_index in range(29720,29721):
                     pass
                 #print(test,type(test))
                 if type(test) == str:
-                    player_name.append(test)
+                    player_name = test
+                    player_complete_name = re.findall(rf"{player_name}</a>",str(soup))
+                    print(player_name, player_complete_name)
+                    print(str(soup))
+                    #print(soup)
+                    #print(text)
                     #####################
-                    #player_complete_name = re.findall(rf"{player_name}</a>",str(soup))
                     #base_url = 'https://sofifa.com/players?keyword='
                     #url = base_url + str(player_name)
                     #res = requests.get(url)
@@ -116,48 +119,10 @@ for id_index in range(29720,29721):
                         #print('####################################################################')
                     #break ### this is just for testing 1 players
                     #####################
+
+
+
             counter = counter + 1
-    print(player_name)
-
-    # Get bdfutbol ID from each player
-    player_id_bdfutbol = []
-    player_name_complete = []
-    base_url_player_bdfutbol = "https://www.bdfutbol.com/en/j/j"
-    for p in range(len(player_name)):
-        for line in soup:
-            player_bdfutbol_id = re.findall(rf"<a href=\"../j/j[0-9]+.html\">{player_name[p]}</a>",str(line))
-            player_bdfutbol_id = re.findall(r"[0-9]+",str(player_bdfutbol_id))
-            if player_bdfutbol_id: 
-                #print(player_name[p], player_bdfutbol_id)
-                player_id_bdfutbol.append(player_bdfutbol_id[0])
-                break
-
-    # For each player
-    for p in range(len(player_name)):
-        # go to the player page on bdfutbol
-        url_player_bdfutbol = base_url_player_bdfutbol + str(player_id_bdfutbol[p]) + ".html"
-        #print('#########################3')
-        #print('TEST url:',url_player_bdfutbol)
-        res = requests.get(url_player_bdfutbol)
-        html_page = res.content
-        soup = BeautifulSoup(html_page, 'html.parser')
-        text = soup.find_all(text=True)
-        # for each line in the bdfutbol page of the player
-        for line in text:
-            if line.rstrip():
-                #print(line)
-                player_complete_name = re.findall(rf"{player_name[p]}, .+ - Footballer",str(line))
-                player_complete_name = re.findall(r",.+-",str(player_complete_name))
-                # if we get the complete name of the player:
-                if player_complete_name: 
-                    print(player_name[p],"##",player_complete_name[0][2:-2])
-                    player_name_complete.append(player_complete_name[0][2:-2])
-
-    print(player_name_complete)
-
-
-
-
     data_row = [Season,Round,Date,TeamHome,Result,TeamAway,Stadium,Referee]
     data.append(data_row)
 
