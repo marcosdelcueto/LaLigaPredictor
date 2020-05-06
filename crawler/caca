@@ -1,0 +1,391 @@
+New point. Index: 29408
+NEW PLAYER!!!!!!!!!!!!
+html
+ Required meta tags 
+ My meta tags 
+ My links 
+ Bootstrap CSS 
+ Optional JavaScript 
+ jQuery first, then Popper.js, then Bootstrap JS 
+ My js 
+Jovanović, Aleksandar Jovanović - Footballer
+
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-579381-3', 'auto');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        
+
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-1494352246491178",
+        enable_page_level_ads: true
+    });
+
+
+    var googletag = googletag || { };
+    googletag.cmd = googletag.cmd || [];
+
+ Login
+Remove Ads
+English
+Español
+English
+Català
+
+                    let lls=window.localStorage.getItem('BDF_LANG');
+                    if (!lls) lls = navigator.language || navigator.userLanguage;
+                    if (!lls) lls = "es";
+                    let debugls = false;
+			if (lls.indexOf('es') === 0 && !lls.indexOf('en') === 0) console.log("lang=en, redirecting to ../../es/j/j21759.html");
+			else if (lls.indexOf('en') === 0 && lls !== 'en') console.log("lang=en, redirecting to ../../en/j/j21759.html");
+			else if (lls.indexOf('ca') === 0 && lls !== 'en') console.log("lang=en, redirecting to ../../j/j21759.html");
+
+                    if (lls.indexOf('es') === 0 && 'es' !== 'en') {if (debugls) alert('../../es/j/j21759.html'); window.location.href = '../../es/j/j21759.html';}
+                    else if (lls.indexOf('en') === 0 && 'en' !== 'en') {if (debugls) alert('../../en/j/j21759.html'); window.location.href = '../../en/j/j21759.html';}
+                    else if (lls.indexOf('ca') === 0 && 'ca' !== 'en') {if (debugls) alert('../../j/j21759.html'); window.location.href = '../../j/j21759.html';}
+                
+<a style="background:#15CD72; border-radius:8px; color:white !important; padding:1px 4px;" href="../c/api2.html">API v2</a>
+Leagues
+Competitions
+Clubs
+National
+Rankings
+Community
+Players
+Managers
+Referees
+Leagues
+Competitions
+Clubs
+National
+Rankings
+Community
+Players
+Managers
+Referees
+Leagues
+Competitions
+Clubs
+National
+Rankings
+Community
+Players
+Managers
+Referees
+Players
+Managers
+Referees
+Clubs
+Matches
+ ResponsiveHoritzontalDalt 
+
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                
+<div class="futuregenius">
+
+    </div>
+ v8_vertical_dreta 
+
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        
+Jovanović
+Player
+Statistics                                    
+Matches
+Complete name:
+
+                        Aleksandar Jovanović                    
+Date of birth:
+06/12/1992, 27 years
+Place of birth:
+Niš
+Birth Country:
+Serbia
+I found birth country: Serbia
+Height:
+1'92 m
+Weight:
+85 kg
+Position:
+Goalkeeper
+ v6 jugador 
+
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    
+Career path
+Category
+Club
+Trophies
+Season
+Division
+Age
+PM
+CM
+SM
+AM
+Minutes
+Yellow Cards
+Red Cards
+Goals
+Competitions
+Number
+Called up
+Goals Penalty
+Own Goals
+Goals Conceded
+Wins
+Losses
+Draws
+Substituted Matches
+Total Called
+Save
+Restore defaults
+Club
+Season
+Div
+Age
+PM
+SM
+CM
+AM
+Min
+YC
+RD
+G
+Huesca
+2018-19
+1ª
+26
+12
+12
+12
+0
+1080
+1
+0
+0
+Huesca
+2019-20
+2ª
+27
+0
+0
+0
+0
+0
+0
+0
+0
+Deportivo de La Coruña
+2019-20
+2ª
+27
+0
+0
+0
+0
+0
+0
+0
+0
+Total
+12
+12
+12
+0
+1080
+1
+0
+0
+1st Division            
+2nd Division            
+
+        var T=[2018,2019,2019];var D=[1,2,2];var E=[79,79,13];var PJ=[12,0,0];var PC=[12,0,0];var PT=[12,0,0];var TG=[1,0,0];var TV=[0,0,0];var M=[1080,0,0];var G=[0,0,0];var GENC=[19,0,0];var PG=[1,0,0];var PP=[7,0,0];var PE=[4,0,0];var PCONV=[20,0,5];var PDOR=[25,25,13];var PGPP=[0,0,0];var PGPEN=[0,0,0];var PX=[0,0,0];
+
+            script_jugador("eng",21759,1);
+
+            
+    
+Comments
+
+            var quill = new Quill('#editor-container', {
+                modules: {
+                    toolbar: '#toolbar-container'
+                },
+                placeholder: 'Write a comment...',
+                theme: 'snow'
+            });
+
+            $('.formcomentaris').submit(function() {
+                $("input[name='comentari']").val(quill.root.innerHTML);
+            });
+
+            $("#form-comentaris-id").submit(function(e) {
+                e.preventDefault();
+
+                let form = $(this);
+                let url = form.attr('action');
+
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: form.serialize(),
+                    beforeSend: function() {
+                        $('#loading').modal('show');
+                    },
+                    success: function(data)
+                    {
+                        if (data == 1) {
+                            putGeneralMessage("Comment sent successfully.","success");
+                            let date = new Date();
+                            let sdate = date.toJSON().slice(0,10) + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+                            addComment($("input[name=comentari]").val(),0,$("input[name=username]").val(),sdate,true,999999999);
+                        } else if (data == 0) {
+                            putGeneralMessage("An error has occured.","error");
+                        } else if (data == -1) {
+                            putGeneralMessage("The verification code wasn't entered correctly. Go back and try it again..","error");
+                        }
+                        $('#loading').modal('hide');
+                        quill.setText('');
+                    }
+                });
+            });
+
+            function deleteComment(id,e) {
+                if (!e) e = window.event;
+                var sender = e.srcElement || e.target;
+                var parametres = {
+                    "id" : id
+                };
+                $.ajax({
+                    data:  parametres,
+                    url:   '../../php/delete_comment.php',
+                    type:  'post',
+                    beforeSend: function() {
+                        //$('#loading').modal('show');
+                    },
+                    success:  function (resp) {
+                        var response = resp.trim();
+                        if (response == "1") {
+                            putGeneralMessage("Comment deleted successfully.","success");
+                            $(sender).closest(".comentari").remove();
+                        } else {
+                            putGeneralMessage("An error has occured.","success");
+                        }
+                        //$('#loading').modal('hide');
+                    }
+                });
+            }
+
+            function addComment(com,marg,user,data,meu,idc) {
+                var comment = "<div class='comentari' style='margin-left:"+marg+"px;background-color:#F9F9F9'><div class='row align-items-center'>";
+                comment += "<div class='col-auto text-left'><p class='font-weight-bold f15 pl-2 pr-2 mb-1 pt-2'>"+user+"</p><p class='f14 pl-2 pr-2  mb-1'>"+data+"</p></div>";
+                comment += "<div class='col f16'>" + com + "</div>";
+                if (meu) comment += "<div class='col-auto'><a href='javascript:void(0)' onclick='deleteComment(" + idc + ",event);' class='text-gris f12 pl-2 pr-2' title='Delete'><i class='far fa-trash-alt'></i></a></div>";
+                else comment += "<div class='col-auto'><a href='javascript:void(0)' onclick='related(" + idc + ");' class='text-gris f12 pl-2 pr-2' title='Reply'><i class='fas fa-reply'></i></a></div>";
+                comment += "</div></div>";
+                $(".divcomentaris").append(comment);
+            }
+
+            function showNoVistos(novistos) {
+                var item = "<div class='pt-2 pb-2 alert alert-warning'>There are "+novistos+" additional comments only visible for registered users</div>";
+                $(".divcomentaris").append(item);
+            }
+
+                    
+Your message will only be viewn by the BDFutbol tema. For public messages 
+log in
+Send
+Notify error
+Last update: 05/05/2020
+v14.5.1
+<p class="mt-5"><a href="http://www.bdbasket.com"><img src="../../img/logo_bdbasket.png" alt="BDBasket"></a></p>
+
+                        Sections                        
+Leagues
+Competitions
+Rankings
+Clubs
+Players
+Managers
+Referees
+Spain Team
+Community
+Data Service
+
+                        Other                        
+Information
+API
+Trivial
+Links
+Completeness
+Forum
+Blog
+Contact
+Donate
+BDBasket
+Flashscores
+Contributors 
+
+                © 2008—2020 Historical Soccer Database.
+            
+
+	window.addEventListener("load", function(){
+	window.cookieconsent.initialise({
+		"palette": {
+			"popup": {
+				"background": "#eaf7f7",
+				"text": "#5c7291"
+				},
+			"button": {
+				"background": "#56cbdb",
+				"text": "#ffffff"
+			}
+		},
+		"theme": "edgeless",
+		"content": {
+			"message": "",
+			"dismiss": "Ok"
+		}
+	})});
+	
+
+    $(document).ready(function() {
+        $(".go-to-top").click(function () {
+            $(window).scrollTop(0);
+        });
+
+        $("#btn-search").click(function(){
+            $("#search_front").toggle();
+            $("#nav-header").toggle();
+            $("#logo").toggle();
+            $("#mobile-menu").toggle();
+            if ($("#main-nav").hasClass("w-100")) $("#main-nav").removeClass("w-100");
+            else $("#main-nav").addClass("w-100");
+            $("#s").focus();
+        });
+
+        $("#close-search,#close-search-2").click(function(){
+            $("#search_front").toggle();
+            $("#nav-header").toggle();
+            $("#logo").toggle();
+            $("#mobile-menu").toggle();
+            if ($("#main-nav").hasClass("w-100")) $("#main-nav").removeClass("w-100");
+            else $("#main-nav").addClass("w-100");
+        });
+
+        $(".resize").click(function(){
+            $('#form-size').submit();
+        });
+        $(".resize-foto").click(function(){
+            $('#form-size-foto').submit();
+        });
+    });
+
+Countries: [['Serbia', 'Australia']]
+####################################################################
+ERROR: More than 1 possible ID when looking in sofifa for: Aleksandar Jovanović
+####################################################################
