@@ -7,10 +7,50 @@ import unidecode
 import pandas as pd
 from bs4 import BeautifulSoup
 
+def get_id(medium_name):
+    medium_name= medium_name.strip()
+    #print('try looking for',medium_name)
+    url = base_url_sofifa_search + str(medium_name) + "&r=" + str(fifa_year) + "0001&set=true"
+    print('TEST search in sofifa url:',url)
+    res = requests.get(url)
+    html_page = res.content
+    soup = BeautifulSoup(html_page, 'html.parser')
+    for line in soup:
+        #print(line)
+        #country = re.findall(r"title=.+<a href=\"/players\?pn=",str(line))
+        #country = re.findall(r"title=\".+?\"/>",str(country))
+        #country = re.findall(r"\".+?\"",str(country))
+        #country = re.findall(r"[a-zA-Z ]{2,}",str(country))
+        #if country: 
+            #country_player.append(country)
+            #print('new country found:', country)
+        #exact_name = re.findall(rf"<a class=\"tooltip=\".*{medium_name}\" href=\"/player/[0-9]+",str(line))
+        exact_name = re.findall(rf"<a class=.+{medium_name}\" href=\"/player/[0-9]+",str(line))
+        if exact_name: 
+            #print('### TEST EXACT NAME', exact_name)
+            id_by_exact_name = re.findall(r"[0-9]+",str(exact_name))
+            #print('### TEST ID BY EXACT NAME', id_by_exact_name)
+        player_id = re.findall(r"href=\"/player/[0-9]+",str(line))
+        player_id = re.findall(r"[0-9]+",str(player_id))
+        #print(player_id)
+        if player_id:
+            player_sofifa_id = player_id
+            print('Inside function, player ID:', player_sofifa_id)
+            #print('I got an ID this time:', player_sofifa_id)
+            if len(player_sofifa_id)>1:
+                print('########## More than 1 ID found. The one by exact name is:',id_by_exact_name[0])
+                if id_by_exact_name[0] in player_sofifa_id:
+                    player_sofifa_id = []
+                    player_sofifa_id.append(id_by_exact_name[0])
+                    print('Inside function, player ID (after curation):', player_sofifa_id)
+            return player_sofifa_id
+
+
+
 data = []
 base_url = 'https://www.bdfutbol.com/en/p/p.php?id='
 # Loop over all indeces
-for id_index in range(29721,29910):
+for id_index in range(29733,29910):
     # Assign corresponding season
     if id_index >= 25600 and id_index <= 25979:
         Season = 2009
@@ -115,7 +155,7 @@ for id_index in range(29721,29910):
                 break
 
     # For each player
-    country_bdfutbol = []
+    #country_bdfutbol = []
     for p in range(len(player_name)):
     #for p in range(1):
         prev_line=None
@@ -132,9 +172,8 @@ for id_index in range(29721,29910):
         for line in text:
             if line.rstrip():
                 #print(line)
-                if prev_line == 'Birth Country:':
-                    #print('I found birth country:', unidecode.unidecode(str(line)))
-                    country_bdfutbol.append(unidecode.unidecode(str(line)))
+                #if prev_line == 'Birth Country:':
+                    #country_bdfutbol.append(unidecode.unidecode(str(line)))
                 player_complete_name = re.findall(rf"{player_name[p]}, .+ - Footballer",str(line))
                 player_complete_name = re.findall(r",.+-",str(player_complete_name))
                 # if we get the complete name of the player:
@@ -160,7 +199,7 @@ for id_index in range(29721,29910):
         print('NEW PLAYER soFIFA',p)
         #print('#################')
         player_sofifa_id = None
-        country_player = []
+        #country_player = []
         url = base_url_sofifa_search + str(p) + "&r=" + str(fifa_year) + "0001&set=true"
         print('TEST search in sofifa url:',url)
         res = requests.get(url)
@@ -174,17 +213,16 @@ for id_index in range(29721,29910):
             player_id = re.findall(r"[0-9]+",str(player_id))
             if player_id:
                 player_sofifa_id = player_id
-            country = re.findall(r"title=.+<a href=\"/players\?pn=",str(line))
-            country = re.findall(r"title=\".+?\"/>",str(country))
-            country = re.findall(r"\".+?\"",str(country))
-            country = re.findall(r"[a-zA-Z ]{2,}",str(country))
-            if country: 
-                country_player.append(country)
-                #print('new country found:', country)
-            #print('length of country_player:', len(country_player))
+            #country = re.findall(r"title=.+<a href=\"/players\?pn=",str(line))
+            #country = re.findall(r"title=\".+?\"/>",str(country))
+            #country = re.findall(r"\".+?\"",str(country))
+            #country = re.findall(r"[a-zA-Z ]{2,}",str(country))
+            #if country: 
+                #country_player.append(country)
+        ##################################
         if player_sofifa_id == None:
-            #################################
-            # If no ID has been found when searching long name in sofifa, try removing last word of long name
+        #################################
+        # If no ID has been found when searching long name in sofifa, try removing last word of long name
             if len(p.split()) > 1:
                 #print('long name split words:',p.split())
                 new_name=[]
@@ -194,223 +232,155 @@ for id_index in range(29721,29910):
                 medium_name=''
                 for i in new_name:
                     medium_name = medium_name + ' ' + i
-                medium_name = unidecode.unidecode(medium_name)
-                print('try looking for', medium_name)
-                url = base_url_sofifa_search + str(medium_name) + "&r=" + str(fifa_year) + "0001&set=true"
-                print('TEST search in sofifa url:',url)
-                res = requests.get(url)
-                html_page = res.content
-                soup = BeautifulSoup(html_page, 'html.parser')
-                for line in soup:
-                    country = re.findall(r"title=.+<a href=\"/players\?pn=",str(line))
-                    country = re.findall(r"title=\".+?\"/>",str(country))
-                    country = re.findall(r"\".+?\"",str(country))
-                    country = re.findall(r"[a-zA-Z ]{2,}",str(country))
-                    if country: 
-                        country_player.append(country)
-                        print('new country found:', country)
-                    #print(line)
-                    player_id = re.findall(r"href=\"/player/[0-9]+",str(line))
-                    player_id = re.findall(r"[0-9]+",str(player_id))
-                    #print(player_id)
-                    if player_id:
-                        player_sofifa_id = player_id
-                        #print('I got an ID this time:', player_sofifa_id)
-            if player_sofifa_id == None:
-            ################################        
-            #################################
-                # If no ID has been found when searching long name in sofifa, try removing 2nd word from last name
-                if len(p.split()) > 2:
-                    #print('long name split words:',p.split())
-                    new_name=[]
-                    for i in p.split():
-                        new_name.append(i)
-                    new_name2 = new_name[0:1] + new_name[2:]
-                    medium_name=''
-                    for i in new_name2:
-                        medium_name = medium_name + ' ' + i
-                    medium_name = unidecode.unidecode(medium_name)
-                    print('try looking for', medium_name)
-                    url = base_url_sofifa_search + str(medium_name) + "&r=" + str(fifa_year) + "0001&set=true"
-                    print('TEST search in sofifa url:',url)
-                    res = requests.get(url)
-                    html_page = res.content
-                    soup = BeautifulSoup(html_page, 'html.parser')
-                    for line in soup:
-                        country = re.findall(r"title=.+<a href=\"/players\?pn=",str(line))
-                        country = re.findall(r"title=\".+?\"/>",str(country))
-                        country = re.findall(r"\".+?\"",str(country))
-                        country = re.findall(r"[a-zA-Z ]{2,}",str(country))
-                        if country: 
-                            country_player.append(country)
-                            print('new country found:', country)
-                        #print(line)
-                        player_id = re.findall(r"href=\"/player/[0-9]+",str(line))
-                        player_id = re.findall(r"[0-9]+",str(player_id))
-                        #print(player_id)
-                        if player_id:
-                            player_sofifa_id = player_id
-                            #print('I got an ID this time:', player_sofifa_id)
-                if player_sofifa_id == None:
-                ################################        
-                #################################
-                    # If no ID has been found when searching long name in sofifa, try using just 2 first words
-                    if len(p.split()) > 2:
-                        #print('long name split words:',p.split())
-                        new_name=[]
-                        for i in p.split():
-                            new_name.append(i)
-                        new_name2 = new_name[0:2]
-                        medium_name=''
-                        for i in new_name2:
-                            medium_name = medium_name + ' ' + i
-                        medium_name = unidecode.unidecode(medium_name)
-                        print('try looking for', medium_name)
-                        url = base_url_sofifa_search + str(medium_name) + "&r=" + str(fifa_year) + "0001&set=true"
-                        print('TEST search in sofifa url:',url)
-                        res = requests.get(url)
-                        html_page = res.content
-                        soup = BeautifulSoup(html_page, 'html.parser')
-                        for line in soup:
-                            country = re.findall(r"title=.+<a href=\"/players\?pn=",str(line))
-                            country = re.findall(r"title=\".+?\"/>",str(country))
-                            country = re.findall(r"\".+?\"",str(country))
-                            country = re.findall(r"[a-zA-Z ]{2,}",str(country))
-                            if country: 
-                                country_player.append(country)
-                                print('new country found:', country)
-                            #print(line)
-                            player_id = re.findall(r"href=\"/player/[0-9]+",str(line))
-                            player_id = re.findall(r"[0-9]+",str(player_id))
-                            #print(player_id)
-                            if player_id:
-                                player_sofifa_id = player_id
-                                #print('I got an ID this time:', player_sofifa_id)
-                    if player_sofifa_id == None:
-                    ################################        
-                    #################################
-                        # If no ID has been found when searching long name in sofifa, try using just 1 and 3 words
-                        if len(p.split()) > 3:
-                            #print('long name split words:',p.split())
-                            new_name=[]
-                            for i in p.split():
-                                new_name.append(i)
-                            new_name2 = new_name[0:1] + new_name[2:3]
-                            #print('provisional name:',new_name2)
-                            medium_name=''
-                            for i in new_name2:
-                                medium_name = medium_name + ' ' + i
-                            medium_name = unidecode.unidecode(medium_name)
-                            print('try looking for', medium_name)
-                            url = base_url_sofifa_search + str(medium_name) + "&r=" + str(fifa_year) + "0001&set=true"
-                            print('TEST search in sofifa url:',url)
-                            res = requests.get(url)
-                            html_page = res.content
-                            soup = BeautifulSoup(html_page, 'html.parser')
-                            for line in soup:
-                                country = re.findall(r"title=.+<a href=\"/players\?pn=",str(line))
-                                country = re.findall(r"title=\".+?\"/>",str(country))
-                                country = re.findall(r"\".+?\"",str(country))
-                                country = re.findall(r"[a-zA-Z ]{2,}",str(country))
-                                if country: 
-                                    country_player.append(country)
-                                    print('new country found:', country)
-                                #print(line)
-                                player_id = re.findall(r"href=\"/player/[0-9]+",str(line))
-                                player_id = re.findall(r"[0-9]+",str(player_id))
-                                #print(player_id)
-                                if player_id:
-                                    player_sofifa_id = player_id
-                                    #print('I got an ID this time:', player_sofifa_id)
-                        if player_sofifa_id == None:
-                        ################################        
-                        #################################
-                            # If no ID has been found when searching long name in sofifa, drop first word
-                            if len(p.split()) > 2:
-                                #print('long name split words:',p.split())
-                                new_name=[]
-                                for i in p.split():
-                                    new_name.append(i)
-                                new_name2 = new_name[1:]
-                                medium_name=''
-                                for i in new_name2:
-                                    medium_name = medium_name + ' ' + i
-                                medium_name = unidecode.unidecode(medium_name)
-                                print('try looking for', medium_name)
-                                url = base_url_sofifa_search + str(medium_name) + "&r=" + str(fifa_year) + "0001&set=true"
-                                print('TEST search in sofifa url:',url)
-                                res = requests.get(url)
-                                html_page = res.content
-                                soup = BeautifulSoup(html_page, 'html.parser')
-                                for line in soup:
-                                    country = re.findall(r"title=.+<a href=\"/players\?pn=",str(line))
-                                    country = re.findall(r"title=\".+?\"/>",str(country))
-                                    country = re.findall(r"\".+?\"",str(country))
-                                    country = re.findall(r"[a-zA-Z ]{2,}",str(country))
-                                    if country: 
-                                        country_player.append(country)
-                                        print('new country found:', country)
-                                    #print(line)
-                                    player_id = re.findall(r"href=\"/player/[0-9]+",str(line))
-                                    player_id = re.findall(r"[0-9]+",str(player_id))
-                                    #print(player_id)
-                                    if player_id:
-                                        player_sofifa_id = player_id
-                                        #print('I got an ID this time:', player_sofifa_id)
-                            if player_sofifa_id == None:
-                                ################################        
-                                #################################
-                                # If no ID has been found when searching long name in sofifa, try with short name
-                                print('try looking for', player_name[counter_player])
-                                url = base_url_sofifa_search + str(player_name[counter_player]) + "&r=" + str(fifa_year) + "0001&set=true"
-                                print('TEST search in sofifa url:',url)
-                                res = requests.get(url)
-                                html_page = res.content
-                                soup = BeautifulSoup(html_page, 'html.parser')
-                                for line in soup:
-                                    country = re.findall(r"title=.+<a href=\"/players\?pn=",str(line))
-                                    country = re.findall(r"title=\".+?\"/>",str(country))
-                                    country = re.findall(r"\".+?\"",str(country))
-                                    country = re.findall(r"[a-zA-Z ]{2,}",str(country))
-                                    if country: 
-                                        country_player.append(country)
-                                        print('new country found:', country)
-                                    #print(line)
-                                    player_id = re.findall(r"href=\"/player/[0-9]+",str(line))
-                                    player_id = re.findall(r"[0-9]+",str(player_id))
-                                    #print(player_id)
-                                    if player_id:
-                                        player_sofifa_id = player_id
-                                        #print('I got an ID this time:', player_sofifa_id)
-                                if player_sofifa_id == None:
-                                ################################        
-                                    print('####################################################################')
-                                    print('ERROR: No ID found when looking in sofifa for:', p)
-                                    print('ERROR: No ID found when looking in sofifa for:', player_name[counter_player])
-                                    print('####################################################################')
-                                    sys.exit()
+                #medium_name = unidecode.unidecode(medium_name)
+                player_sofifa_id = get_id(medium_name)
+                if player_sofifa_id == None: player_sofifa_id = get_id(unidecode.unidecode(medium_name))
+        ################################        
+        if player_sofifa_id == None:
+        #################################
+        # If no ID has been found when searching long name in sofifa, try removing last word of long name
+            if len(p.split()) > 1:
+                #print('long name split words:',p.split())
+                new_name=[]
+                for i in p.split():
+                    new_name.append(i)
+                new_name = new_name[0:-1]
+                medium_name=''
+                for i in new_name:
+                    medium_name = medium_name + ' ' + i
+                #medium_name = unidecode.unidecode(medium_name)
+                player_sofifa_id = get_id(medium_name)
+                if player_sofifa_id == None: player_sofifa_id = get_id(unidecode.unidecode(medium_name))
+        #################################
+        if player_sofifa_id == None:
+        ################################        
+        # If no ID has been found when searching long name in sofifa, try removing 2nd word from last name
+            if len(p.split()) > 2:
+                #print('long name split words:',p.split())
+                new_name=[]
+                for i in p.split():
+                    new_name.append(i)
+                new_name2 = new_name[0:1] + new_name[2:]
+                medium_name=''
+                for i in new_name2:
+                    medium_name = medium_name + ' ' + i
+                #medium_name = unidecode.unidecode(medium_name)
+                player_sofifa_id = get_id(medium_name)
+                if player_sofifa_id == None: player_sofifa_id = get_id(unidecode.unidecode(medium_name))
+        ################################        
+        if player_sofifa_id == None:
+        #################################
+        # If no ID has been found when searching long name in sofifa, use only first three names
+            if len(p.split()) > 4:
+                #print('long name split words:',p.split())
+                new_name=[]
+                for i in p.split():
+                    new_name.append(i)
+                new_name2 = new_name[0:3]
+                medium_name=''
+                for i in new_name2:
+                    medium_name = medium_name + ' ' + i
+                #medium_name = unidecode.unidecode(medium_name)
+                player_sofifa_id = get_id(medium_name)
+                if player_sofifa_id == None: player_sofifa_id = get_id(unidecode.unidecode(medium_name))
+        ################################        
+        if player_sofifa_id == None:
+        #################################
+        # If no ID has been found when searching long name in sofifa, try using just 2 first words
+            if len(p.split()) > 2:
+                #print('long name split words:',p.split())
+                new_name=[]
+                for i in p.split():
+                    new_name.append(i)
+                new_name2 = new_name[0:2]
+                medium_name=''
+                for i in new_name2:
+                    medium_name = medium_name + ' ' + i
+                #medium_name = unidecode.unidecode(medium_name)
+                player_sofifa_id = get_id(medium_name)
+                if player_sofifa_id == None: player_sofifa_id = get_id(unidecode.unidecode(medium_name))
+        ################################        
+        if player_sofifa_id == None:
+        #################################
+        # If no ID has been found when searching long name in sofifa, drop first word
+            if len(p.split()) > 2:
+                #print('long name split words:',p.split())
+                new_name=[]
+                for i in p.split():
+                    new_name.append(i)
+                new_name2 = new_name[1:]
+                medium_name=''
+                for i in new_name2:
+                    medium_name = medium_name + ' ' + i
+                #medium_name = unidecode.unidecode(medium_name)
+                player_sofifa_id = get_id(medium_name)
+                if player_sofifa_id == None: player_sofifa_id = get_id(unidecode.unidecode(medium_name))
+        ################################        
+        if player_sofifa_id == None:
+        #################################
+        # If no ID has been found when searching long name in sofifa, try using just 1 and 3 words
+            if len(p.split()) > 3:
+                #print('long name split words:',p.split())
+                new_name=[]
+                for i in p.split():
+                    new_name.append(i)
+                new_name2 = new_name[0:1] + new_name[2:3]
+                #print('provisional name:',new_name2)
+                medium_name=''
+                for i in new_name2:
+                    medium_name = medium_name + ' ' + i
+                #medium_name = unidecode.unidecode(medium_name)
+                player_sofifa_id = get_id(medium_name)
+                if player_sofifa_id == None: player_sofifa_id = get_id(unidecode.unidecode(medium_name))
+        ################################        
+        if player_sofifa_id == None:
+        #################################
+        # If no ID has been found when searching long name in sofifa, drop first and last name
+            if len(p.split()) > 3:
+                #print('long name split words:',p.split())
+                new_name=[]
+                for i in p.split():
+                    new_name.append(i)
+                new_name2 = new_name[1:-1]
+                medium_name=''
+                for i in new_name2:
+                    medium_name = medium_name + ' ' + i
+                #medium_name = unidecode.unidecode(medium_name)
+                player_sofifa_id = get_id(medium_name)
+                if player_sofifa_id == None: player_sofifa_id = get_id(unidecode.unidecode(medium_name))
+        ################################        
+        if player_sofifa_id == None:
+        #################################
+        # If no ID has been found when searching long name in sofifa, try with short name
+            player_sofifa_id = get_id(player_name[counter_player])
+        if player_sofifa_id == None: player_sofifa_id = get_id(unidecode.unidecode(medium_name))
+        if player_sofifa_id == None:
+            print('####################################################################')
+            print('ERROR: No ID found when looking in sofifa for:', p)
+            print('ERROR: No ID found when looking in sofifa for:', player_name[counter_player])
+            print('####################################################################')
+            sys.exit()
         if len(player_sofifa_id) == 1:
             print('I found only one sofifa entry:',p,player_sofifa_id)
             pass
         elif len(player_sofifa_id) > 1:
+            pass
+        #<a class="tooltip" data-tooltip="Aitor Fernández" href="/player/193314/aitor-fernandez/200001/"><div class=
+
             #####################################################
-            player_sofifa_id2 = []
-            #<a href="/players?pn=
-            #country = []
-            print('IDs:',player_sofifa_id)
-            print('Countries sofifa:', country_player)
-            #print(country_bdfutbol, type(country_bdfutbol))
-            for c in range(len(country_player[0])):
-                print(country_player[0][c], type(country_player[0][c]))
-                if country_player[0][c] in country_bdfutbol: 
-                    #print('I found correct one:', country_player[0][c])
-                    #print('Correct ID:',player_sofifa_id[c])
-                    player_sofifa_id2.append(player_sofifa_id[c])
-            print('I finally found sofifa entry(ies):',p,player_sofifa_id2)
-            if len(player_sofifa_id2) == 1:  
-                print('I finally found only one sofifa entry:',p,player_sofifa_id2)
-                #player_sofifa_id = []
-                player_sofifa_id = player_sofifa_id2
+            #####################################################
+            #player_sofifa_id2 = []
+            #print('IDs:',player_sofifa_id)
+            #print('Countries sofifa:', country_player)
+            #for c in range(len(country_player[0])):
+                #print(country_player[0][c], type(country_player[0][c]))
+                #if country_player[0][c] in country_bdfutbol: 
+                    #player_sofifa_id2.append(player_sofifa_id[c])
+            #print('I finally found sofifa entry(ies):',p,player_sofifa_id2)
+            #if len(player_sofifa_id2) == 1:  
+                #print('I finally found only one sofifa entry:',p,player_sofifa_id2)
+                #player_sofifa_id = player_sofifa_id2
+            #####################################################
             #####################################################
         if len(player_sofifa_id) > 1:
             print('####################################################################')
