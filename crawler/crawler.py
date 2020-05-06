@@ -3,13 +3,14 @@
 import re
 import sys
 import requests
+import unidecode
 import pandas as pd
 from bs4 import BeautifulSoup
 
 data = []
 base_url = 'https://www.bdfutbol.com/en/p/p.php?id='
 # Loop over all indeces
-for id_index in range(29721,29910):
+for id_index in range(29624,29720):
     # Assign corresponding season
     if id_index >= 25600 and id_index <= 25979:
         Season = 2009
@@ -148,7 +149,7 @@ for id_index in range(29721,29910):
     counter_player=0
     for p in player_name_complete:
         player_sofifa_id = None
-        url = base_url_sofifa_search + str(p)
+        url = base_url_sofifa_search + str(p) + "&r=" + str(fifa_year) + "0001&set=true"
         #print('TEST search in sofifa url:',url)
         res = requests.get(url)
         html_page = res.content
@@ -173,7 +174,8 @@ for id_index in range(29721,29910):
                 medium_name=''
                 for i in new_name:
                     medium_name = medium_name + ' ' + i
-                #print('try looking for', medium_name)
+                medium_name = unidecode.unidecode(medium_name)
+                print('try looking for', medium_name)
                 url = base_url_sofifa_search + str(medium_name)
                 #print('TEST search in sofifa url:',url)
                 res = requests.get(url)
@@ -200,7 +202,8 @@ for id_index in range(29721,29910):
                     medium_name=''
                     for i in new_name2:
                         medium_name = medium_name + ' ' + i
-                    #print('try looking for', medium_name)
+                    medium_name = unidecode.unidecode(medium_name)
+                    print('try looking for', medium_name)
                     url = base_url_sofifa_search + str(medium_name)
                     #print('TEST search in sofifa url:',url)
                     res = requests.get(url)
@@ -215,10 +218,10 @@ for id_index in range(29721,29910):
                             player_sofifa_id = player_id
                             #print('I got an ID this time:', player_sofifa_id)
                 if player_sofifa_id == None:
-                ################################        
+                    ################################        
                     #################################
                     # If no ID has been found when searching long name in sofifa, try with short name
-                    #print('try looking for', player_name[counter_player])
+                    print('try looking for', player_name[counter_player])
                     url = base_url_sofifa_search + str(player_name[counter_player])
                     #print('TEST search in sofifa url:',url)
                     res = requests.get(url)
