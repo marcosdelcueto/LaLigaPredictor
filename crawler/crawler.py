@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 from difflib import SequenceMatcher
 ##### START CUSTOMIZABLE PARAMETERS #####
 start_index = 29720
-end_index   = 29721
+end_index   = 29910
 csv_file_name = 'test_dataframe.csv'
 base_url = 'https://www.bdfutbol.com/en/p/p.php?id='
 base_url_player_bdfutbol = "https://www.bdfutbol.com/en/j/j"
@@ -37,7 +37,7 @@ def get_id(medium_name):
                 if id_by_exact_name[0] in player_sofifa_id:
                     player_sofifa_id = []
                     player_sofifa_id.append(id_by_exact_name[0])
-                    print('# warning # More than 1 ID found. Was able to solve it:',medium_name,id_by_exact_name[0],'--',TeamHome,'-',TeamAway,'--',url)
+                    #print('# warning # More than 1 ID found. Was able to solve it:',medium_name,id_by_exact_name[0],'--',TeamHome,'-',TeamAway,'--',url)
             return player_sofifa_id,url
     return None,None
 #### End function to get id from sofifa ####
@@ -134,7 +134,7 @@ for id_index in range(start_index,end_index):
             counter = counter + 1
     # Create time label
     fifa_year = int(str(Season)[-2:]) + 1
-    time_stamp = int(Round)+2
+    time_stamp = int(Round)+9
     if time_stamp < 10:
         time_stamp = '000' + str(time_stamp)
     else:
@@ -181,7 +181,11 @@ for id_index in range(start_index,end_index):
     # For each player, look in sofifa and get player info (try to get id both for regular name, and unicode-friendly one)
     counter_player=0
     for p in player_name_complete:
-        if p == 'Jacobus Antonius Peter Johannes Cillessen': p='Jasper Cillessen' # special case
+        # Special cases
+        if p == 'Jacobus Antonius Peter Johannes Cillessen': p='Jasper Cillessen'
+        if p == 'Takashi Inui': player_sofifa_id=205114
+        if p == 'Lee Kang In': player_sofifa_id=243780
+        if p == 'Takefusa Kubo': player_sofifa_id=237681
         # Calculate id using long name
         medium_name = p
         player_sofifa_id, final_url = get_id(medium_name)
@@ -196,6 +200,9 @@ for id_index in range(start_index,end_index):
             player_sofifa_id, final_url = get_id(medium_name)
         elif player_sofifa_id == None and unidecode.unidecode(p)=='Idrissu Baba Mohammed':
             medium_name = 'Iddrisu Baba'
+            player_sofifa_id, final_url = get_id(medium_name)
+        elif player_sofifa_id == None and unidecode.unidecode(p)=='Djene Dakonam Ortega':
+            medium_name = 'Dakonam Djene'
             player_sofifa_id, final_url = get_id(medium_name)
         ##################################
         # If no ID has been found when searching long name in sofifa, try removing last word of long name
