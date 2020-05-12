@@ -7,20 +7,53 @@ import unidecode
 import pandas as pd
 from bs4 import BeautifulSoup
 from difflib import SequenceMatcher
+
+
+#########################################
 ##### START CUSTOMIZABLE PARAMETERS #####
-start_index = 29720
-end_index   = 29910
+start_index = 29340
+end_index   = 29720
 csv_file_name = 'test_dataframe.csv'
 base_url = 'https://www.bdfutbol.com/en/p/p.php?id='
 base_url_player_bdfutbol = "https://www.bdfutbol.com/en/j/j"
 base_url_sofifa_search = 'https://sofifa.com/players?keyword='
 base_url_sofifa_player = 'https://sofifa.com/player/'
 ###### END CUSTOMIZABLE PARAMETERS ######
+#########################################
 
-### Start function to get id from sofifa ###
-def get_id(medium_name):
+
+###########################
+### START main function ###
+def main():
+    # Initialize list with final results
+    data = []
+    # Loop over all indeces
+    for id_index in range(start_index,end_index):
+        # Print new id_index
+        print('#######################')
+        print('New match. Index:', id_index)
+        print('#######################')
+        # Calculate Season
+        Season = get_Season(id_index)
+        # Get general info from bdfutbol
+        counter=0
+        Round, Date, TeamHome, Result, TeamAway, Stadium, Referee, player_name, soup, counter = get_general_info_bdfutbol(id_index,counter) 
+        # Get complete player name from bdfutbol
+        player_name_complete = get_bdfutbol_complete_name(player_name,soup)
+        # Get players info from sofifa
+        player_rating, player_potential, counter = get_player_sofifa_info(counter,Season,Round,player_name_complete,player_name)
+        # Create dataframe with data
+        df = create_dataframe(player_name,player_rating,player_potential,data,Season,Round,Date,TeamHome,Result,TeamAway,Stadium,Referee)
+        # Print dataframe into csv file
+        df.to_csv (csv_file_name, index = False, header=True)
+#### END main function ####
+###########################
+
+############################################
+### START function to get id from sofifa ###
+def get_id(medium_name,time_label):
     medium_name= medium_name.strip()
-    url = base_url_sofifa_search + str(medium_name) + "&r=" + str(fifa_year) + str(time_stamp) + "&set=true"
+    url = base_url_sofifa_search + str(medium_name) + "&r=" + str(time_label) + "&set=true"
     #print('TEST search in sofifa url:',url)
     res = requests.get(url)
     html_page = res.content
@@ -40,12 +73,154 @@ def get_id(medium_name):
                     #print('# warning # More than 1 ID found. Was able to solve it:',medium_name,id_by_exact_name[0],'--',TeamHome,'-',TeamAway,'--',url)
             return player_sofifa_id,url
     return None,None
-#### End function to get id from sofifa ####
+#### END function to get id from sofifa ####
+############################################
 
-# Initialize list with final results
-data = []
-# Loop over all indeces
-for id_index in range(start_index,end_index):
+#############################
+### START sofifa_function ###
+def sofifa_function(p,time_label,counter_player,player_name):
+    # Special cases
+    if p == 'Jacobus Antonius Peter Johannes Cillessen': p='Jasper Cillessen'
+    if p == 'Takashi Inui': player_sofifa_id=205114
+    if p == 'Lee Kang In': player_sofifa_id=243780
+    if p == 'Takefusa Kubo': player_sofifa_id=237681
+    if unidecode.unidecode(p) == 'Francisco de Borja Fernández Fernández': player_sofifa_id=110787
+    # Calculate id using long name
+    medium_name = p
+    player_sofifa_id, final_url = get_id(medium_name,time_label)
+    if player_sofifa_id == None: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name),time_label)
+    ##################################
+    # Manually fix discrepancies on sofifa and bdfutbol
+    if player_sofifa_id == None and unidecode.unidecode(p)=='Miguel Alfonso Herrero Javaloyas':
+        medium_name = 'Miguel Angel Herrero Javaloyas'
+        player_sofifa_id, final_url = get_id(medium_name,time_label)
+    elif player_sofifa_id == None and unidecode.unidecode(p)=='Luis Alberto Suarez Diaz':
+        medium_name = 'Luis Suarez'
+        player_sofifa_id, final_url = get_id(medium_name,time_label)
+    elif player_sofifa_id == None and unidecode.unidecode(p)=='Idrissu Baba Mohammed':
+        medium_name = 'Iddrisu Baba'
+        player_sofifa_id, final_url = get_id(medium_name,time_label)
+    elif player_sofifa_id == None and unidecode.unidecode(p)=='Djene Dakonam Ortega':
+        medium_name = 'Dakonam Djene'
+        player_sofifa_id, final_url = get_id(medium_name,time_label)
+    ##################################
+    # If no ID has been found when searching long name in sofifa, try removing last word of long name
+    if player_sofifa_id == None or len(player_sofifa_id) > 1:
+        if len(p.split()) > 1:
+            new_name=[]
+            for i in p.split():
+                new_name.append(i)
+            new_name = new_name[0:-1]
+            medium_name=''
+            for i in new_name:
+                medium_name = medium_name + ' ' + i
+            player_sofifa_id, final_url = get_id(medium_name,time_label)
+            if player_sofifa_id == None or len(player_sofifa_id) > 1: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name),time_label)
+    #################################
+    # If no ID has been found when searching long name in sofifa, try removing 2nd word from long name
+    if player_sofifa_id == None or len(player_sofifa_id) > 1:
+        if len(p.split()) > 2:
+            new_name=[]
+            for i in p.split():
+                new_name.append(i)
+            new_name2 = new_name[0:1] + new_name[2:]
+            medium_name=''
+            for i in new_name2:
+                medium_name = medium_name + ' ' + i
+            player_sofifa_id, final_url = get_id(medium_name,time_label)
+            if player_sofifa_id == None or len(player_sofifa_id) > 1: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name),time_label)
+    ################################        
+    # If no ID has been found when searching long name in sofifa, use only first three names
+    if player_sofifa_id == None or len(player_sofifa_id) > 1:
+        if len(p.split()) > 4:
+            new_name=[]
+            for i in p.split():
+                new_name.append(i)
+            new_name2 = new_name[0:3]
+            medium_name=''
+            for i in new_name2:
+                medium_name = medium_name + ' ' + i
+            player_sofifa_id, final_url = get_id(medium_name,time_label)
+            if player_sofifa_id == None or len(player_sofifa_id) > 1: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name),time_label)
+    ################################        
+    # If no ID has been found when searching long name in sofifa, try using just 2 first words
+    if player_sofifa_id == None or len(player_sofifa_id) > 1:
+        if len(p.split()) > 2:
+            new_name=[]
+            for i in p.split():
+                new_name.append(i)
+            new_name2 = new_name[0:2]
+            medium_name=''
+            for i in new_name2:
+                medium_name = medium_name + ' ' + i
+            player_sofifa_id, final_url = get_id(medium_name,time_label)
+            if player_sofifa_id == None or len(player_sofifa_id) > 1: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name),time_label)
+    ################################        
+    # If no ID has been found when searching long name in sofifa, try using just 1 and 3 words
+    if player_sofifa_id == None or len(player_sofifa_id) > 1:
+        if len(p.split()) > 3 and p.split()[2] not in ['do','de','di','da','del']:
+            new_name=[]
+            for i in p.split():
+                new_name.append(i)
+            new_name2 = new_name[0:1] + new_name[2:3]
+            medium_name=''
+            for i in new_name2:
+                medium_name = medium_name + ' ' + i
+            player_sofifa_id, final_url = get_id(medium_name,time_label)
+            if player_sofifa_id == None or len(player_sofifa_id) > 1: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name),time_label)
+    ################################        
+    # If no ID has been found when searching long name in sofifa, drop first word
+    if player_sofifa_id == None or len(player_sofifa_id) > 1:
+        if len(p.split()) > 2:
+            new_name=[]
+            for i in p.split():
+                new_name.append(i)
+            new_name2 = new_name[1:]
+            medium_name=''
+            for i in new_name2:
+                medium_name = medium_name + ' ' + i
+            player_sofifa_id, final_url = get_id(medium_name,time_label)
+            if player_sofifa_id == None or len(player_sofifa_id) > 1: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name),time_label)
+    ################################        
+    # If no ID has been found when searching long name in sofifa, drop first and last name
+    if player_sofifa_id == None or len(player_sofifa_id) > 1:
+        if len(p.split()) > 3:
+            new_name=[]
+            for i in p.split():
+                new_name.append(i)
+            new_name2 = new_name[1:-1]
+            medium_name=''
+            for i in new_name2:
+                medium_name = medium_name + ' ' + i
+            player_sofifa_id, final_url = get_id(medium_name,time_label)
+            if player_sofifa_id == None or len(player_sofifa_id) > 1: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name),time_label)
+    ################################        
+    # If no ID has been found when searching long name in sofifa, try with short name
+    if player_sofifa_id == None or len(player_sofifa_id) > 1:
+        player_sofifa_id, final_url = get_id(player_name[counter_player],time_label)
+        player_sofifa_id, final_url = get_id(unidecode.unidecode(player_name[counter_player]),time_label)
+    ################################        
+    return player_sofifa_id, final_url, p
+#### END sofifa_function ####
+#############################
+
+###############################
+### START Create time label ###
+def create_time_label(Season,Round,Increment):
+    fifa_year = int(str(Season)[-2:]) + 1
+    time_stamp = int(Round)+int(Increment)
+    if time_stamp < 10:
+        time_stamp = '000' + str(time_stamp)
+    else:
+        time_stamp = '00' + str(time_stamp)
+    time_label = str(fifa_year) + str(time_stamp)
+    return time_label
+#### END Create time label ####
+###############################
+
+########################
+### START get_Season ###
+def get_Season(id_index):
     # Assign corresponding season
     if id_index >= 25600 and id_index <= 25979:
         Season = 2009
@@ -72,10 +247,13 @@ for id_index in range(start_index,end_index):
     else:
         print('ERROR: index out of range:', id_index)
         sys.exit()
-    # Print new id_index
-    print('#######################')
-    print('New match. Index:', id_index)
-    print('#######################')
+    return Season
+#### END get_Season ####
+########################
+
+#######################################
+### START get_general_info_bdfutbol ###
+def get_general_info_bdfutbol(id_index,counter):
     # Parse bdfutbol html with BeautifulSoup
     url = base_url + str(id_index)
     res = requests.get(url)
@@ -83,7 +261,6 @@ for id_index in range(start_index,end_index):
     soup = BeautifulSoup(html_page, 'html.parser')
     text = soup.find_all(text=True)
     # Loop over each line to extract data
-    counter=0
     counter_holder = -1000
     player_name = []
     for line in text:
@@ -132,16 +309,13 @@ for id_index in range(start_index,end_index):
                 if type(test) == str and not is_this_int_with_extra_time:
                     player_name.append(test)
             counter = counter + 1
-    # Create time label
-    fifa_year = int(str(Season)[-2:]) + 1
-    time_stamp = int(Round)+9
-    if time_stamp < 10:
-        time_stamp = '000' + str(time_stamp)
-    else:
-        time_stamp = '00' + str(time_stamp)
-    time_label = str(fifa_year) + str(time_stamp)
+    return Round, Date, TeamHome, Result, TeamAway, Stadium, Referee, player_name, soup, counter
+#### END get_general_info_bdfutbol ####
+###############################
 
-    ### START bdfutbol ###
+########################################
+### START get_bdfutbol_complete_name ###
+def get_bdfutbol_complete_name(player_name,soup):
     # Get bdfutbol ID from each player
     player_id_bdfutbol = []
     player_name_complete = []
@@ -171,144 +345,35 @@ for id_index in range(start_index,end_index):
         # if no 'short name, long name' format is provided, use short name as long one
         if p == len(player_name_complete):
             player_name_complete.append(player_name[p])
-
     #print(player_name_complete)
-    #### END bdfutbol ####
+    return player_name_complete
+#### END get_bdfutbol_complete_name ####
+########################################
 
-    #### START sofifa ####
+######################################
+#### START get_player_sofifa_info ####
+def get_player_sofifa_info(counter,Season,Round,player_name_complete,player_name):
     player_rating = []
     player_potential = []
     # For each player, look in sofifa and get player info (try to get id both for regular name, and unicode-friendly one)
     counter_player=0
     for p in player_name_complete:
-        # Special cases
-        if p == 'Jacobus Antonius Peter Johannes Cillessen': p='Jasper Cillessen'
-        if p == 'Takashi Inui': player_sofifa_id=205114
-        if p == 'Lee Kang In': player_sofifa_id=243780
-        if p == 'Takefusa Kubo': player_sofifa_id=237681
-        # Calculate id using long name
-        medium_name = p
-        player_sofifa_id, final_url = get_id(medium_name)
-        if player_sofifa_id == None: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name))
-        ##################################
-        # Manually fix discrepancies on sofifa and bdfutbol
-        if player_sofifa_id == None and unidecode.unidecode(p)=='Miguel Alfonso Herrero Javaloyas':
-            medium_name = 'Miguel Angel Herrero Javaloyas'
-            player_sofifa_id, final_url = get_id(medium_name)
-        elif player_sofifa_id == None and unidecode.unidecode(p)=='Luis Alberto Suarez Diaz':
-            medium_name = 'Luis Suarez'
-            player_sofifa_id, final_url = get_id(medium_name)
-        elif player_sofifa_id == None and unidecode.unidecode(p)=='Idrissu Baba Mohammed':
-            medium_name = 'Iddrisu Baba'
-            player_sofifa_id, final_url = get_id(medium_name)
-        elif player_sofifa_id == None and unidecode.unidecode(p)=='Djene Dakonam Ortega':
-            medium_name = 'Dakonam Djene'
-            player_sofifa_id, final_url = get_id(medium_name)
-        ##################################
-        # If no ID has been found when searching long name in sofifa, try removing last word of long name
-        if player_sofifa_id == None or len(player_sofifa_id) > 1:
-            if len(p.split()) > 1:
-                new_name=[]
-                for i in p.split():
-                    new_name.append(i)
-                new_name = new_name[0:-1]
-                medium_name=''
-                for i in new_name:
-                    medium_name = medium_name + ' ' + i
-                player_sofifa_id, final_url = get_id(medium_name)
-                if player_sofifa_id == None or len(player_sofifa_id) > 1: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name))
-        #################################
-        # If no ID has been found when searching long name in sofifa, try removing 2nd word from long name
-        if player_sofifa_id == None or len(player_sofifa_id) > 1:
-            if len(p.split()) > 2:
-                new_name=[]
-                for i in p.split():
-                    new_name.append(i)
-                new_name2 = new_name[0:1] + new_name[2:]
-                medium_name=''
-                for i in new_name2:
-                    medium_name = medium_name + ' ' + i
-                player_sofifa_id, final_url = get_id(medium_name)
-                if player_sofifa_id == None or len(player_sofifa_id) > 1: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name))
-        ################################        
-        # If no ID has been found when searching long name in sofifa, use only first three names
-        if player_sofifa_id == None or len(player_sofifa_id) > 1:
-            if len(p.split()) > 4:
-                new_name=[]
-                for i in p.split():
-                    new_name.append(i)
-                new_name2 = new_name[0:3]
-                medium_name=''
-                for i in new_name2:
-                    medium_name = medium_name + ' ' + i
-                player_sofifa_id, final_url = get_id(medium_name)
-                if player_sofifa_id == None or len(player_sofifa_id) > 1: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name))
-        ################################        
-        # If no ID has been found when searching long name in sofifa, try using just 2 first words
-        if player_sofifa_id == None or len(player_sofifa_id) > 1:
-            if len(p.split()) > 2:
-                new_name=[]
-                for i in p.split():
-                    new_name.append(i)
-                new_name2 = new_name[0:2]
-                medium_name=''
-                for i in new_name2:
-                    medium_name = medium_name + ' ' + i
-                player_sofifa_id, final_url = get_id(medium_name)
-                if player_sofifa_id == None or len(player_sofifa_id) > 1: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name))
-        ################################        
-        # If no ID has been found when searching long name in sofifa, try using just 1 and 3 words
-        if player_sofifa_id == None or len(player_sofifa_id) > 1:
-            if len(p.split()) > 3 and p.split()[2] not in ['do','de','di','da','del']:
-                new_name=[]
-                for i in p.split():
-                    new_name.append(i)
-                new_name2 = new_name[0:1] + new_name[2:3]
-                medium_name=''
-                for i in new_name2:
-                    medium_name = medium_name + ' ' + i
-                player_sofifa_id, final_url = get_id(medium_name)
-                if player_sofifa_id == None or len(player_sofifa_id) > 1: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name))
-        ################################        
-        # If no ID has been found when searching long name in sofifa, drop first word
-        if player_sofifa_id == None or len(player_sofifa_id) > 1:
-            if len(p.split()) > 2:
-                new_name=[]
-                for i in p.split():
-                    new_name.append(i)
-                new_name2 = new_name[1:]
-                medium_name=''
-                for i in new_name2:
-                    medium_name = medium_name + ' ' + i
-                player_sofifa_id, final_url = get_id(medium_name)
-                if player_sofifa_id == None or len(player_sofifa_id) > 1: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name))
-        ################################        
-        # If no ID has been found when searching long name in sofifa, drop first and last name
-        if player_sofifa_id == None or len(player_sofifa_id) > 1:
-            if len(p.split()) > 3:
-                new_name=[]
-                for i in p.split():
-                    new_name.append(i)
-                new_name2 = new_name[1:-1]
-                medium_name=''
-                for i in new_name2:
-                    medium_name = medium_name + ' ' + i
-                player_sofifa_id, final_url = get_id(medium_name)
-                if player_sofifa_id == None or len(player_sofifa_id) > 1: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name))
-        ################################        
-        # If no ID has been found when searching long name in sofifa, try with short name
-        if player_sofifa_id == None or len(player_sofifa_id) > 1:
-            player_sofifa_id, final_url = get_id(player_name[counter_player])
-            player_sofifa_id, final_url = get_id(unidecode.unidecode(player_name[counter_player]))
-        ################################        
+        player_sofifa_id = None
+        time_label = create_time_label(Season,Round,9)
+        player_sofifa_id, final_url, p = sofifa_function(p,time_label,counter_player,player_name)
         # Finally, print error message if no ID could be found
+        if player_sofifa_id == None:
+            time_label = create_time_label(Season,Round,0)
+            player_sofifa_id, final_url, p = sofifa_function(p,time_label,counter_player,player_name)
+        if player_sofifa_id == None:
+            time_label = create_time_label(Season,Round,15)
+            player_sofifa_id, final_url, p = sofifa_function(p,time_label,counter_player,player_name)
         if player_sofifa_id == None:
             print('####################################################################')
             print('ERROR: No ID found when looking in sofifa for:', p)
             print('ERROR: No ID found when looking in sofifa for:', player_name[counter_player])
             print('####################################################################')
             sys.exit()
-        ################################        
         # Finally, print error message if more than one ID was found
         if len(player_sofifa_id) > 1:
             print('####################################################################')
@@ -357,9 +422,13 @@ for id_index in range(start_index,end_index):
                     if counter > counter_placeholder+5 and counter_placeholder > 0: break
         player_rating.append(int(rating))
         player_potential.append(int(potential))
-    ##### END sofifa #####
+    return player_rating, player_potential, counter
+##### END get_player_sofifa_info #####
+######################################
 
-    ### START dataframe ###
+##############################
+### START create_dataframe ###
+def create_dataframe(player_name,player_rating,player_potential,data,Season,Round,Date,TeamHome,Result,TeamAway,Stadium,Referee):
     # Initialize lists
     PlayersHome = []
     PlayersAway = []
@@ -388,5 +457,10 @@ for id_index in range(start_index,end_index):
     df = pd.DataFrame(data,columns=['Season','Round','Date','TeamHome','Result','TeamAway','Stadium','Referee','PlayersHome','RatingHome','PotentialHome','PlayersAway','RatingAway','PotentialAway'])
     # print data frame into csv file
     #df.to_csv (r'test_dataframe.csv', index = False, header=True)
-    df.to_csv (csv_file_name, index = False, header=True)
-    #### END dataframe ####
+    #df.to_csv (csv_file_name, index = False, header=True)
+    return df
+#### END create_dataframe ####
+##############################
+
+# Run main function
+main()
