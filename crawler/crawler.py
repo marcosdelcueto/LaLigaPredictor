@@ -11,13 +11,15 @@ from difflib import SequenceMatcher
 
 #########################################
 ##### START CUSTOMIZABLE PARAMETERS #####
-start_index = 29340
-end_index   = 29720
+start_index = 29720
+end_index   = 29910
 csv_file_name = 'test_dataframe.csv'
 base_url = 'https://www.bdfutbol.com/en/p/p.php?id='
 base_url_player_bdfutbol = "https://www.bdfutbol.com/en/j/j"
 base_url_sofifa_search = 'https://sofifa.com/players?keyword='
 base_url_sofifa_player = 'https://sofifa.com/player/'
+special_cases = [['Takashi Inui',[205114]],['Lee Kang In',[243780]],['Takefusa Kubo',[237681]],['Francisco de Borja Fernandez Fernandez',[110787]],['Junior Osmar Ignacio Alonso Mujica',[220337]]]
+time_labels_up_to = 21
 ###### END CUSTOMIZABLE PARAMETERS ######
 #########################################
 
@@ -41,7 +43,7 @@ def main():
         # Get complete player name from bdfutbol
         player_name_complete = get_bdfutbol_complete_name(player_name,soup)
         # Get players info from sofifa
-        player_rating, player_potential, counter = get_player_sofifa_info(counter,Season,Round,player_name_complete,player_name)
+        player_rating, player_potential, counter = get_player_sofifa_info(counter,Season,Round,player_name_complete,player_name,special_cases,time_labels_up_to)
         # Create dataframe with data
         df = create_dataframe(player_name,player_rating,player_potential,data,Season,Round,Date,TeamHome,Result,TeamAway,Stadium,Referee)
         # Print dataframe into csv file
@@ -78,16 +80,17 @@ def get_id(medium_name,time_label):
 
 #############################
 ### START sofifa_function ###
-def sofifa_function(p,time_label,counter_player,player_name):
+def sofifa_function(p,time_label,counter_player,player_name,special_cases):
+    player_sofifa_id = None
+    final_url = None
     # Special cases
-    if p == 'Jacobus Antonius Peter Johannes Cillessen': p='Jasper Cillessen'
-    if p == 'Takashi Inui': player_sofifa_id=205114
-    if p == 'Lee Kang In': player_sofifa_id=243780
-    if p == 'Takefusa Kubo': player_sofifa_id=237681
-    if unidecode.unidecode(p) == 'Francisco de Borja Fernández Fernández': player_sofifa_id=110787
+    if unidecode.unidecode(p) == 'Jacobus Antonius Peter Johannes Cillessen': p='Jasper Cillessen'
+    for i in range(len(special_cases)):
+        if unidecode.unidecode(p) == special_cases[i][0]: player_sofifa_id = special_cases[i][1]
     # Calculate id using long name
-    medium_name = p
-    player_sofifa_id, final_url = get_id(medium_name,time_label)
+    if player_sofifa_id == None:
+        medium_name = p
+        player_sofifa_id, final_url = get_id(medium_name,time_label)
     if player_sofifa_id == None: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name),time_label)
     ##################################
     # Manually fix discrepancies on sofifa and bdfutbol
@@ -156,9 +159,9 @@ def sofifa_function(p,time_label,counter_player,player_name):
             player_sofifa_id, final_url = get_id(medium_name,time_label)
             if player_sofifa_id == None or len(player_sofifa_id) > 1: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name),time_label)
     ################################        
-    # If no ID has been found when searching long name in sofifa, try using just 1 and 3 words
+    # If no ID has been found when searching long name in sofifa, try using just 1 or 3 words
     if player_sofifa_id == None or len(player_sofifa_id) > 1:
-        if len(p.split()) > 3 and p.split()[2] not in ['do','de','di','da','del']:
+        if len(p.split()) > 3 or p.split()[2] not in ['do','de','di','da','del']:
             new_name=[]
             for i in p.split():
                 new_name.append(i)
@@ -182,7 +185,7 @@ def sofifa_function(p,time_label,counter_player,player_name):
             player_sofifa_id, final_url = get_id(medium_name,time_label)
             if player_sofifa_id == None or len(player_sofifa_id) > 1: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name),time_label)
     ################################        
-    # If no ID has been found when searching long name in sofifa, drop first and last name
+    # If no ID has been found when searching long name in sofifa, drop first or last name
     if player_sofifa_id == None or len(player_sofifa_id) > 1:
         if len(p.split()) > 3:
             new_name=[]
@@ -352,29 +355,26 @@ def get_bdfutbol_complete_name(player_name,soup):
 
 ######################################
 #### START get_player_sofifa_info ####
-def get_player_sofifa_info(counter,Season,Round,player_name_complete,player_name):
+def get_player_sofifa_info(counter,Season,Round,player_name_complete,player_name,special_cases,time_labels_up_to):
     player_rating = []
     player_potential = []
     # For each player, look in sofifa and get player info (try to get id both for regular name, and unicode-friendly one)
     counter_player=0
     for p in player_name_complete:
         player_sofifa_id = None
-        time_label = create_time_label(Season,Round,9)
-        player_sofifa_id, final_url, p = sofifa_function(p,time_label,counter_player,player_name)
-        # Finally, print error message if no ID could be found
-        if player_sofifa_id == None:
-            time_label = create_time_label(Season,Round,0)
-            player_sofifa_id, final_url, p = sofifa_function(p,time_label,counter_player,player_name)
-        if player_sofifa_id == None:
-            time_label = create_time_label(Season,Round,15)
-            player_sofifa_id, final_url, p = sofifa_function(p,time_label,counter_player,player_name)
+        # Look in sofifa for different dates
+        for t in range(time_labels_up_to+1):
+            if player_sofifa_id == None:
+                time_label = create_time_label(Season,Round,t)
+                player_sofifa_id, final_url, p = sofifa_function(p,time_label,counter_player,player_name,special_cases)
+        # Print error message if no ID was found
         if player_sofifa_id == None:
             print('####################################################################')
             print('ERROR: No ID found when looking in sofifa for:', p)
             print('ERROR: No ID found when looking in sofifa for:', player_name[counter_player])
             print('####################################################################')
             sys.exit()
-        # Finally, print error message if more than one ID was found
+        # Print error message if more than one ID was found
         if len(player_sofifa_id) > 1:
             print('####################################################################')
             print('ERROR: More than 1 possible ID when looking in sofifa for:', p)
@@ -400,7 +400,10 @@ def get_player_sofifa_info(counter,Season,Round,player_name_complete,player_name
                     name_sofifa = unidecode.unidecode(str(name_sofifa))
                     name_sofifa = re.findall(r"[a-zA-Z\- ]{2,}",str(name_sofifa))
                     if name_sofifa: 
-                        if SequenceMatcher(a=unidecode.unidecode(p),b=name_sofifa[0].strip()).ratio() < 0.59:
+                        #if SequenceMatcher(a=unidecode.unidecode(p),b=name_sofifa[0].strip()).ratio() < 0.59:
+                        #print('TEST special names:', [i[0] for i in special_cases])
+                        if SequenceMatcher(a=unidecode.unidecode(p),b=name_sofifa[0].strip()).ratio() < 0.59 and unidecode.unidecode(p) not in [i[0] for i in special_cases]:
+
                             print('### WARNING ### Player:', p, '---', name_sofifa[0], player_sofifa_id, final_url, SequenceMatcher(a=unidecode.unidecode(p),b=name_sofifa[0].strip()).ratio())
                     player_lbs = re.findall(r"lbs$",str(line))
                     if player_lbs: counter_placeholder=counter
