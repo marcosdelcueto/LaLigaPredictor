@@ -161,7 +161,7 @@ def sofifa_function(p,time_label,counter_player,player_name,special_cases):
     ################################        
     # If no ID has been found when searching long name in sofifa, try using just 1 or 3 words
     if player_sofifa_id == None or len(player_sofifa_id) > 1:
-        if len(p.split()) > 3 or p.split()[2] not in ['do','de','di','da','del']:
+        if len(p.split()) > 3 and p.split()[2] not in ['do','de','di','da','del']:
             new_name=[]
             for i in p.split():
                 new_name.append(i)
@@ -363,7 +363,11 @@ def get_player_sofifa_info(counter,Season,Round,player_name_complete,player_name
     for p in player_name_complete:
         player_sofifa_id = None
         # Look in sofifa for different dates
-        for t in range(time_labels_up_to+1):
+        for t in range(int((time_labels_up_to-3)/2),time_labels_up_to+1):
+            if player_sofifa_id == None:
+                time_label = create_time_label(Season,Round,t)
+                player_sofifa_id, final_url, p = sofifa_function(p,time_label,counter_player,player_name,special_cases)
+        for t in range(int((time_labels_up_to-3)/2)):
             if player_sofifa_id == None:
                 time_label = create_time_label(Season,Round,t)
                 player_sofifa_id, final_url, p = sofifa_function(p,time_label,counter_player,player_name,special_cases)
