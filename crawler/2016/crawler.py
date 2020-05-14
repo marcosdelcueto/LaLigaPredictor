@@ -11,8 +11,8 @@ from difflib import SequenceMatcher
 
 #########################################
 ##### START CUSTOMIZABLE PARAMETERS #####
-start_index = 29857
-end_index   = 29910
+start_index = 28580
+end_index   = 28960
 csv_file_name = 'test_dataframe.csv'
 base_url = 'https://www.bdfutbol.com/en/p/p.php?id='
 base_url_player_bdfutbol = "https://www.bdfutbol.com/en/j/j"
