@@ -11,14 +11,14 @@ from difflib import SequenceMatcher
 
 #########################################
 ##### START CUSTOMIZABLE PARAMETERS #####
-start_index = 29720
+start_index = 29857
 end_index   = 29910
 csv_file_name = 'test_dataframe.csv'
 base_url = 'https://www.bdfutbol.com/en/p/p.php?id='
 base_url_player_bdfutbol = "https://www.bdfutbol.com/en/j/j"
 base_url_sofifa_search = 'https://sofifa.com/players?keyword='
 base_url_sofifa_player = 'https://sofifa.com/player/'
-special_cases = [['Takashi Inui',[205114]],['Lee Kang In',[243780]],['Takefusa Kubo',[237681]],['Francisco de Borja Fernandez Fernandez',[110787]],['Junior Osmar Ignacio Alonso Mujica',[220337]]]
+special_cases = [['Takashi Inui',[205114]],['Lee Kang In',[243780]],['Takefusa Kubo',[237681]],['Francisco de Borja Fernandez Fernandez',[110787]],['Junior Osmar Ignacio Alonso Mujica',[220337]],['Gustavo Adrian Ramos Vasquez',[176619]],['Esteban Felrx Granero Molina ',[178085]]]
 time_labels_up_to = 21
 ###### END CUSTOMIZABLE PARAMETERS ######
 #########################################
