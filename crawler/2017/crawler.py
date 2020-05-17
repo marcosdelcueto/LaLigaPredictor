@@ -11,14 +11,14 @@ from difflib import SequenceMatcher
 
 #########################################
 ##### START CUSTOMIZABLE PARAMETERS #####
-start_index = 28960
+start_index = 29132
 end_index   = 29340
 csv_file_name = 'test_dataframe.csv'
 base_url = 'https://www.bdfutbol.com/en/p/p.php?id='
 base_url_player_bdfutbol = "https://www.bdfutbol.com/en/j/j"
 base_url_sofifa_search = 'https://sofifa.com/players?keyword='
 base_url_sofifa_player = 'https://sofifa.com/player/'
-special_cases = [['Takashi Inui',[205114]],['Lee Kang In',[243780]],['Takefusa Kubo',[237681]],['Francisco de Borja Fernandez Fernandez',[110787]],['Junior Osmar Ignacio Alonso Mujica',[220337]],['Gustavo Adrian Ramos Vasquez',[176619]],['Esteban Felrx Granero Molina',[178085]],['Pablo Guido Larrea Gambara',[235971]],['Gaku Shibasaki',[232883]],['Enzo Alan Zidane Fernandez',[211234]],['Alex Pachon Parraga',[246760]],['Victor Campuzano Bonilla',[246949]],['Emerson Aparecido Leite de Souza',[247204]]]
+special_cases = [['Takashi Inui',[205114]],['Lee Kang In',[243780]],['Takefusa Kubo',[237681]],['Francisco de Borja Fernandez Fernandez',[110787]],['Junior Osmar Ignacio Alonso Mujica',[220337]],['Gustavo Adrian Ramos Vasquez',[176619]],['Esteban Felrx Granero Molina',[178085]],['Pablo Guido Larrea Gambara',[235971]],['Gaku Shibasaki',[232883]],['Enzo Alan Zidane Fernandez',[211234]],['Alex Pachon Parraga',[246760]],['Victor Campuzano Bonilla',[246949]],['Emerson Aparecido Leite de Souza',[247204]],['Papakouli Diop ',[178250]],['Jose Carlos Sanchez Gonzalez',[240919]],['Loic Alex Teliere Hubert Remy',[179527]],['Ivan Villar Martinez',[222572]],['Rachid Ait-Atmane',[225120]],['Papakouli Diop',[178250]],['Martin Aguirregabiria Padilla',[241827]],['Markel Areitio Cedrun',[235990]],['Mikel Carro Fandino',[247806]],['Antolin Alcaraz Viveros',[138949]],['Angel de la Calzada Ramos',[231750]],['Dario Poveda Romera',[236940]],['Steve Aldo One',[228975]],['Javier Lopez Abadias',[230875]],['Jaime Seoane Valenciano',[247793]],['Waldo Rubio Marin',[231414]],['Enrique Cebria Alcover',[212488]],['Ruben Sanchez Perez-Cejuela',[236995]],['Robert Mazan',[227936]],['Gustavo Enrique Giordano Amaro Assuncao da Silva',[248386]],['Diego Caballo Alonso',[244466]],['Diego Barrios Perez',[236384]],['Manuel Alejandro Garcia Sanchez',[172287]],['Aly Malle',[237294]],['Antonio Moya Vega',[241588]],['Eugeni Valderrama Domenech',[209695]],['Merveil Valthy Streeker Ndockyt',[242792]],['Zourdine Mouhemed Thior',[248398]]]
 time_labels_up_to = 21
 ###### END CUSTOMIZABLE PARAMETERS ######
 #########################################
@@ -94,29 +94,50 @@ def sofifa_function(p,time_label,counter_player,player_name,special_cases):
     if player_sofifa_id == None: player_sofifa_id, final_url = get_id(unidecode.unidecode(medium_name),time_label)
     ##################################
     # Manually fix discrepancies on sofifa and bdfutbol
-    if player_sofifa_id == None and unidecode.unidecode(p)=='Miguel Alfonso Herrero Javaloyas':
+    if player_sofifa_id == None and unidecode.unidecode(p)=='Miguel Alfonso Herrero Javaloyas': 
         medium_name = 'Miguel Angel Herrero Javaloyas'
         player_sofifa_id, final_url = get_id(medium_name,time_label)
-    elif player_sofifa_id == None and unidecode.unidecode(p)=='Luis Alberto Suarez Diaz':
+    elif player_sofifa_id == None and unidecode.unidecode(p)=='Luis Alberto Suarez Diaz': 
         medium_name = 'Luis Suarez'
         player_sofifa_id, final_url = get_id(medium_name,time_label)
-    elif player_sofifa_id == None and unidecode.unidecode(p)=='Idrissu Baba Mohammed':
+    elif player_sofifa_id == None and unidecode.unidecode(p)=='Idrissu Baba Mohammed': 
         medium_name = 'Iddrisu Baba'
         player_sofifa_id, final_url = get_id(medium_name,time_label)
-    elif player_sofifa_id == None and unidecode.unidecode(p)=='Djene Dakonam Ortega':
+    elif player_sofifa_id == None and unidecode.unidecode(p)=='Djene Dakonam Ortega': 
         medium_name = 'Dakonam Djene'
         player_sofifa_id, final_url = get_id(medium_name,time_label)
-    elif player_sofifa_id == None and unidecode.unidecode(p)=='Alhassane Bangoura':
+    elif player_sofifa_id == None and unidecode.unidecode(p)=='Alhassane Bangoura': 
         medium_name = 'Lassane Bangoura'
         player_sofifa_id, final_url = get_id(medium_name,time_label)
-    elif player_sofifa_id == None and unidecode.unidecode(p)=='Osvaldo Nicolas Fabian Gaitan':
+    elif player_sofifa_id == None and unidecode.unidecode(p)=='Osvaldo Nicolas Fabian Gaitan': 
         medium_name = 'Nicolas Gaitan'
         player_sofifa_id, final_url = get_id(medium_name,time_label)
-    elif player_sofifa_id == None and unidecode.unidecode(p)=='Carlos Gurpegui Nausia':
+    elif player_sofifa_id == None and unidecode.unidecode(p)=='Carlos Gurpegui Nausia': 
         medium_name = 'Carlos Gurpegi'
         player_sofifa_id, final_url = get_id(medium_name,time_label)
-    elif player_sofifa_id == None and unidecode.unidecode(p)=='Francisco Jesus Lopez de la Manzanara Delgado':
+    elif player_sofifa_id == None and unidecode.unidecode(p)=='Francisco Jesus Lopez de la Manzanara Delgado': 
         medium_name = 'Fran Manzanara'
+        player_sofifa_id, final_url = get_id(medium_name,time_label)
+    elif player_sofifa_id == None and unidecode.unidecode(p)=='Aderlan Leandro de Jesus Santos': 
+        medium_name = 'Aderllan Santos'
+        player_sofifa_id, final_url = get_id(medium_name,time_label)
+    elif player_sofifa_id == None and unidecode.unidecode(p)=='Angel Martin Correa Martinez': 
+        medium_name = 'Angel Correa'
+        player_sofifa_id, final_url = get_id(medium_name,time_label)
+    elif player_sofifa_id == None and unidecode.unidecode(p)=='Youssef El-Arabi': 
+        medium_name = 'Youssef El Arabi'
+        player_sofifa_id, final_url = get_id(medium_name,time_label)
+    elif player_sofifa_id == None and unidecode.unidecode(p)=='Sergio Mendiguchia Iglesias': 
+        medium_name = 'Sergio Mendi'
+        player_sofifa_id, final_url = get_id(medium_name,time_label)
+    elif player_sofifa_id == None and unidecode.unidecode(p)=='Alberto Martin-Romo Garcia-Adamez': 
+        medium_name = 'Alberto Martin'
+        player_sofifa_id, final_url = get_id(medium_name,time_label)
+    elif player_sofifa_id == None and unidecode.unidecode(p)=='Fabio Alexandre da Silva Coentrao': 
+        medium_name = 'Fabio Coentrao'
+        player_sofifa_id, final_url = get_id(medium_name,time_label)
+    elif player_sofifa_id == None and unidecode.unidecode(p)=='Diogo Jose Rosario Gomes Figueiras': 
+        medium_name = 'Diogo Figueiras'
         player_sofifa_id, final_url = get_id(medium_name,time_label)
     ##################################
     # If no ID has been found when searching long name in sofifa, try removing last word of long name

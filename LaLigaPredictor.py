@@ -43,6 +43,9 @@ def main():
     df_results = df_results.join(one_hot_TeamHome)
     df_results = df_results.join(one_hot_TeamAway)
     df_results = df_results.join(one_hot_Referee)
+    # Create list with teams that play in the matches whose outcome we will try to predict
+    list_TeamHome = df_results['TeamHome'].values.tolist()[-10:]
+    list_TeamAway = df_results['TeamAway'].values.tolist()[-10:]
     # Drop unnecessary columns
     df_results = df_results.drop('Result',axis = 1)
     df_results = df_results.drop('Spectators',axis = 1)
@@ -61,13 +64,13 @@ def main():
     X = df_results.drop('ResultHome',axis = 1)
     y = df_results[['ResultHome']]
     # Call MLP function
-    MLP(X,y)
+    MLP(X,y,list_TeamHome,list_TeamAway)
 ### End function main
 ########################
 
 ########################
 ### Start function MLP
-def MLP(X,y):
+def MLP(X,y,list_TeamHome,list_TeamAway):
     # Scale Season and MatchDay
     #scaler = StandardScaler().fit(X[['Season','MatchDay']])
     scaler = MinMaxScaler().fit(X[['Season','MatchDay','Time']])
@@ -78,15 +81,24 @@ def MLP(X,y):
     #print('y:')
     #print(y)
     print('##############')
-    
     X_train, X_test, y_train, y_test = train_test_split(X,y, test_size=10,shuffle=False)
-    print('NEW X_test:')
+    print('## Descriptors of matches to predict:')
     print(X_test)
-    print('NEW y_test:')
-    print(y_test)
+    new_list_results = []
+    list_result = y_test['ResultHome'].values.tolist()
+    for i in range(len(list_result)):
+        if list_result[i] ==  1: new_list_results.append(1)
+        if list_result[i] ==  0: new_list_results.append('X')
+        if list_result[i] == -1: new_list_results.append(2)
+    print('## Results of matches to predict:')
+    print(new_list_results)
+    #print(y_test)
+    #print(list_result)
     
     # Start ML
     for nodes in nodes_list:
+        print('Starting MLP training')
+        print('Progress %.1f%s' %(0.0, '%'))
         accu_per_node=[]
         result_1 = [[] for j in range(len(y_test))] # TeamHome wins
         result_2 = [[] for j in range(len(y_test))] # TeamHome loses
@@ -96,20 +108,51 @@ def MLP(X,y):
             clf.fit(X_train, y_train.values.ravel())
             y_pred = clf.predict(X_test)
             #print('j, y_pred:', j, y_pred)
-            print('Progress %.1f%s' %(j*100/Samples, '%'))
+            print('Progress %.1f%s' %((j+1)*100/Samples, '%'))
             for i in range(len(y_pred)):
                 if y_pred[i] ==  1: result_1[i].append(1)
                 if y_pred[i] == -1: result_2[i].append(1)
                 if y_pred[i] ==  0: result_X[i].append(1)
             accu=accuracy_score(y_test, y_pred)
             accu_per_node.append(accu)
+        print('Nodes: %s. Mean: %.3f. Median: %.3f. Stdev: %.3f' % (str(nodes),statistics.mean(accu_per_node),statistics.median(accu_per_node),statistics.stdev(accu_per_node)))
+        print('')
+        print('##### Bets ######')
+        correct_bets    = 0
+        incorrect_bets = 0
         for i in range(len(y_pred)):
             best = 'N/A'
             if sum(result_1[i]) >= sum(result_X[i]) and sum(result_1[i]) >= sum(result_2[i]) and sum(result_1[i])/Samples >= threshold: best = '1'
             if sum(result_X[i]) >= sum(result_1[i]) and sum(result_X[i]) >= sum(result_2[i]) and sum(result_X[i])/Samples >= threshold: best = 'X'
             if sum(result_2[i]) >= sum(result_X[i]) and sum(result_2[i]) >= sum(result_1[i]) and sum(result_2[i])/Samples >= threshold: best = '2'
-            print('BET: Match %i. Final: %s ## 1: %.2f. X: %.2f. 2: %.2f' %(i,best,sum(result_1[i])/Samples,sum(result_X[i])/Samples,sum(result_2[i])/Samples))
-        print('Nodes: %s. Mean: %.3f. Median: %.3f. Stdev: %.3f' % (str(nodes),statistics.mean(accu_per_node),statistics.median(accu_per_node),statistics.stdev(accu_per_node)))
+            #print('TEST best:', best, type(best))
+            #print('TEST list_result[i]:', list_result[i], type(list_result[i]))
+            if best == '1':
+                if list_result[i] == 1:
+                    #print('I am correct', best)
+                    correct_bets = correct_bets + 1
+                else:
+                    #print('I am incorrect', best)
+                    incorrect_bets = incorrect_bets + 1
+            if best == 'X':
+                if list_result[i] == 0:
+                    #print('I am correct', best)
+                    correct_bets = correct_bets + 1
+                else:
+                    #print('I am incorrect', best)
+                    incorrect_bets = incorrect_bets + 1
+            if best == '2':
+                if list_result[i] == -1:
+                    #print('I am correct', best)
+                    correct_bets = correct_bets + 1
+                else:
+                    #print('I am incorrect', best)
+                    incorrect_bets = incorrect_bets + 1
+            print('Bet: %s. %s -- %s. %s (1: %.2f. X: %.2f. 2: %.2f)' %(best,list_TeamHome[i],list_TeamAway[i],'\t',sum(result_1[i])/Samples,sum(result_X[i])/Samples,sum(result_2[i])/Samples))
+        print('#################')
+        print('# Correct bets:', correct_bets)
+        print('# Incorrect bets:', incorrect_bets)
+        print('# Bet accuracy: %.2f'  %(correct_bets/(correct_bets+incorrect_bets)))
 ### End function MLP
 ########################
 
