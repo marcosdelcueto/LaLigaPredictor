@@ -6,7 +6,7 @@ As of now, all data is in <i>data.csv</i>. Train with (N-10) samples, and predic
 
 Main program, <i>LaLigaPredictor.py</i> processes, cleans data and use a MLP classifier to decide outcome of unknown matches. We run the classifier several times to try different random-states, so we end up with a probability of each outcome (1, X, 2). If the probability of an outcome is larger than a threshold confidence value, we accept that result.
 
-The goal is to offer the use a way to systematically predict the outcome of future matches. In betting sites such as https://sports.bwin.com/en/sports/football-4, a user could, under their own responsibility, place bets following the predicted results. A betting accuracy of 50% is our initial goal, as this implies means that one would always earn some amount of money.
+The goal is to offer the use a way to systematically predict the outcome of future matches. In betting sites such as https://sports.bwin.com/en/sports/football-4, a user could, under their own responsibility, place bets following the predicted results. A betting accuracy of 50% is our initial goal, as this means that one would always earn some amount of money.
 
 ### Data base
 
