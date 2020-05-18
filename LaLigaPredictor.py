@@ -71,10 +71,10 @@ def main():
 ########################
 ### Start function MLP
 def MLP(X,y,list_TeamHome,list_TeamAway):
-    # Scale Season and MatchDay
-    #scaler = StandardScaler().fit(X[['Season','MatchDay']])
-    scaler = MinMaxScaler().fit(X[['Season','MatchDay','Time']])
-    X[['Season','MatchDay','Time']]=scaler.transform(X[['Season','MatchDay','Time']])
+    # Scale Season and Round
+    #scaler = StandardScaler().fit(X[['Season','Round']])
+    scaler = MinMaxScaler().fit(X[['Season','Round','Time']])
+    X[['Season','Round','Time']]=scaler.transform(X[['Season','Round','Time']])
     X = X.drop('Time',axis = 1)
     #print('SCALED X:')
     #print(X)
