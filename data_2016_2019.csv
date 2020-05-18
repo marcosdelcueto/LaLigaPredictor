@@ -1,4 +1,4 @@
-Season,MatchDay,TeamHome,Result,TeamAway,Stadium,Date,Time,Spectators,Referee,YellowCards,RedCards
+Season,Round,TeamHome,Result,TeamAway,Stadium,Date,Time,Spectators,Referee,YellowCards,RedCards
 2016,1,Málaga ,1 – 1 ,Osasuna ,La Rosaleda ,19 de agosto ,20:45 ,22199,Jaime Latre ,4,0
 2016,1,Deportivo de La Coruña ,2 – 1 ,Eibar ,Riazor ,19 de agosto ,22:00 ,22374,Melero López ,6,0
 2016,1,Barcelona ,6 – 2 ,Betis ,Camp Nou ,20 de agosto ,18:15 ,65731,Undiano Mallenco ,4,0

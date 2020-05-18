@@ -11,9 +11,10 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 
 ### START CUSTOMIZABLE PARAMETERS ###
-Samples = 100               # Number of times NLP is run: use large numbers (e.g. 100) to average over random_state
+NLPtimes = 100              # Number of times NLP is run: use large numbers (e.g. 100) to average over random_state
 threshold = 0.6             # When final averaged predictions are given: assign N/A if probability is under threshold value
 nodes_list = [(120,120)]    # Each tuple contains number of nodes per hidden layer. More than one layer will try them in turn
+predict_samples = 10        # Number of samples at the end of data.csv that are predicted
 #### END CUSTOMIZABLE PARAMETERS ####
 
 ########################
@@ -44,28 +45,26 @@ def main():
     df_results = df_results.join(one_hot_TeamAway)
     df_results = df_results.join(one_hot_Referee)
     # Create list with teams that play in the matches whose outcome we will try to predict
-    list_TeamHome = df_results['TeamHome'].values.tolist()[-10:]
-    list_TeamAway = df_results['TeamAway'].values.tolist()[-10:]
+    list_TeamHome = df_results['TeamHome'].values.tolist()[-predict_samples:]
+    list_TeamAway = df_results['TeamAway'].values.tolist()[-predict_samples:]
     # Drop unnecessary columns
-    df_results = df_results.drop('Result',axis = 1)
-    df_results = df_results.drop('Spectators',axis = 1)
-    df_results = df_results.drop('TimeHour',axis = 1)
-    df_results = df_results.drop('TimeMinute',axis = 1)
-    df_results = df_results.drop('Date',axis = 1)
-    df_results = df_results.drop('Stadium',axis = 1)
-    df_results = df_results.drop('YellowCards',axis = 1)
-    df_results = df_results.drop('RedCards',axis = 1)
-    df_results = df_results.drop('GoalsHome',axis = 1)
-    df_results = df_results.drop('GoalsAway',axis = 1)
-    df_results = df_results.drop('TeamHome',axis = 1)
-    df_results = df_results.drop('TeamAway',axis = 1)
-    df_results = df_results.drop('Referee',axis = 1)
-    # Assign X and y
+    lists_columns_to_drop = ['Result','Spectators','TimeHour','TimeMinute','Date','Stadium','YellowCards','RedCards','GoalsHome','GoalsAway','TeamHome','TeamAway','Referee']
+    df_results  = drop_columns(df_results,lists_columns_to_drop)
+    # Assign descriptors X and target y
     X = df_results.drop('ResultHome',axis = 1)
     y = df_results[['ResultHome']]
     # Call MLP function
     MLP(X,y,list_TeamHome,list_TeamAway)
 ### End function main
+########################
+
+########################
+### Start function drop_columns
+def drop_columns(df_results,list_columns_to_drop):
+    for i in list_columns_to_drop:
+        df_results = df_results.drop(i,axis = 1)
+    return df_results
+### End function drop_columns
 ########################
 
 ########################
@@ -80,35 +79,47 @@ def MLP(X,y,list_TeamHome,list_TeamAway):
     #print(X)
     #print('y:')
     #print(y)
-    print('##############')
-    X_train, X_test, y_train, y_test = train_test_split(X,y, test_size=10,shuffle=False)
-    print('## Descriptors of matches to predict:')
-    print(X_test)
+    print('################')
+    print('# Input values #')
+    print('NLPtimes',NLPtimes)
+    print('threshold',threshold)
+    print('nodes_list',nodes_list)
+    print('predict_samples',predict_samples)
+    print('################')
+    X_train, X_test, y_train, y_test = train_test_split(X,y, test_size=predict_samples,shuffle=False)
+    #print('## Descriptors of matches to predict:')
+    #print(X_test)
     new_list_results = []
     list_result = y_test['ResultHome'].values.tolist()
     for i in range(len(list_result)):
         if list_result[i] ==  1: new_list_results.append(1)
         if list_result[i] ==  0: new_list_results.append('X')
         if list_result[i] == -1: new_list_results.append(2)
-    print('## Results of matches to predict:')
+    print('## %i matches outcomes will be predicted' %(len(new_list_results)))
+    print('## Real results of these matches:')
     print(new_list_results)
+    print('################')
     #print(y_test)
     #print(list_result)
     
     # Start ML
     for nodes in nodes_list:
-        print('Starting MLP training')
+        print('Starting MLP training -- It may take several minutes')
         print('Progress %.1f%s' %(0.0, '%'))
+        progress_count = 1
         accu_per_node=[]
         result_1 = [[] for j in range(len(y_test))] # TeamHome wins
         result_2 = [[] for j in range(len(y_test))] # TeamHome loses
         result_X = [[] for j in range(len(y_test))] # Draw
-        for j in range(Samples):
+        for j in range(NLPtimes):
             clf = MLPClassifier(hidden_layer_sizes=(nodes), max_iter=10000, alpha=1e-4, solver='adam',  random_state=None,tol=0.0001)
             clf.fit(X_train, y_train.values.ravel())
             y_pred = clf.predict(X_test)
             #print('j, y_pred:', j, y_pred)
-            print('Progress %.1f%s' %((j+1)*100/Samples, '%'))
+            prog = (j+1)*100/NLPtimes
+            if prog >= 10*progress_count:
+                print('Progress %.1f%s' %(prog, '%'))
+                progress_count = progress_count + 1
             for i in range(len(y_pred)):
                 if y_pred[i] ==  1: result_1[i].append(1)
                 if y_pred[i] == -1: result_2[i].append(1)
@@ -122,9 +133,9 @@ def MLP(X,y,list_TeamHome,list_TeamAway):
         incorrect_bets = 0
         for i in range(len(y_pred)):
             best = 'N/A'
-            if sum(result_1[i]) >= sum(result_X[i]) and sum(result_1[i]) >= sum(result_2[i]) and sum(result_1[i])/Samples >= threshold: best = '1'
-            if sum(result_X[i]) >= sum(result_1[i]) and sum(result_X[i]) >= sum(result_2[i]) and sum(result_X[i])/Samples >= threshold: best = 'X'
-            if sum(result_2[i]) >= sum(result_X[i]) and sum(result_2[i]) >= sum(result_1[i]) and sum(result_2[i])/Samples >= threshold: best = '2'
+            if sum(result_1[i]) >= sum(result_X[i]) and sum(result_1[i]) >= sum(result_2[i]) and sum(result_1[i])/NLPtimes >= threshold: best = '1'
+            if sum(result_X[i]) >= sum(result_1[i]) and sum(result_X[i]) >= sum(result_2[i]) and sum(result_X[i])/NLPtimes >= threshold: best = 'X'
+            if sum(result_2[i]) >= sum(result_X[i]) and sum(result_2[i]) >= sum(result_1[i]) and sum(result_2[i])/NLPtimes >= threshold: best = '2'
             #print('TEST best:', best, type(best))
             #print('TEST list_result[i]:', list_result[i], type(list_result[i]))
             if best == '1':
@@ -148,7 +159,7 @@ def MLP(X,y,list_TeamHome,list_TeamAway):
                 else:
                     #print('I am incorrect', best)
                     incorrect_bets = incorrect_bets + 1
-            print('Bet: %s. %s -- %s. %s (1: %.2f. X: %.2f. 2: %.2f)' %(best,list_TeamHome[i],list_TeamAway[i],'\t',sum(result_1[i])/Samples,sum(result_X[i])/Samples,sum(result_2[i])/Samples))
+            print('Bet: %s. %s -- %s. %s (1: %.2f. X: %.2f. 2: %.2f)' %(best,list_TeamHome[i],list_TeamAway[i],'\t',sum(result_1[i])/NLPtimes,sum(result_X[i])/NLPtimes,sum(result_2[i])/NLPtimes))
         print('#################')
         print('# Correct bets:', correct_bets)
         print('# Incorrect bets:', incorrect_bets)
