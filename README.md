@@ -8,6 +8,8 @@ Main program, _LaLigaPredictor.py_ processes, cleans data and use a MLP classifi
 
 The goal is to offer the user a way to systematically predict the outcome of future matches. In betting sites such as https://sports.bwin.com/en/sports/football-4, a user could, under their own responsibility, place bets following the predicted results. A betting accuracy of 50% is our initial goal, as this means that one would always earn some amount of money.
 
+![Alt Text](./output.gif)
+
 ---
 
 ## Getting Started
@@ -25,7 +27,7 @@ We make use of the following packages:
 
 ### Usage
 
-One would need to edit customizable parameters in header of _LaLigaPredictor.py_, adapt the database _data.csv_ if necessary and then simply run:
+One would need to edit customizable parameters in header of _LaLigaPredictor.py_ and adapt the database _data.csv_, if necessary. Then go to the main _LaLigaPredictor_ directory, open a terminal and simply run:
 
 ```
 ./LaLigaPredictor.py

@@ -11,7 +11,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 
 ### START CUSTOMIZABLE PARAMETERS ###
-NLPtimes = 100              # Number of times NLP is run: use large numbers (e.g. 100) to average over random_state
+NLPtimes = 10              # Number of times NLP is run: use large numbers (e.g. 100) to average over random_state
 threshold = 0.6             # When final averaged predictions are given: assign N/A if probability is under threshold value
 nodes_list = [(120,120)]    # Each tuple contains number of nodes per hidden layer. More than one layer will try them in turn
 predict_samples = 10        # Number of samples at the end of data.csv that are predicted
