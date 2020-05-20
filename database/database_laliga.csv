@@ -1,4 +1,384 @@
 Season,Round,TeamHome,Result,TeamAway,Stadium,Date,Time,Spectators,Referee,YellowCards,RedCards
+2015,1,Málaga ,0 - 0 ,Sevilla ,La Rosaleda ,21 de agosto ,20:30 ,,,,
+2015,1,Deportivo de La Coruña ,0 - 0 ,Real Sociedad ,Riazor ,22 de agosto ,18:30 ,,,,
+2015,1,Espanyol ,1 - 0 ,Getafe ,Cornellá-El Prat ,22 de agosto ,18:30 ,,,,
+2015,1,Atlético de Madrid ,1 - 0 ,Las Palmas ,Vicente Calderón ,22 de agosto ,20:30 ,,,,
+2015,1,Rayo Vallecano ,0 - 0 ,Valencia ,Vallecas ,22 de agosto ,22:30 ,,,,
+2015,1,Athletic Club ,0 - 1 ,Barcelona ,San Mamés ,23 de agosto ,18:30 ,,,,
+2015,1,Sporting de Gijón ,0 - 0 ,Real Madrid ,El Molinón ,23 de agosto ,20:30 ,,,,
+2015,1,Levante ,1 - 2 ,Celta de Vigo ,Ciutat de València ,23 de agosto ,22:00 ,,,,
+2015,1,Betis ,1 - 1 ,Villarreal ,Benito Villamarín ,23 de agosto ,22:30 ,,,,
+2015,1,Granada ,1 - 3 ,Eibar ,Nuevo Los Cármenes ,24 de agosto ,20:30 ,,,,
+2015,2,Villarreal ,3 - 1 ,Espanyol ,El Madrigal ,28 de agosto ,20:30 ,,,,
+2015,2,Real Sociedad ,0 - 0 ,Sporting de Gijón ,Anoeta ,29 de agosto ,18:30 ,,,,
+2015,2,Barcelona ,1 - 0 ,Málaga ,Camp Nou ,29 de agosto ,20:30 ,,,,
+2015,2,Celta de Vigo ,3 - 0 ,Rayo Vallecano ,Balaídos ,29 de agosto ,22:00 ,,,,
+2015,2,Real Madrid ,5 - 0 ,Betis ,Santiago Bernabéu ,29 de agosto ,22:30 ,,,,
+2015,2,Eibar ,2 - 0 ,Athletic Club ,Ipurúa ,30 de agosto ,18:30 ,,,,
+2015,2,Valencia ,1 - 1 ,Deportivo de La Coruña ,Mestalla ,30 de agosto ,20:30 ,,,,
+2015,2,Sevilla ,0 - 3 ,Atlético de Madrid ,Ramón Sánchez Pizjuán ,30 de agosto ,20:30 ,,,,
+2015,2,Getafe ,1 - 2 ,Granada ,Coliseum Alfonso Pérez ,30 de agosto ,22:30 ,,,,
+2015,2,Las Palmas,0 - 0 ,Levante ,Gran Canaria,30 de agosto ,22:30 ,,,,
+2015,3,Levante ,1 - 1 ,Sevilla ,Ciutat de València ,11 de septiembre ,20:30 ,,,,
+2015,3,Espanyol ,0 - 6 ,Real Madrid ,Cornellá-El Prat ,12 de septiembre ,16:00 ,,,,
+2015,3,Sporting de Gijón ,0 - 1 ,Valencia ,El Molinón ,12 de septiembre ,18:15 ,,,,
+2015,3,Atlético de Madrid ,1 - 2 ,Barcelona ,Vicente Calderón ,12 de septiembre ,20:30 ,,,,
+2015,3,Betis ,1 - 0 ,Real Sociedad ,Benito Villamarín ,12 de septiembre ,22:00 ,,,,
+2015,3,Granada ,1 - 3 ,Villarreal ,Nuevo Los Cármenes ,13 de septiembre ,12:00 ,,,,
+2015,3,Athletic Club ,3 - 1 ,Getafe ,San Mamés ,13 de septiembre ,16:00 ,,,,
+2015,3,Celta de Vigo ,3 - 3 ,Las Palmas ,Balaídos ,13 de septiembre ,18:15 ,,,,
+2015,3,Málaga ,0 - 0 ,Eibar ,La Rosaleda ,13 de septiembre ,20:30 ,,,,
+2015,3,Rayo Vallecano ,1 - 3 ,Deportivo de La Coruña ,Vallecas ,14 de septiembre ,20:30 ,,,,
+2015,4,Getafe ,1 - 0 ,Málaga ,Coliseum Alfonso Pérez ,18 de septiembre ,20:30 ,,,,
+2015,4,Real Madrid ,1 - 0 ,Granada ,Santiago Bernabéu ,19 de septiembre ,16:00 ,,,,
+2015,4,Valencia ,0 - 0 ,Betis ,Mestalla ,19 de septiembre ,18:15 ,,,,
+2015,4,Eibar ,0 - 2 ,Atlético de Madrid ,Ipurúa ,19 de septiembre ,20:30 ,,,,
+2015,4,Real Sociedad ,2 - 3 ,Espanyol ,Anoeta ,19 de septiembre ,22:00 ,,,,
+2015,4,Sevilla ,1 - 2 ,Celta de Vigo ,Ramón Sánchez Pizjuán ,20 de septiembre ,12:00 ,,,,
+2015,4,Deportivo de La Coruña ,2 - 3 ,Sporting de Gijón ,Riazor ,20 de septiembre ,16:00 ,,,,
+2015,4,Villarreal ,3 - 1 ,Athletic Club ,El Madrigal ,20 de septiembre ,18:15 ,,,,
+2015,4,Barcelona ,4 - 1 ,Levante ,Camp Nou ,20 de septiembre ,20:30 ,,,,
+2015,4,Las Palmas ,0 - 1 ,Rayo Vallecano ,Gran Canaria ,20 de septiembre ,20:30 ,,,,
+2015,5,Espanyol ,1 - 0 ,Valencia ,Cornellá-El Prat ,22 de septiembre ,20:00 ,,,,
+2015,5,Atlético de Madrid ,2 - 0 ,Getafe ,Vicente Calderón ,22 de septiembre ,20:00 ,,,,
+2015,5,Granada ,0 - 3 ,Real Sociedad ,Nuevo Los Cármenes ,22 de septiembre ,22:00 ,,,,
+2015,5,Celta de Vigo ,4 - 1 ,Barcelona ,Balaídos ,23 de septiembre ,20:00 ,,,,
+2015,5,Rayo Vallecano ,2 - 1 ,Sporting de Gijón ,Campo de Fútbol de Vallecas ,23 de septiembre ,20:00 ,,,,
+2015,5,Levante ,2 - 2 ,Eibar ,Ciutat de València ,23 de septiembre ,20:00 ,,,,
+2015,5,Athletic Club ,1 - 2 ,Real Madrid ,San Mamés ,23 de septiembre ,21:00 ,,,,
+2015,5,Málaga ,0 - 1 ,Villarreal ,La Rosaleda ,23 de septiembre ,22:00 ,,,,
+2015,5,Las Palmas ,2 - 0 ,Sevilla ,Gran Canaria ,23 de septiembre ,22:00 ,,,,
+2015,5,Betis ,1 - 2 ,Deportivo de La Coruña ,Benito Villamarín ,24 de septiembre ,22:05 ,,,,
+2015,6,Valencia ,1 - 0 ,Granada ,Mestalla ,25 de septiembre ,20:30 ,,,,
+2015,6,Barcelona ,2 - 1 ,Las Palmas ,Camp Nou ,26 de septiembre ,16:00 ,,,,
+2015,6,Real Madrid ,0 - 0 ,Málaga ,Santiago Bernabéu ,26 de septiembre ,18:15 ,,,,
+2015,6,Sevilla ,3 - 2 ,Rayo Vallecano ,Ramón Sánchez Pizjuán ,26 de septiembre ,20:30 ,,,,
+2015,6,Villarreal ,1 - 0 ,Atlético de Madrid ,El Madrigal ,26 de septiembre ,20:30 ,,,,
+2015,6,Eibar ,1 - 1 ,Celta de Vigo ,Ipurúa ,26 de septiembre ,22:00 ,,,,
+2015,6,Sporting de Gijón ,1 - 2 ,Betis ,El Molinón ,27 de septiembre ,12:00 ,,,,
+2015,6,Deportivo de La Coruña ,3 - 0 ,Espanyol ,Riazor ,27 de septiembre ,16:00 ,,,,
+2015,6,Getafe ,3 - 0 ,Levante ,Alfonso Pérez ,27 de septiembre ,18:15 ,,,,
+2015,6,Real Sociedad ,0 - 0 ,Athletic Club ,Anoeta ,27 de septiembre ,20:30 ,,,,
+2015,7,Celta de Vigo ,0 - 0 ,Getafe ,Balaídos ,2 de octubre ,20:30 ,,,,
+2015,7,Sevilla ,2 - 1 ,Barcelona ,Ramón Sánchez Pizjuán ,3 de octubre ,16:00 ,,,,
+2015,7,Granada ,1 - 1 ,Deportivo de La Coruña ,Nuevo Los Cármenes ,3 de octubre ,18:15 ,,,,
+2015,7,Espanyol ,1 - 2 ,Sporting de Gijón ,Cornellà-El Prat ,3 de octubre ,20:30 ,,,,
+2015,7,Las Palmas ,0 - 2 ,Eibar ,Gran Canaria ,3 de octubre ,22:00 ,,,,
+2015,7,Málaga ,3 - 1 ,Real Sociedad ,La Rosaleda ,3 de octubre ,22:05 ,,,,
+2015,7,Rayo Vallecano ,0 - 2 ,Betis ,Campo de Fútbol de Vallecas ,4 de octubre ,12:00 ,,,,
+2015,7,Athletic Club ,3 - 1 ,Valencia ,San Mamés ,4 de octubre ,16:00 ,,,,
+2015,7,Levante ,1 - 0 ,Villarreal ,Ciutat de València ,4 de octubre ,18:15 ,,,,
+2015,7,Atlético de Madrid ,1 - 1 ,Real Madrid ,Vicente Calderón ,4 de octubre ,20:30 ,,,,
+2015,8,Real Madrid ,3 - 0 ,Levante ,Santiago Bernabéu ,17 de octubre ,16:00 ,,,,
+2015,8,Eibar ,1 - 1 ,Sevilla ,Ipurúa ,17 de octubre ,18:15 ,,,,
+2015,8,Barcelona ,5 - 2 ,Rayo Vallecano ,Camp Nou ,17 de octubre ,20:30 ,,,,
+2015,8,Valencia ,3 - 0 ,Málaga ,Mestalla ,17 de octubre ,22:00 ,,,,
+2015,8,Betis ,1 - 3 ,Espanyol ,Benito Villamarín ,17 de octubre ,22:05 ,,,,
+2015,8,Villarreal ,1 - 2 ,Celta de Vigo ,El Madrigal ,18 de octubre ,12:00 ,,,,
+2015,8,Real Sociedad ,0 - 2 ,Atlético de Madrid ,Anoeta ,18 de octubre ,16:00 ,,,,
+2015,8,Getafe ,4 - 0 ,Las Palmas ,Alfonso Pérez ,18 de octubre ,18:15 ,,,,
+2015,8,Deportivo de La Coruña ,2 - 2 ,Athletic Club ,Riazor ,18 de octubre ,20:30 ,,,,
+2015,8,Sporting de Gijón ,3 - 3 ,Granada ,El Molinón ,19 de octubre ,20:30 ,,,,
+2015,9,Rayo Vallecano ,3 - 0 ,Espanyol ,Campo de Fútbol de Vallecas ,23 de octubre ,20:30 ,,,,
+2015,9,Celta de Vigo ,1 - 3 ,Real Madrid ,Balaídos ,24 de octubre ,16:00 ,,,,
+2015,9,Granada ,1 - 1 ,Betis ,Nuevo Los Cármenes ,24 de octubre ,18:15 ,,,,
+2015,9,Sevilla ,5 - 0 ,Getafe ,Ramón Sánchez Pizjuán ,24 de octubre ,20:30 ,,,,
+2015,9,Málaga ,2 - 0 ,Deportivo de La Coruña ,La Rosaleda ,24 de octubre ,22:05 ,,,,
+2015,9,Levante ,0 - 4 ,Real Sociedad ,Ciutat de València ,25 de octubre ,12:00 ,,,,
+2015,9,Las Palmas ,0 - 0 ,Villarreal ,Gran Canaria ,25 de octubre ,16:00 ,,,,
+2015,9,Barcelona ,3 - 1 ,Eibar ,Camp Nou ,25 de octubre ,18:15 ,,,,
+2015,9,Atlético de Madrid ,2 - 1 ,Valencia ,Vicente Calderón ,25 de octubre ,20:30 ,,,,
+2015,9,Athletic Club ,3 - 0 ,Sporting de Gijón ,San Mamés ,26 de octubre ,20:30 ,,,,
+2015,10,Deportivo de La Coruña ,1 - 1 ,Atlético de Madrid ,Riazor ,30 de octubre ,20:30 ,,,,
+2015,10,Real Madrid ,3 - 1 ,Las Palmas ,Santiago Bernabéu ,31 de octubre ,16:00 ,,,,
+2015,10,Valencia ,3 - 0 ,Levante  ,Mestalla ,31 de octubre ,18:15 ,,,,
+2015,10,Villarreal ,2 - 1 ,Sevilla ,El Madrigal ,31 de octubre ,18:15 ,,,,
+2015,10,Getafe ,0 - 2 ,Barcelona ,Coliseum Alfonso Pérez ,31 de octubre ,20:30 ,,,,
+2015,10,Real Sociedad ,2 - 3 ,Celta de Vigo ,Anoeta ,31 de octubre ,22:05 ,,,,
+2015,10,Eibar ,1 - 0 ,Rayo Vallecano ,Ipurúa ,1 de noviembre ,12:00 ,,,,
+2015,10,Espanyol ,1 - 1 ,Granada ,Cornellà-El Prat ,1 de noviembre ,16:00 ,,,,
+2015,10,Sporting de Gijón ,1 - 0 ,Málaga ,El Molinón ,1 de noviembre ,18:15 ,,,,
+2015,10,Betis ,1 - 3 ,Athletic Club ,Benito Villamarín ,1 de noviembre ,20:30 ,,,,
+2015,11,Las Palmas ,2 - 0 ,Real Sociedad ,Gran Canaria ,6 de noviembre ,20:30 ,,,,
+2015,11,Celta de Vigo ,1 - 5 ,Valencia ,Balaídos ,7 de noviembre ,16:00 ,,,,
+2015,11,Levante ,1 - 1 ,Deportivo de La Coruña ,Ciutat de València ,7 de noviembre ,18:15 ,,,,
+2015,11,Rayo Vallecano ,2 - 1 ,Granada ,Campo de Fútbol de Vallecas ,7 de noviembre ,20:30 ,,,,
+2015,11,Eibar ,3 - 1 ,Getafe ,Ipurúa ,7 de noviembre ,20:30 ,,,,
+2015,11,Málaga ,0 - 1 ,Betis ,La Rosaleda ,7 de noviembre ,22:05 ,,,,
+2015,11,Athletic Club ,2 - 1 ,Espanyol ,San Mamés ,8 de noviembre ,12:00 ,,,,
+2015,11,Barcelona ,3 - 0 ,Villarreal ,Camp Nou ,8 de noviembre ,16:00 ,,,,
+2015,11,Atlético de Madrid ,1 - 0 ,Sporting de Gijón ,Vicente Calderón ,8 de noviembre ,18:15 ,,,,
+2015,11,Sevilla ,3 - 2 ,Real Madrid ,Ramón Sánchez Pizjuán ,8 de noviembre ,20:30 ,,,,
+2015,12,Real Sociedad ,2 - 0 ,Sevilla ,Anoeta ,21 de noviembre ,16:00 ,,,,
+2015,12,Real Madrid ,0 - 4 ,Barcelona ,Santiago Bernabéu ,21 de noviembre ,18:15 ,,,,
+2015,12,Espanyol ,2 - 0 ,Málaga ,Cornellà-El Prat ,21 de noviembre ,20:30 ,,,,
+2015,12,Valencia ,1 - 1 ,Las Palmas ,Mestalla ,21 de noviembre ,22:00 ,,,,
+2015,12,Deportivo de La Coruña ,2 - 0 ,Celta de Vigo ,Riazor ,21 de noviembre ,22:05 ,,,,
+2015,12,Sporting de Gijón ,0 - 3 ,Levante ,El Molinón ,22 de noviembre ,12:00 ,,,,
+2015,12,Villarreal ,1 - 1 ,Eibar ,El Madrigal ,22 de noviembre ,16:00 ,,,,
+2015,12,Granada ,2 - 0 ,Athletic Club ,Nuevo Los Carmenes ,22 de noviembre ,18:15 ,,,,
+2015,12,Betis ,0 - 1 ,Atlético de Madrid ,Benito Villamarín ,22 de noviembre ,20:30 ,,,,
+2015,12,Getafe ,1 - 1 ,Rayo Vallecano ,Coliseum Alfonso Pérez ,23 de noviembre ,20:30 ,,,,
+2015,13,Levante ,0 - 1 ,Betis ,Ciutat de València ,27 de noviembre ,20:30 ,,,,
+2015,13,Barcelona ,4 - 0 ,Real Sociedad ,Camp Nou ,28 de noviembre ,16:00 ,,,,
+2015,13,Atlético de Madrid ,1 - 0 ,Espanyol ,Vicente Calderón ,28 de noviembre ,18:15 ,,,,
+2015,13,Málaga ,2 - 2 ,Granada ,La Rosaleda ,28 de noviembre ,20:30 ,,,,
+2015,13,Las Palmas ,0 - 2 ,Deportivo de La Coruña ,Gran Canaria ,28 de noviembre ,22:00 ,,,,
+2015,13,Celta de Vigo ,2 - 1 ,Sporting de Gijón ,Balaídos ,28 de noviembre ,22:05 ,,,,
+2015,13,Getafe ,2 - 0 ,Villarreal ,Coliseum Alfonso Pérez ,29 de noviembre ,12:00 ,,,,
+2015,13,Eibar ,0 - 2 ,Real Madrid ,Ipurúa ,29 de noviembre ,16:00 ,,,,
+2015,13,Rayo Vallecano ,0 - 3 ,Athletic Club ,Campo de Fútbol de Vallecas ,29 de noviembre ,18:15 ,,,,
+2015,13,Sevilla ,1 - 0 ,Valencia ,Ramón Sánchez Pizjuán ,29 de noviembre ,20:30 ,,,,
+2015,14,Real Madrid ,4 - 1 ,Getafe ,Santiago Bernabéu ,5 de diciembre ,16:00 ,,,,
+2015,14,Granada ,0 - 2 ,Atlético de Madrid ,Nuevo Los Carmenes ,5 de diciembre ,18:15 ,,,,
+2015,14,Valencia ,1 - 1 ,Barcelona ,Mestalla ,5 de diciembre ,20:30 ,,,,
+2015,14,Deportivo de La Coruña ,1 - 1 ,Sevilla ,Riazor ,5 de diciembre ,22:00 ,,,,
+2015,14,Betis ,1 - 1 ,Celta de Vigo ,Benito Villamarín ,5 de diciembre ,22:05 ,,,,
+2015,14,Real Sociedad ,2 - 1 ,Eibar ,Anoeta ,6 de diciembre ,12:00 ,,,,
+2015,14,Villarreal ,2 - 1 ,Rayo Vallecano ,El Madrigal ,6 de diciembre ,16:00 ,,,,
+2015,14,Sporting de Gijón ,3 - 1 ,Las Palmas ,El Molinón ,6 de diciembre ,18:15 ,,,,
+2015,14,Athletic Club ,0 - 0 ,Málaga ,San Mamés ,6 de diciembre ,20:30 ,,,,
+2015,14,Espanyol ,1 - 1 ,Levante ,Cornellà-El Prat ,7 de diciembre,20:30 ,,,,
+2015,15,Getafe ,1 - 1 ,Real Sociedad ,Coliseum Alfonso Pérez ,11 de diciembre ,20:30 ,,,,
+2015,15,Barcelona ,2 - 2 ,Deportivo de La Coruña ,Camp Nou ,12 de diciembre ,16:00 ,,,,
+2015,15,Levante ,1 - 2 ,Granada ,Ciutat de València ,12 de diciembre ,18:15 ,,,,
+2015,15,Celta de Vigo ,1 - 0 ,Espanyol ,Balaídos ,12 de diciembre ,18:15 ,,,,
+2015,15,Sevilla ,2 - 0 ,Sporting de Gijón ,Ramón Sánchez Pizjuán ,12 de diciembre ,20:30 ,,,,
+2015,15,Las Palmas ,1 - 0 ,Betis ,Gran Canaria ,12 de diciembre ,22:05 ,,,,
+2015,15,Rayo Vallecano ,1 - 2 ,Málaga ,Campo de Fútbol de Vallecas ,13 de diciembre ,12:00 ,,,,
+2015,15,Eibar ,1 - 1 ,Valencia ,Ipurúa ,13 de diciembre ,16:00 ,,,,
+2015,15,Atlético de Madrid ,2 - 1 ,Athletic Club ,Vicente Calderón ,13 de diciembre ,18:15 ,,,,
+2015,15,Villarreal ,1 - 0 ,Real Madrid ,El Madrigal ,13 de diciembre ,20:30 ,,,,
+2015,16,Valencia ,2 - 2 ,Getafe ,Mestalla ,19 de diciembre ,16:00 ,,David Fernández Borbalán,,
+2015,16,Espanyol ,1 - 0 ,Las Palmas ,Cornellà-El Prat ,19 de diciembre ,18:15 ,,Mario Melero López ,,
+2015,16,Betis ,0 - 0 ,Sevilla ,Benito Villamarín ,19 de diciembre ,20:30 ,,Carlos Clos Gómez,,
+2015,16,Deportivo de La Coruña ,2 - 0 ,Eibar ,Riazor ,19 de diciembre ,22:05 ,,Xavier Estrada Fernández,,
+2015,16,Real Madrid ,10 - 2 ,Rayo Vallecano ,Santiago Bernabéu ,20 de diciembre ,16:00 ,,Ignacio Iglesias Villanueva,,
+2015,16,Real Sociedad ,0 - 2 ,Villarreal ,Anoeta ,20 de diciembre ,18:15 ,,Carlos del Cerro Grande,,
+2015,16,Athletic Club ,2 - 0 ,Levante ,San Mamés ,20 de diciembre ,18:15 ,,Alejandro José Hernández Hernández,,
+2015,16,Granada ,0 - 2 ,Celta de Vigo ,Nuevo Los Carmenes ,20 de diciembre ,18:15 ,,Juan Martínez Munuera,,
+2015,16,Málaga ,1 - 0 ,Atlético de Madrid ,La Rosaleda ,20 de diciembre ,20:30 ,,Antonio Miguel Mateu Lahoz,,
+2015,16,Sporting de Gijón ,1 - 3 ,Barcelona ,El Molinón ,17 de febrero ,18:30 ,,Ricardo de Burgos Bengoetxea,,
+2015,17,Real Madrid ,3 - 1 ,Real Sociedad ,Santiago Bernabéu ,30 de diciembre ,16:00 ,,,,
+2015,17,Levante ,0 - 1 ,Málaga ,Ciutat de València ,30 de diciembre ,16:00 ,,,,
+2015,17,Sevilla ,2 - 0 ,Espanyol ,Ramón Sánchez Pizjuán ,30 de diciembre ,18:15 ,,,,
+2015,17,Rayo Vallecano ,0 - 2 ,Atlético de Madrid ,Campo de Fútbol de Vallecas ,30 de diciembre ,18:15 ,,,,
+2015,17,Eibar ,2 - 0 ,Sporting de Gijón ,Ipurúa ,30 de diciembre ,18:15 ,,,,
+2015,17,Getafe ,0 - 0 ,Deportivo de La Coruña ,Coliseum Alfonso Pérez ,30 de diciembre ,20:30 ,,,,
+2015,17,Barcelona ,4 - 0 ,Betis ,Camp Nou ,30 de diciembre ,20:30 ,,,,
+2015,17,Celta de Vigo ,0 - 1 ,Athletic Club ,Balaídos ,30 de diciembre ,20:30 ,,,,
+2015,17,Las Palmas ,4 - 1 ,Granada ,Gran Canaria ,30 de diciembre ,21:00 ,,,,
+2015,17,Villarreal ,1 - 0 ,Valencia ,El Madrigal ,31 de diciembre ,16:00 ,,,,
+2015,18,Espanyol ,0 - 0 ,Barcelona ,Cornellà-El Prat ,2 de enero ,16:00 ,,,,
+2015,18,Atlético de Madrid ,1 - 0 ,Levante ,Vicente Calderón ,2 de enero ,20:30 ,,,,
+2015,18,Málaga ,2 - 0 ,Celta de Vigo ,La Rosaleda ,2 de enero ,22:05 ,,,,
+2015,18,Rayo Vallecano ,2 - 2 ,Real Sociedad ,Campo de Fútbol de Vallecas ,3 de enero ,12:00 ,,,,
+2015,18,Granada ,2 - 1 ,Sevilla ,Nuevo Los Carmenes ,3 de enero ,16:00 ,,,,
+2015,18,Betis ,0 - 4 ,Eibar ,Benito Villamarín ,3 de enero ,16:00 ,,,,
+2015,18,Athletic Club ,2 - 2 ,Las Palmas ,San Mamés ,3 de enero ,18:15 ,,,,
+2015,18,Deportivo de La Coruña ,1 - 2 ,Villarreal ,Riazor ,3 de enero ,18:15 ,,,,
+2015,18,Valencia ,2 - 2 ,Real Madrid ,Mestalla ,3 de enero ,20:30 ,,,,
+2015,18,Sporting de Gijón ,1 - 2 ,Getafe ,El Molinón ,4 de enero ,20:30 ,,,,
+2015,19,Barcelona ,4 - 0 ,Granada ,Camp Nou ,9 de enero ,16:00 ,,,,
+2015,19,Sevilla ,2 - 0 ,Athletic Club ,Ramón Sánchez-Pizjuán ,9 de enero ,18:15 ,,,,
+2015,19,Getafe ,1 - 0 ,Betis ,Coliseum Alfonso Pérez ,9 de enero ,18:15 ,,,,
+2015,19,Real Madrid ,5 - 0 ,Deportivo de La Coruña ,Santiago Bernabéu ,9 de enero ,20:30 ,,,,
+2015,19,Levante ,2 - 1 ,Rayo Vallecano ,Ciutat de València ,9 de enero ,22:05 ,,,,
+2015,19,Villarreal ,2 - 0 ,Sporting de Gijón ,El Madrigal ,10 de enero ,12:00 ,,,,
+2015,19,Real Sociedad ,2 - 0 ,Valencia ,Anoeta ,10 de enero ,16:00 ,,,,
+2015,19,Las Palmas ,1 - 1 ,Málaga ,Estadio de Gran Canaria ,10 de enero ,18:15 ,,,,
+2015,19,Eibar ,2 - 1 ,Espanyol ,Ipurúa ,10 de enero ,18:15 ,,,,
+2015,19,Celta de Vigo ,0 - 2 ,Atlético de Madrid ,Balaídos ,10 de enero ,20:30 ,,,,
+2015,20,Sevilla ,2 - 1 ,Málaga ,Ramón Sánchez-Pizjuán ,16 de enero ,20:30 ,,,,
+2015,20,Celta de Vigo ,4 - 3 ,Levante ,Balaídos ,16 de enero ,18:15 ,,,,
+2015,20,Villarreal ,0 - 0 ,Betis ,El Madrigal ,16 de enero ,20:30 ,,,,
+2015,20,Real Sociedad ,1 - 1 ,Deportivo de La Coruña ,Anoeta ,16 de enero ,22:05 ,,,,
+2015,20,Valencia ,2 - 2 ,Rayo Vallecano ,Mestalla ,17 de enero ,12:00 ,,,,
+2015,20,Real Madrid ,5 - 1 ,Sporting de Gijón ,Santiago Bernabéu ,17 de enero ,16:00 ,,,,
+2015,20,Getafe ,3 - 1 ,Espanyol ,Coliseum Alfonso Pérez ,17 de enero ,18:15 ,,,,
+2015,20,Las Palmas ,0 - 3 ,Atlético de Madrid ,Gran Canaria ,17 de enero ,18:15 ,,,,
+2015,20,Barcelona ,6 - 0 ,Athletic Club ,Camp Nou ,17 de enero ,20:30 ,,,,
+2015,20,Eibar ,5 - 1 ,Granada ,Ipurúa ,18 de enero ,20:30 ,,,,
+2015,21,Sporting de Gijón ,5 - 1 ,Real Sociedad ,El Molinón ,22 de enero ,20:30 ,,,,
+2015,21,Málaga ,1 - 2 ,Barcelona ,La Rosaleda ,23 de enero ,16:00 ,,,,
+2015,21,Espanyol ,2 - 2 ,Villarreal ,Cornellà-El Prat ,23 de enero ,18:15 ,,,,
+2015,21,Granada ,3 - 2 ,Getafe ,Nuevo Los Carmenes ,23 de enero ,20:30 ,,,,
+2015,21,Rayo Vallecano ,3 - 0 ,Celta de Vigo ,Campo de Fútbol de Vallecas ,23 de enero ,22:05 ,,,,
+2015,21,Athletic Club ,5 - 2 ,Eibar ,San Mamés ,24 de enero ,12:00 ,,,,
+2015,21,Atlético de Madrid ,0 - 0 ,Sevilla ,Vicente Calderón ,24 de enero ,16:00 ,,,,
+2015,21,Deportivo de La Coruña ,1 - 1 ,Valencia ,Riazor ,24 de enero ,18:15 ,,,,
+2015,21,Betis ,1 - 1 ,Real Madrid ,Benito Villamarín ,24 de enero ,20:30 ,,,,
+2015,21,Levante ,3 - 2 ,Las Palmas ,Ciutat de València ,25 de enero ,20:30 ,,,,
+2015,22,Barcelona ,2 - 1 ,Atlético de Madrid ,Camp Nou ,30 de enero ,16:00 ,,,,
+2015,22,Eibar ,1 - 2 ,Málaga ,Ipurúa ,30 de enero ,18:15 ,,,,
+2015,22,Getafe ,0 - 1 ,Athletic Club ,Coliseum Alfonso Pérez ,30 de enero ,18:15 ,,,,
+2015,22,Villarreal ,1 - 0 ,Granada ,El Madrigal ,30 de enero ,20:30 ,,,,
+2015,22,Real Sociedad ,2 - 1 ,Betis ,Anoeta ,30 de enero ,22:05 ,,,,
+2015,22,Sevilla ,3 - 1 ,Levante ,Ramón Sánchez-Pizjuán ,31 de enero ,12:00 ,,,,
+2015,22,Valencia ,0 - 1 ,Sporting de Gijón ,Mestalla ,31 de enero ,16:00 ,,,,
+2015,22,Las Palmas ,2 - 1 ,Celta de Vigo ,Gran Canaria ,31 de enero ,18:15 ,,,,
+2015,22,Real Madrid ,6 - 0 ,Espanyol ,Santiago Bernabéu ,31 de enero ,20:30 ,,,,
+2015,22,Deportivo de La Coruña ,2 - 2 ,Rayo Vallecano ,Riazor ,1 de febrero ,20:30 ,,,,
+2015,23,Málaga ,3 - 0 ,Getafe ,La Rosaleda ,5 de febrero ,20:30 ,,,,
+2015,23,Atlético de Madrid ,3 - 1 ,Eibar ,Vicente Calderón ,6 de febrero ,16:00 ,,,,
+2015,23,Rayo Vallecano ,2 - 0 ,Las Palmas ,Campo de Fútbol de Vallecas ,6 de febrero ,18:15 ,,,,
+2015,23,Athletic Club ,0 - 0 ,Villarreal ,San Mamés ,6 de febrero ,20:30 ,,,,
+2015,23,Sporting de Gijón ,1 - 1 ,Deportivo de La Coruña ,El Molinón ,6 de febrero ,22:05 ,,,,
+2015,23,Levante ,0 - 2 ,Barcelona ,Ciutat de València ,7 de febrero ,12:00 ,,,,
+2015,23,Betis ,1 - 0 ,Valencia ,Benito Villamarín ,7 de febrero ,16:00 ,,,,
+2015,23,Celta de Vigo ,1 - 1 ,Sevilla ,Balaídos ,7 de febrero ,18:15 ,,,,
+2015,23,Granada ,1 - 2 ,Real Madrid ,Nuevo Los Carmenes ,7 de febrero ,20:30 ,,,,
+2015,23,Espanyol ,0 - 5 ,Real Sociedad ,Cornellà-El Prat ,8 de febrero ,20:30 ,,,,
+2015,24,Sporting de Gijón ,2 - 2 ,Rayo Vallecano ,El Molinón ,12 de febrero ,20:30 ,,,,
+2015,24,Real Madrid ,4 - 2 ,Athletic Club ,Santiago Bernabéu ,13 de febrero ,16:00 ,,,,
+2015,24,Villarreal ,1 - 0 ,Málaga ,El Madrigal ,13 de febrero ,18:15 ,,,,
+2015,24,Valencia ,2 - 1 ,Espanyol ,Mestalla ,13 de febrero ,20:30 ,,,,
+2015,24,Deportivo de La Coruña ,2 - 2 ,Betis ,Riazor ,13 de febrero ,22:05 ,,,,
+2015,24,Real Sociedad ,3 - 0 ,Granada ,Anoeta ,14 de febrero ,12:00 ,,,,
+2015,24,Sevilla ,2 - 0 ,Las Palmas ,Ramón Sánchez-Pizjuán ,14 de febrero ,16:00 ,,,,
+2015,24,Getafe ,0 - 1 ,Atlético de Madrid ,Coliseum Alfonso Pérez ,14 de febrero ,18:15 ,,,,
+2015,24,Eibar ,2 - 0 ,Levante ,Ipurúa ,14 de febrero ,18:15 ,,,,
+2015,24,Barcelona ,6 - 1 ,Celta de Vigo ,Camp Nou ,14 de febrero ,20:30 ,,,,
+2015,25,Levante ,3 - 0 ,Getafe ,Ciutat de València ,19 de febrero ,20:30 ,,,,
+2015,25,Las Palmas ,1 - 2 ,Barcelona ,Gran Canaria ,20 de febrero ,16:00 ,,,,
+2015,25,Espanyol ,1 - 0 ,Deportivo de La Coruña ,Cornellà-El Prat ,20 de febrero ,18:15 ,,,,
+2015,25,Betis ,1 - 1 ,Sporting de Gijón ,Benito Villamarín ,20 de febrero ,20:30 ,,,,
+2015,25,Celta de Vigo ,3 - 2 ,Eibar ,Balaídos ,20 de febrero ,22:05 ,,,,
+2015,25,Rayo Vallecano ,2 - 2 ,Sevilla ,Campo de Fútbol de Vallecas ,21 de febrero ,12:00 ,,,,
+2015,25,Málaga ,1 - 1 ,Real Madrid ,La Rosaleda ,21 de febrero ,16:00 ,,,,
+2015,25,Granada ,1 - 2 ,Valencia ,Nuevo Los Carmenes ,21 de febrero ,18:15 ,,,,
+2015,25,Athletic Club ,0 - 1 ,Real Sociedad ,San Mamés ,21 de febrero ,18:15 ,,,,
+2015,25,Atlético de Madrid ,0 - 0 ,Villarreal ,Vicente Calderón ,21 de febrero ,20:30 ,,,,
+2015,26,Eibar ,0 - 1 ,Las Palmas ,Ipurúa ,26 de febrero ,20:30 ,,,,
+2015,26,Real Madrid ,0 - 1 ,Atlético de Madrid ,Santiago Bernabéu ,27 de febrero ,16:00 ,,,,
+2015,26,Getafe ,0 - 1 ,Celta de Vigo ,Coliseum Alfonso Pérez ,27 de febrero ,18:15 ,,,,
+2015,26,Sporting de Gijón ,2 - 4 ,Espanyol ,El Molinón ,27 de febrero ,18:15 ,,,,
+2015,26,Betis ,2 - 2 ,Rayo Vallecano ,Benito Villamarín ,27 de febrero ,20:30 ,,,,
+2015,26,Real Sociedad ,1 - 1 ,Málaga ,Anoeta ,27 de febrero ,22:05 ,,,,
+2015,26,Villarreal ,3 - 0 ,Levante ,El Madrigal ,28 de febrero ,12:00 ,,,,
+2015,26,Valencia ,0 - 3 ,Athletic Club ,Mestalla ,28 de febrero ,16:00 ,,,,
+2015,26,Deportivo de La Coruña ,0 - 1 ,Granada ,Riazor ,28 de febrero ,18:15 ,,,,
+2015,26,Barcelona ,2 - 1 ,Sevilla ,Camp Nou ,28 de febrero ,20:30 ,,,,
+2015,27,Atlético de Madrid ,3 - 0 ,Real Sociedad ,Vicente Calderón ,1 de marzo ,21:00 ,,,,
+2015,27,Las Palmas ,4 - 0 ,Getafe ,Gran Canaria ,1 de marzo ,22:00 ,,,,
+2015,27,Sevilla ,1 - 0 ,Eibar ,Ramón Sánchez-Pizjuán ,2 de marzo ,20:00 ,,,,
+2015,27,Málaga ,1 - 2 ,Valencia ,La Rosaleda ,2 de marzo ,20:00 ,,,,
+2015,27,Athletic Club ,4 - 1 ,Deportivo de La Coruña ,San Mamés ,2 de marzo ,20:00 ,,,,
+2015,27,Celta de Vigo ,0 - 0 ,Villarreal ,Balaídos ,2 de marzo ,20:00 ,,,,
+2015,27,Levante ,1 - 3 ,Real Madrid ,Ciutat de València ,2 de marzo ,21:00 ,,,,
+2015,27,Granada ,2 - 0 ,Sporting de Gijón ,Nuevo Los Carmenes ,3 de marzo ,20:00 ,,,,
+2015,27,Espanyol ,0 - 3 ,Betis ,Cornellà-El Prat ,3 de marzo ,20:30 ,,,,
+2015,27,Rayo Vallecano ,1 - 5 ,Barcelona ,Campo de Fútbol de Vallecas ,3 de marzo ,21:00 ,,,,
+2015,28,Real Madrid ,7 - 1 ,Celta de Vigo ,Santiago Bernabéu ,5 de marzo ,16:00 ,,,,
+2015,28,Villarreal ,0 - 1 ,Las Palmas ,El Madrigal ,5 de marzo ,18:15 ,,,,
+2015,28,Getafe ,1 - 1 ,Sevilla ,Coliseum Alfonso Pérez ,5 de marzo ,20:30 ,,,,
+2015,28,Deportivo de La Coruña ,3 - 3 ,Málaga ,Riazor ,5 de marzo ,22:00 ,,,,
+2015,28,Betis ,2 - 0 ,Granada ,Benito Villamarín ,6 de marzo ,12:00 ,,,,
+2015,28,Eibar ,0 - 4 ,Barcelona ,Ipurúa ,6 de marzo ,16:00 ,,,,
+2015,28,Real Sociedad ,1 - 1 ,Levante ,Anoeta ,6 de marzo ,18:15 ,,,,
+2015,28,Sporting de Gijón ,0 - 2 ,Athletic Club ,El Molinón ,6 de marzo ,18:15 ,,,,
+2015,28,Valencia ,1 - 3 ,Atlético de Madrid ,Mestalla ,6 de marzo ,20:30 ,,,,
+2015,28,Espanyol ,2 - 1 ,Rayo Vallecano ,Cornellà-El Prat ,7 de marzo ,20:30 ,,,,
+2015,29,Málaga ,1 - 0 ,Sporting de Gijón ,La Rosaleda ,11 de marzo ,20:30 ,,,,
+2015,29,Barcelona ,6 - 0 ,Getafe ,Camp Nou ,12 de marzo ,16:00 ,,,,
+2015,29,Celta de Vigo ,1 - 0 ,Real Sociedad ,Balaídos ,12 de marzo ,18:15 ,,,,
+2015,29,Atlético de Madrid ,3 - 0 ,Deportivo de La Coruña ,Vicente Calderón ,12 de marzo ,20:30 ,,,,
+2015,29,Rayo Vallecano ,1 - 1 ,Eibar ,Campo de Fútbol de Vallecas ,12 de marzo ,22:00 ,,,,
+2015,29,Levante ,1 - 0 ,Valencia ,Ciutat de València ,13 de marzo ,12:00 ,,,,
+2015,29,Sevilla ,4 - 2 ,Villarreal ,Ramón Sánchez-Pizjuán ,13 de marzo ,16:00 ,,,,
+2015,29,Athletic Club ,3 - 1 ,Betis ,San Mamés ,13 de marzo ,18:15 ,,,,
+2015,29,Las Palmas ,1 - 2 ,Real Madrid ,Gran Canaria ,13 de marzo ,20:30 ,,,,
+2015,29,Granada ,1 - 1 ,Espanyol ,Nuevo Los Cármenes ,14 de marzo ,20:30 ,,,,
+2015,30,Getafe ,1 - 1 ,Eibar ,Coliseum Alfonso Pérez ,18 de marzo ,20:30 ,,,,
+2015,30,Sporting de Gijón ,2 - 1 ,Atlético de Madrid ,El Molinón ,19 de marzo ,16:00 ,,,,
+2015,30,Granada ,2 - 2 ,Rayo Vallecano ,Nuevo Los Carmenes ,19 de marzo ,18:15 ,,,,
+2015,30,Real Sociedad ,0 - 1 ,Las Palmas ,Anoeta ,19 de marzo ,18:15 ,,,,
+2015,30,Deportivo de La Coruña ,2 - 1 ,Levante ,Riazor ,19 de marzo ,20:30 ,,,,
+2015,30,Betis ,0 - 1 ,Málaga ,Benito Villamarín ,19 de marzo ,22:05 ,,,,
+2015,30,Espanyol ,2 - 1 ,Athletic Club ,Cornellà-El Prat ,20 de marzo ,12:00 ,,,,
+2015,30,Villarreal ,2 - 2 ,Barcelona ,El Madrigal ,20 de marzo ,16:00 ,,,,
+2015,30,Valencia ,0 - 2 ,Celta de Vigo ,Mestalla ,20 de marzo ,18:15 ,,,,
+2015,30,Real Madrid ,4 - 0 ,Sevilla ,Santiago Bernabéu ,20 de marzo ,20:30 ,,,,
+2015,31,Rayo Vallecano ,2 - 0 ,Getafe ,Campo de Fútbol de Vallecas ,1 de abril ,20:30 ,,,,
+2015,31,Atlético de Madrid ,5 - 1 ,Betis ,Vicente Calderón ,2 de abril ,16:00 ,,,,
+2015,31,Las Palmas ,2 - 1 ,Valencia ,Gran Canaria ,2 de abril ,18:15 ,,,,
+2015,31,Barcelona ,1 - 2 ,Real Madrid ,Camp Nou ,2 de abril ,20:30 ,,,,
+2015,31,Celta de Vigo ,1 - 1 ,Deportivo de La Coruña ,Balaídos ,2 de abril ,22:05 ,,,,
+2015,31,Athletic Club ,1 - 1 ,Granada ,San Mamés ,3 de abril ,12:00 ,,,,
+2015,31,Málaga ,1 - 1 ,Espanyol ,La Rosaleda ,3 de abril ,16:00 ,,,,
+2015,31,Eibar ,1 - 2 ,Villarreal ,Ipurúa ,3 de abril ,18:15 ,,,,
+2015,31,Sevilla ,1 - 2 ,Real Sociedad ,Ramón Sánchez-Pizjuán ,3 de abril ,20:30 ,,,,
+2015,31,Levante ,0 - 0 ,Sporting de Gijón ,Ciutat de València ,4 de abril ,20:30 ,,,,
+2015,32,Granada ,0 - 0 ,Málaga ,Nuevo Los Carmenes ,8 de abril ,20:30 ,,,,
+2015,32,Real Madrid ,4 - 0 ,Eibar ,Santiago Bernabéu ,9 de abril ,16:00 ,,,,
+2015,32,Espanyol ,1 - 3 ,Atlético de Madrid ,Cornellà-El Prat ,9 de abril ,18:15 ,,,,
+2015,32,Real Sociedad ,1 - 0 ,Barcelona ,Anoeta ,9 de abril ,20:30 ,,,,
+2015,32,Betis ,1 - 0 ,Levante ,Benito Villamarín ,9 de abril ,22:05 ,,,,
+2015,32,Sporting de Gijón ,0 - 1 ,Celta de Vigo ,El Molinón ,10 de abril ,12:00 ,,,,
+2015,32,Valencia ,2 - 1 ,Sevilla ,Mestalla ,10 de abril ,16:00 ,,,,
+2015,32,Villarreal ,2 - 0 ,Getafe ,El Madrigal ,10 de abril ,18:15 ,,,,
+2015,32,Athletic Club ,1 - 0 ,Rayo Vallecano ,San Mamés ,10 de abril ,20:30 ,,,,
+2015,32,Deportivo de La Coruña ,1 - 3 ,Las Palmas ,Riazor ,11 de abril ,20:30 ,,,,
+2015,33,Levante ,2 - 1 ,Espanyol ,Ciutat de València ,15 de abril ,20:30 ,,,,
+2015,33,Getafe ,1 - 5 ,Real Madrid ,Coliseum Alfonso Pérez ,16 de abril ,16:00 ,,,,
+2015,33,Las Palmas ,1 - 1 ,Sporting de Gijón ,Gran Canaria ,16 de abril ,18:15 ,,,,
+2015,33,Eibar ,2 - 1 ,Real Sociedad ,Ipurúa ,16 de abril ,20:30 ,,,,
+2015,33,Celta de Vigo ,1 - 1 ,Betis ,Balaídos ,16 de abril ,22:05 ,,,,
+2015,33,Málaga ,0 - 1 ,Athletic Club ,La Rosaleda ,17 de abril ,12:00 ,,,,
+2015,33,Sevilla ,1 - 1 ,Deportivo de La Coruña ,Ramón Sánchez-Pizjuán ,17 de abril ,16:00 ,,,,
+2015,33,Rayo Vallecano ,2 - 1 ,Villarreal ,Campo de Fútbol de Vallecas ,17 de abril ,18:15 ,,,,
+2015,33,Atlético de Madrid ,3 - 0 ,Granada ,Vicente Calderón ,17 de abril ,18:15 ,,,,
+2015,33,  Barcelona ,1 - 2 ,Valencia ,Camp Nou ,17 de abril ,20:30 ,,,,
+2015,34,Espanyol ,1 - 1 ,Celta de Vigo ,Cornellà-El Prat ,19 de abril ,20:00 ,,,,
+2015,34,Betis ,1 - 0 ,Las Palmas ,Benito Villamarín ,19 de abril ,21:00 ,,,,
+2015,34,Deportivo de La Coruña ,0 - 8 ,Barcelona ,Riazor ,20 de abril ,20:00 ,,,,
+2015,34,Valencia ,4 - 0 ,Eibar ,Mestalla ,20 de abril ,20:45 ,,,,
+2015,34,Málaga ,1 - 1 ,Rayo Vallecano ,La Rosaleda ,20 de abril ,20:45 ,,,,
+2015,34,Athletic Club ,0 - 1 ,Atlético de Madrid ,San Mamés ,20 de abril ,20:45 ,,,,
+2015,34,Sporting de Gijón ,2 - 1 ,Sevilla ,El Molinón ,20 de abril ,20:45 ,,,,
+2015,34,Real Madrid ,3 - 0 ,Villarreal ,Santiago Bernabéu ,20 de abril ,22:00 ,,,,
+2015,34,Real Sociedad ,1 - 2 ,Getafe ,Anoeta ,21 de abril ,20:30 ,,,,
+2015,34,Granada ,5 - 1 ,Levante ,Nuevo Los Cármenes ,21 de abril ,21:00 ,,,,
+2015,35,Las Palmas ,4 - 0 ,Espanyol ,Gran Canaria ,22 de abril ,21:00 ,,,,
+2015,35,Rayo Vallecano ,2 - 3 ,Real Madrid ,Campo de Fútbol de Vallecas ,23 de abril ,16:00 ,,,,
+2015,35,Atlético de Madrid ,1 - 0 ,Málaga ,Vicente Calderón ,23 de abril ,18:15 ,,,,
+2015,35,Barcelona ,6 - 0 ,Sporting de Gijón ,Camp Nou ,23 de abril ,20:30 ,,,,
+2015,35,Eibar ,1 - 1 ,Deportivo de La Coruña ,Ipurua ,23 de abril ,22:05 ,,,,
+2015,35,Levante ,2 - 2 ,Athletic Club ,Ciutat de Valencia ,24 de abril ,12:00 ,,,,
+2015,35,Sevilla ,2 - 0 ,Betis ,Ramón Sánchez Pizjuán ,24 de abril ,16:00 ,,,,
+2015,35,Getafe ,2 - 2 ,Valencia ,Coliseum Alfonso Pérez ,24 de abril ,18:15 ,,,,
+2015,35,Villarreal ,0 - 0 ,Real Sociedad ,El Madrigal ,24 de abril ,20:30 ,,,,
+2015,35,Celta de Vigo ,2 - 1 ,Granada ,Balaídos ,25 de abril,20:30 ,,,,
+2015,36,Sporting de Gijón ,2 - 0 ,Eibar ,El Molinón ,29 de abril ,20:30 ,,,,
+2015,36,Real Sociedad ,0 - 1 ,Real Madrid ,Anoeta ,30 de abril ,16:00 ,,,,
+2015,36,Atlético de Madrid ,1 - 0 ,Rayo Vallecano ,Vicente Calderón ,30 de abril ,18:15 ,,,,
+2015,36,Betis ,0 - 2 ,Barcelona ,Benito Villamarín ,30 de abril ,20:30 ,,,,
+2015,36,Granada ,3 - 2 ,Las Palmas ,Nuevo Los Cármenes ,30 de abril ,22:05 ,,,,
+2015,36,Athletic Club ,2 - 1 ,Celta de Vigo ,San Mamés ,1 de mayo ,12:00 ,,,,
+2015,36,Espanyol ,1 - 0 ,Sevilla ,Cornellà-El Prat ,1 de mayo ,16:00 ,,,,
+2015,36,Deportivo de La Coruña ,0 - 2 ,Getafe ,Riazor ,1 de mayo ,18:15 ,,,,
+2015,36,Valencia ,0 - 2 ,  Villarreal ,Mestalla ,1 de mayo ,20:30 ,,,,
+2015,36,Málaga ,3 - 1 ,Levante   ,La Rosaleda ,2 de mayo,20:30 ,,,,
+2015,37,Barcelona ,5 - 0 ,Espanyol ,Camp Nou ,8 de mayo ,17:00 ,,,,
+2015,37,Getafe ,1 - 1 ,Sporting de Gijón ,Coliseum Alfonso Pérez ,8 de mayo ,17:00 ,,,,
+2015,37,Celta de Vigo ,1 - 0 ,Málaga ,Balaídos ,8 de mayo ,17:00 ,,,,
+2015,37,Sevilla ,1 - 4 ,Granada ,Ramón Sánchez Pizjuán ,8 de mayo ,17:00 ,,,,
+2015,37,Real Madrid ,3 - 2 ,Valencia ,Santiago Bernabéu ,8 de mayo ,17:00 ,,,,
+2015,37,Real Sociedad ,2 - 1 ,Rayo Vallecano ,Anoeta ,8 de mayo ,17:00 ,,,,
+2015,37,Villarreal ,0 - 2 ,Deportivo de La Coruña ,El Madrigal ,8 de mayo ,17:00 ,,,,
+2015,37,Eibar ,1 - 1 ,Betis ,Ipurúa ,8 de mayo ,17:00 ,,,,
+2015,37,Las Palmas ,0 - 0 ,Athletic Club ,Gran Canaria ,8 de mayo ,17:00 ,,,,
+2015,37,Levante ,2 - 1 ,Atlético de Madrid ,Ciudad de Valencia,8 de mayo ,17:00 ,,,,
+2015,38,Valencia ,0 - 1 ,Real Sociedad ,Mestalla ,13 de mayo ,20:30 ,,,,
+2015,38,Granada ,0 - 3 ,Barcelona,Nuevo Los Carmenes ,14 de mayo ,17:00 ,,,,
+2015,38,Deportivo de La Coruña ,0 - 2 ,Real Madrid ,Riazor ,14 de mayo ,17:00 ,,,,
+2015,38,Atlético de Madrid ,2 - 0 ,  Celta de Vigo ,Vicente Calderón ,14 de mayo ,19:30 ,,,,
+2015,38,Athletic Club ,3 - 1 ,Sevilla ,San Mamés ,14 de mayo ,19:30 ,,,,
+2015,38,Málaga ,4 - 1 ,Las Palmas ,La Rosaleda ,15 de mayo ,12:00 ,,,,
+2015,38,Espanyol ,4 - 2 ,Eibar ,Cornellà-El Prat ,15 de mayo ,19:00 ,,,,
+2015,38,Sporting de Gijón ,2 - 0 ,Villarreal ,El Molinón ,15 de mayo ,19:30 ,,,,
+2015,38,Rayo Vallecano   ,3 - 1 ,Levante ,Campo de Fútbol de Vallecas ,15 de mayo ,19:30 ,,,,
+2015,38,Betis ,2 - 1 ,Getafe   ,Benito Villamarín ,15 de mayo ,19:30 ,,,,
 2016,1,Málaga ,1 – 1 ,Osasuna ,La Rosaleda ,19 de agosto ,20:45 ,22199,Jaime Latre ,4,0
 2016,1,Deportivo de La Coruña ,2 – 1 ,Eibar ,Riazor ,19 de agosto ,22:00 ,22374,Melero López ,6,0
 2016,1,Barcelona ,6 – 2 ,Betis ,Camp Nou ,20 de agosto ,18:15 ,65731,Undiano Mallenco ,4,0
@@ -1229,3 +1609,103 @@ Season,Round,TeamHome,Result,TeamAway,Stadium,Date,Time,Spectators,Referee,Yello
 2019,9,Espanyol ,0 – 1 ,Villarreal ,RCDE Stadium ,20 de octubre ,16:00 ,20653,Del Cerro Grande ,3,0
 2019,9,Athletic Club ,1 – 1 ,Valladolid ,San Mamés ,20 de octubre ,18:30 ,37107,Gil Manzano ,5,0
 2019,9,Sevilla ,1 – 0 ,Levante  ,Sánchez-Pizjuán ,20 de octubre ,21:00 ,34657,Cuadra Fernández ,4,0
+2019,10,Villarreal C. F. ,4 – 1 ,Deportivo Alavés ,La Cerámica ,25 de octubre ,19:00 ,16049,Medié Jiménez ,4,0
+2019,10,C. D. Leganés ,1 – 0 ,R. C. D. Mallorca ,Butarque ,26 de octubre ,16:00 ,10058,Prieto Iglesias ,5,0
+2019,10,Real Valladolid C. F. ,2 – 0 ,S. D. Eibar ,José Zorrilla ,26 de octubre ,18:30 ,20036,Munuera Montero ,2,0
+2019,10,Atlético de Madrid ,2 – 0 ,Athletic Club ,Wanda Metropolitano ,26 de octubre ,21:00 ,59211,Hernández Hernández ,4,0
+2019,10,R. C. Celta de Vigo ,0 – 1 ,Real Sociedad ,Balaídos ,27 de octubre ,13:00 ,18002,Pizarro Gómez ,5,1
+2019,10,Granada C. F. ,1 – 0 ,Real Betis ,Los Cármenes ,27 de octubre ,15:00 ,18895,Mateu Lahoz ,7,0
+2019,10,Levante U. D. ,0 – 1 ,R. C. D. Español ,Ciudad de València ,27 de octubre ,17:00 ,18934,González Fuertes ,5,0
+2019,10,Sevilla F. C. ,2 – 0 ,Getafe C. F. ,Sánchez-Pizjuán ,27 de octubre ,19:30 ,38181,Sánchez Martínez ,5,0
+2019,10,C. A. Osasuna ,3 – 1 ,Valencia C. F. ,El Sadar ,27 de octubre ,22:00 ,14976,Jaime Latre ,2,1
+2019,10,F. C. Barcelona ,0 – 0 ,Real Madrid C. F. ,Camp Nou ,18 de diciembre,20:00 ,93426,Hernández Hernández ,8,0
+2019,11,Deportivo Alavés ,1 – 1 ,Atlético de Madrid ,Mendizorroza ,29 de octubre ,19:00 ,17235,Estrada Fernández ,6,0
+2019,11,F. C. Barcelona ,5 – 1 ,Real Valladolid C. F. ,Camp Nou ,29 de octubre ,21:15 ,59896,Alberola Rojas ,3,0
+2019,11,Real Sociedad ,1 – 2 ,Levante U. D. ,Reale Arena ,30 de octubre ,19:00 ,28142,Melero López ,7,0
+2019,11,Valencia C. F. ,1 – 1 ,Sevilla F. C. ,Mestalla ,30 de octubre ,19:00 ,37881,Del Cerro Grande ,9,0
+2019,11,Athletic Club ,3 – 0 ,R. C. D. Español ,San Mamés ,30 de octubre ,20:00 ,37094,Martínez Munuera ,1,0
+2019,11,Real Betis ,2 – 1 ,R. C. Celta de Vigo ,Benito Villamarín ,30 de octubre ,21:00 ,43353,Gil Manzano ,7,0
+2019,11,Real Madrid C. F. ,5 – 0 ,C. D. Leganés ,Santiago Bernabéu ,30 de octubre ,21:15 ,53870,Soto Grado ,6,0
+2019,11,S. D. Eibar ,2 – 1 ,Villarreal C. F. ,Ipurúa ,31 de octubre ,19:00 ,5632,Cuadra Fernández ,3,0
+2019,11,R. C. D. Mallorca ,2 – 2 ,C. A. Osasuna ,Estadio de Son Moix ,31 de octubre ,19:00 ,12641,Cordero Vega ,6,0
+2019,11,Getafe C. F. ,3 – 1 ,Granada C. F. ,Alfonso Pérez ,31 de octubre ,21:15 ,10227,González González ,10,0
+2019,12,R. C. D. Español ,1 – 2 ,Valencia C. F. ,RCDE Stadium ,2 de noviembre ,13:00 ,18428,Pizarro Gómez ,1,0
+2019,12,Levante U. D. ,3 – 1 ,F. C. Barcelona ,Ciudad de València ,2 de noviembre ,16:00 ,23341,Hernández Hernández ,7,0
+2019,12,Sevilla F. C. ,1 – 1 ,Atlético de Madrid ,Sánchez-Pizjuán ,2 de noviembre ,18:30 ,39957,González González ,7,0
+2019,12,Real Madrid C. F. ,0 – 0 ,Real Betis ,Santiago Bernabéu ,2 de noviembre ,21:00 ,70375,Sánchez Martínez ,6,0
+2019,12,Real Valladolid C. F. ,3 – 0 ,R. C. D. Mallorca ,José Zorrilla ,3 de noviembre ,12:00 ,18419,Medié Jiménez ,8,0
+2019,12,Villarreal C. F. ,0 – 0 ,Athletic Club ,La Cerámica ,3 de noviembre ,14:00 ,17460,Jaime Latre ,2,0
+2019,12,C. A. Osasuna ,4 – 2 ,Deportivo Alavés ,El Sadar ,3 de noviembre ,16:00 ,15954,Munuera Montero ,6,0
+2019,12,R. C. Celta de Vigo ,0 – 1 ,Getafe C. F. ,Balaídos ,3 de noviembre ,18:30 ,14705,Mateu Lahoz ,6,0
+2019,12,C. D. Leganés ,1 – 2 ,S. D. Eibar ,Butarque ,3 de noviembre ,18:30 ,9648,González Fuertes ,7,0
+2019,12,Granada C. F. ,1 – 2 ,Real Sociedad ,Los Cármenes ,3 de noviembre ,21:00 ,16921,Prieto Iglesias ,2,0
+2019,13,Real Sociedad ,1 – 1 ,C. D. Leganés ,Reale Arena ,8 de noviembre ,21:00 ,27684,Martínez Munuera ,5,0
+2019,13,Deportivo Alavés ,3 – 0 ,Real Valladolid C. F. ,Mendizorroza ,9 de noviembre ,13:00 ,16148,Melero López ,6,0
+2019,13,Valencia C. F. ,2 – 0 ,Granada C. F. ,Mestalla ,8 de noviembre ,16:00 ,39882,Estrada Fernández ,5,0
+2019,13,S. D. Eibar ,0 – 4 ,Real Madrid C. F. ,Ipurúa ,9 de noviembre ,18:30 ,7045,Cordero Vega ,0,0
+2019,13,F. C. Barcelona ,4 – 1 ,R. C. Celta de Vigo ,Camp Nou ,8 de noviembre ,21:00 ,71209,Cuadra Fernández ,5,0
+2019,13,R. C. D. Mallorca ,3 – 1 ,Villarreal C. F. ,Estadio de Son Moix ,10 de noviembre ,12:00 ,8348,Del Cerro Grande ,5,0
+2019,13,Athletic Club ,2 – 1 ,Levante U. D. ,San Mamés ,10 de noviembre ,14:00 ,33202,Alberola Rojas ,5,0
+2019,13,Atlético de Madrid ,3 – 1 ,R. C. D. Español ,Wanda Metropolitano ,10 de noviembre ,16:00 ,53069,Gil Manzano ,4,0
+2019,13,Getafe C. F. ,0 – 0 ,C. A. Osasuna ,Alfonso Pérez ,10 de noviembre ,18:30 ,10558,Soto Grado ,6,0
+2019,13,Real Betis ,1 – 2 ,Sevilla F. C. ,Benito Villamarín ,10 de noviembre ,21:00 ,53110,Hernández Hernández ,5,0
+2019,14,Levante U. D. ,2 – 1 ,R. C. D. Mallorca ,Ciudad de València ,22 de noviembre ,21:00 ,15110,Pizarro Gómez ,1,1
+2019,14,C. D. Leganés ,1 – 2 ,F. C. Barcelona ,Butarque ,23 de noviembre ,13:00 ,12110,Jaime Latre ,3,0
+2019,14,Real Betis ,2 – 1 ,Valencia C. F. ,Benito Villamarín ,23 de noviembre ,16:00 ,45562,De Burgos Bengoetxea ,4,0
+2019,14,Granada C. F. ,1 – 1 ,Atlético de Madrid ,Los Cármenes ,23 de noviembre ,18:30 ,17003,Medié Jiménez ,7,0
+2019,14,Real Madrid C. F. ,3 – 1 ,Real Sociedad ,Santiago Bernabéu ,23 de noviembre ,21:00 ,69305,Gil Manzano ,2,0
+2019,14,R. C. D. Español ,1 – 1 ,Getafe C. F. ,RCDE Stadium ,24 de noviembre ,12:00 ,22031,González Fuertes ,7,0
+2019,14,C. A. Osasuna ,1 – 2 ,Athletic Club ,El Sadar ,24 de noviembre ,14:00 ,16145,Sánchez Martínez ,7,0
+2019,14,S. D. Eibar ,0 – 2 ,Deportivo Alavés ,Ipurúa ,24 de noviembre ,16:00 ,6317,Mateu Lahoz ,3,0
+2019,14,Villarreal C. F. ,1 – 3 ,R. C. Celta de Vigo ,La Cerámica ,24 de noviembre ,18:30 ,17241,Munuera Montero ,5,0
+2019,14,Real Valladolid C. F. ,0 – 1 ,Sevilla F. C. ,José Zorrilla ,24 de noviembre ,21:00 ,18288,Prieto Iglesias ,5,1
+2019,15,R. C. Celta de Vigo ,0 – 0 ,Real Valladolid C. F. ,Balaídos ,29 de noviembre ,21:00 ,16918,Alberola Rojas ,4,0
+2019,15,Deportivo Alavés ,1 – 2 ,Real Madrid C. F. ,Mendizorroza ,30 de noviembre ,13:00 ,19357,Cuadra Fernández ,7,0
+2019,15,Real Sociedad ,4 – 1 ,S. D. Eibar ,Reale Arena ,30 de noviembre ,16:00 ,28612,Del Cerro Grande ,5,0
+2019,15,R. C. D. Mallorca ,1 – 2 ,Real Betis ,Estadio de Son Moix ,30 de noviembre ,18:30 ,16810,Martínez Munuera ,5,1
+2019,15,Valencia C. F. ,2 – 1 ,Villarreal C. F. ,Mestalla ,30 de noviembre ,21:00 ,38521,Soto Grado ,3,0
+2019,15,Sevilla F. C. ,1 – 0 ,C. D. Leganés ,Sánchez-Pizjuán ,1 de diciembre ,12:00 ,33648,De Burgos Bengoetxea ,6,0
+2019,15,Athletic Club ,2 – 0 ,Granada C. F. ,San Mamés ,1 de diciembre ,14:00 ,37974,Cordero Vega ,9,0
+2019,15,R. C. D. Español ,2 – 4 ,C. A. Osasuna ,RCDE Stadium ,1 de diciembre ,16:00 ,21238,Melero López ,3,1
+2019,15,Getafe C. F. ,4 – 0 ,Levante U. D. ,Alfonso Pérez ,1 de diciembre ,18:30 ,6535,Estrada Fernández ,5,0
+2019,15,Atlético de Madrid ,0 – 1 ,F. C. Barcelona ,Wanda Metropolitano ,1 de diciembre ,21:00 ,64198,Mateu Lahoz ,8,0
+2019,16,Villarreal C. F. ,0 – 0 ,Atlético de Madrid ,La Cerámica ,6 de diciembre ,22:00 ,17964,Hernández Hernández ,3,0
+2019,16,Real Madrid C. F. ,2 – 0 ,R. C. D. Español ,Santiago Bernabéu ,7 de diciembre ,13:00 ,64125,Jaime Latre ,7,0
+2019,16,Granada C. F. ,3 – 0 ,Deportivo Alavés ,Los Cármenes ,7 de diciembre ,16:00 ,14773,Gil Manzano ,3,2
+2019,16,Levante U. D. ,2 – 4 ,Valencia C. F. ,Ciudad de València ,7 de diciembre ,18:30 ,23137,Medié Jiménez ,5,1
+2019,16,F. C. Barcelona ,5 – 2 ,R. C. D. Mallorca ,Camp Nou ,7 de diciembre ,21:00 ,71072,Munuera Montero ,3,0
+2019,16,S. D. Eibar ,0 – 1 ,Getafe C. F. ,Ipurúa ,8 de diciembre ,12:00 ,5969,Prieto Iglesias ,6,1
+2019,16,Real Betis ,3 – 2 ,Athletic Club ,Benito Villamarín ,8 de diciembre ,14:00 ,46106,Pizarro Gómez ,6,0
+2019,16,Real Valladolid C. F. ,0 – 0 ,Real Sociedad ,José Zorrilla ,8 de diciembre ,16:00 ,18654,González Fuertes ,4,0
+2019,16,C. D. Leganés ,3 – 2 ,R. C. Celta de Vigo ,Butarque ,8 de diciembre ,18:30 ,7115,Sánchez Martínez ,8,1
+2019,16,C. A. Osasuna ,1 – 1 ,Sevilla F. C. ,El Sadar ,8 de diciembre ,21:00 ,15045,Estrada Fernández ,8,1
+2019,17,Deportivo Alavés ,1 – 1 ,C. D. Leganés ,Mendizorroza ,13 de diciembre ,21:00 ,15567,Soto Grado ,5,0
+2019,17,Granada C. F. ,1 – 2 ,Levante U. D. ,Los Cármenes ,14 de diciembre ,13:00 ,14127,Del Cerro Grande ,4,0
+2019,17,Real Sociedad ,2 – 2 ,F. C. Barcelona ,Reale Arena ,14 de diciembre ,16:00 ,36639,Alberola Rojas ,1,0
+2019,17,Athletic Club ,0 – 0 ,S. D. Eibar ,San Mamés ,14 de diciembre ,18:30 ,43203,Melero López ,6,0
+2019,17,Atlético de Madrid ,2 – 0 ,C. A. Osasuna ,Wanda Metropolitano ,14 de diciembre ,21:00 ,46033,Munuera Montero ,2,0
+2019,17,Getafe C. F. ,2 – 0 ,Real Valladolid C. F. ,Alfonso Pérez ,15 de diciembre ,12:00 ,10816,Mateu Lahoz ,6,0
+2019,17,R. C. Celta de Vigo ,2 – 2 ,R. C. D. Mallorca ,Balaídos ,15 de diciembre ,14:00 ,13247,De Burgos Bengoetxea ,6,1
+2019,17,R. C. D. Español ,2 – 2 ,Real Betis ,RCDE Stadium ,15 de diciembre ,16:00 ,22248,Cuadra Fernández ,5,0
+2019,17,Sevilla F. C. ,1 – 2 ,Villarreal C. F. ,Sánchez-Pizjuán ,15 de diciembre ,18:30 ,36521,Cordero Vega ,2,0
+2019,17,Valencia C. F. ,1 – 1 ,Real Madrid C. F. ,Mestalla ,15 de diciembre ,21:00 ,44265,Sánchez Martínez ,3,0
+2019,18,S. D. Eibar ,3 – 0 ,Granada C. F. ,Ipurúa ,20 de diciembre ,21:00 ,5341,González Fuertes ,6,0
+2019,18,R. C. D. Mallorca ,0 – 2 ,Sevilla F. C. ,Estadio de Son Moix ,21 de diciembre ,13:00 ,14321,Gil Manzano ,8,0
+2019,18,F. C. Barcelona ,4 – 1 ,Deportivo Alavés ,Camp Nou ,21 de diciembre ,16:00 ,63054,Melero López ,6,0
+2019,18,Villarreal C. F. ,1 – 0 ,Getafe C. F. ,La Cerámica ,21 de diciembre ,18:30 ,14526,Jaime Latre ,5,1
+2019,18,Real Valladolid C. F. ,1 – 1 ,Valencia C. F. ,José Zorrilla ,21 de diciembre ,21:00 ,16295,Pizarro Gómez ,3,0
+2019,18,C. D. Leganés ,2 – 0 ,R. C. D. Español ,Butarque ,22 de diciembre ,12:00 ,10183,Alberola Rojas ,7,0
+2019,18,C. A. Osasuna ,3 – 4 ,Real Sociedad ,El Sadar ,22 de diciembre ,14:00 ,16197,Medié Jiménez ,8,1
+2019,18,Real Betis ,1 – 2 ,Atlético de Madrid ,Benito Villamarín ,22 de diciembre ,16:00 ,52017,Estrada Fernández ,6,0
+2019,18,Levante U. D. ,3 – 1 ,R. C. Celta de Vigo ,Ciudad de València ,22 de diciembre ,18:30 ,18653,Prieto Iglesias ,9,0
+2019,18,Real Madrid C. F. ,0 – 0 ,Athletic Club ,Santiago Bernabéu ,22 de diciembre ,21:00 ,71306,Cordero Vega ,1,0
+2019,19,Real Valladolid C. F. ,2 – 2 ,C. D. Leganés ,José Zorrilla ,3 de enero ,19:00 ,21492,Martínez Munuera ,5,0
+2019,19,Sevilla F. C. ,1 – 1 ,Athletic Club ,Sánchez-Pizjuán ,3 de enero ,21:00 ,37972,González González ,6,0
+2019,19,Valencia C. F. ,1 – 0 ,S. D. Eibar ,Mestalla ,4 de enero ,13:00 ,39856,Hernández Hernández ,2,1
+2019,19,Getafe C. F. ,0 – 3 ,Real Madrid C. F. ,Alfonso Pérez ,4 de enero ,16:00 ,15426,Munuera Montero ,5,0
+2019,19,Atlético de Madrid ,2 – 1 ,Levante U. D. ,Wanda Metropolitano ,4 de enero ,18:30 ,58711,De Burgos Bengoetxea ,4,0
+2019,19,R. C. D. Español ,2 – 2 ,F. C. Barcelona ,RCDE Stadium ,4 de enero ,21:00 ,31233,Del Cerro Grande ,4,0
+2019,19,Granada C. F. ,1 – 0 ,R. C. D. Mallorca ,Los Cármenes ,5 de enero ,12:00 ,16428,Soto Grado ,6,0
+2019,19,Real Sociedad ,1 – 2 ,Villarreal C. F. ,Reale Arena ,5 de enero ,14:00 ,31486,Sánchez Martínez ,9,0
+2019,19,Deportivo Alavés ,1 – 1 ,Real Betis ,Mendizorroza ,5 de enero ,16:00 ,13875,Mateu Lahoz ,10,1
+2019,19,R. C. Celta de Vigo ,1 – 1 ,C. A. Osasuna ,Balaídos ,5 de enero ,21:00 ,11983,Cuadra Fernández ,6,0

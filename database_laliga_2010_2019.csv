@@ -3509,3 +3509,103 @@ Season,Round,TeamHome,Result,TeamAway,Stadium,Date,Time,Spectators,Referee,Yello
 2019,9,Espanyol ,0 – 1 ,Villarreal ,RCDE Stadium ,20 de octubre ,16:00 ,20653,Del Cerro Grande ,3,0
 2019,9,Athletic Club ,1 – 1 ,Valladolid ,San Mamés ,20 de octubre ,18:30 ,37107,Gil Manzano ,5,0
 2019,9,Sevilla ,1 – 0 ,Levante  ,Sánchez-Pizjuán ,20 de octubre ,21:00 ,34657,Cuadra Fernández ,4,0
+2019,10,Villarreal C. F. ,4 – 1 ,Deportivo Alavés ,La Cerámica ,25 de octubre ,19:00 ,16049,Medié Jiménez ,4,0
+2019,10,C. D. Leganés ,1 – 0 ,R. C. D. Mallorca ,Butarque ,26 de octubre ,16:00 ,10058,Prieto Iglesias ,5,0
+2019,10,Real Valladolid C. F. ,2 – 0 ,S. D. Eibar ,José Zorrilla ,26 de octubre ,18:30 ,20036,Munuera Montero ,2,0
+2019,10,Atlético de Madrid ,2 – 0 ,Athletic Club ,Wanda Metropolitano ,26 de octubre ,21:00 ,59211,Hernández Hernández ,4,0
+2019,10,R. C. Celta de Vigo ,0 – 1 ,Real Sociedad ,Balaídos ,27 de octubre ,13:00 ,18002,Pizarro Gómez ,5,1
+2019,10,Granada C. F. ,1 – 0 ,Real Betis ,Los Cármenes ,27 de octubre ,15:00 ,18895,Mateu Lahoz ,7,0
+2019,10,Levante U. D. ,0 – 1 ,R. C. D. Español ,Ciudad de València ,27 de octubre ,17:00 ,18934,González Fuertes ,5,0
+2019,10,Sevilla F. C. ,2 – 0 ,Getafe C. F. ,Sánchez-Pizjuán ,27 de octubre ,19:30 ,38181,Sánchez Martínez ,5,0
+2019,10,C. A. Osasuna ,3 – 1 ,Valencia C. F. ,El Sadar ,27 de octubre ,22:00 ,14976,Jaime Latre ,2,1
+2019,10,F. C. Barcelona ,0 – 0 ,Real Madrid C. F. ,Camp Nou ,18 de diciembre,20:00 ,93426,Hernández Hernández ,8,0
+2019,11,Deportivo Alavés ,1 – 1 ,Atlético de Madrid ,Mendizorroza ,29 de octubre ,19:00 ,17235,Estrada Fernández ,6,0
+2019,11,F. C. Barcelona ,5 – 1 ,Real Valladolid C. F. ,Camp Nou ,29 de octubre ,21:15 ,59896,Alberola Rojas ,3,0
+2019,11,Real Sociedad ,1 – 2 ,Levante U. D. ,Reale Arena ,30 de octubre ,19:00 ,28142,Melero López ,7,0
+2019,11,Valencia C. F. ,1 – 1 ,Sevilla F. C. ,Mestalla ,30 de octubre ,19:00 ,37881,Del Cerro Grande ,9,0
+2019,11,Athletic Club ,3 – 0 ,R. C. D. Español ,San Mamés ,30 de octubre ,20:00 ,37094,Martínez Munuera ,1,0
+2019,11,Real Betis ,2 – 1 ,R. C. Celta de Vigo ,Benito Villamarín ,30 de octubre ,21:00 ,43353,Gil Manzano ,7,0
+2019,11,Real Madrid C. F. ,5 – 0 ,C. D. Leganés ,Santiago Bernabéu ,30 de octubre ,21:15 ,53870,Soto Grado ,6,0
+2019,11,S. D. Eibar ,2 – 1 ,Villarreal C. F. ,Ipurúa ,31 de octubre ,19:00 ,5632,Cuadra Fernández ,3,0
+2019,11,R. C. D. Mallorca ,2 – 2 ,C. A. Osasuna ,Estadio de Son Moix ,31 de octubre ,19:00 ,12641,Cordero Vega ,6,0
+2019,11,Getafe C. F. ,3 – 1 ,Granada C. F. ,Alfonso Pérez ,31 de octubre ,21:15 ,10227,González González ,10,0
+2019,12,R. C. D. Español ,1 – 2 ,Valencia C. F. ,RCDE Stadium ,2 de noviembre ,13:00 ,18428,Pizarro Gómez ,1,0
+2019,12,Levante U. D. ,3 – 1 ,F. C. Barcelona ,Ciudad de València ,2 de noviembre ,16:00 ,23341,Hernández Hernández ,7,0
+2019,12,Sevilla F. C. ,1 – 1 ,Atlético de Madrid ,Sánchez-Pizjuán ,2 de noviembre ,18:30 ,39957,González González ,7,0
+2019,12,Real Madrid C. F. ,0 – 0 ,Real Betis ,Santiago Bernabéu ,2 de noviembre ,21:00 ,70375,Sánchez Martínez ,6,0
+2019,12,Real Valladolid C. F. ,3 – 0 ,R. C. D. Mallorca ,José Zorrilla ,3 de noviembre ,12:00 ,18419,Medié Jiménez ,8,0
+2019,12,Villarreal C. F. ,0 – 0 ,Athletic Club ,La Cerámica ,3 de noviembre ,14:00 ,17460,Jaime Latre ,2,0
+2019,12,C. A. Osasuna ,4 – 2 ,Deportivo Alavés ,El Sadar ,3 de noviembre ,16:00 ,15954,Munuera Montero ,6,0
+2019,12,R. C. Celta de Vigo ,0 – 1 ,Getafe C. F. ,Balaídos ,3 de noviembre ,18:30 ,14705,Mateu Lahoz ,6,0
+2019,12,C. D. Leganés ,1 – 2 ,S. D. Eibar ,Butarque ,3 de noviembre ,18:30 ,9648,González Fuertes ,7,0
+2019,12,Granada C. F. ,1 – 2 ,Real Sociedad ,Los Cármenes ,3 de noviembre ,21:00 ,16921,Prieto Iglesias ,2,0
+2019,13,Real Sociedad ,1 – 1 ,C. D. Leganés ,Reale Arena ,8 de noviembre ,21:00 ,27684,Martínez Munuera ,5,0
+2019,13,Deportivo Alavés ,3 – 0 ,Real Valladolid C. F. ,Mendizorroza ,9 de noviembre ,13:00 ,16148,Melero López ,6,0
+2019,13,Valencia C. F. ,2 – 0 ,Granada C. F. ,Mestalla ,8 de noviembre ,16:00 ,39882,Estrada Fernández ,5,0
+2019,13,S. D. Eibar ,0 – 4 ,Real Madrid C. F. ,Ipurúa ,9 de noviembre ,18:30 ,7045,Cordero Vega ,0,0
+2019,13,F. C. Barcelona ,4 – 1 ,R. C. Celta de Vigo ,Camp Nou ,8 de noviembre ,21:00 ,71209,Cuadra Fernández ,5,0
+2019,13,R. C. D. Mallorca ,3 – 1 ,Villarreal C. F. ,Estadio de Son Moix ,10 de noviembre ,12:00 ,8348,Del Cerro Grande ,5,0
+2019,13,Athletic Club ,2 – 1 ,Levante U. D. ,San Mamés ,10 de noviembre ,14:00 ,33202,Alberola Rojas ,5,0
+2019,13,Atlético de Madrid ,3 – 1 ,R. C. D. Español ,Wanda Metropolitano ,10 de noviembre ,16:00 ,53069,Gil Manzano ,4,0
+2019,13,Getafe C. F. ,0 – 0 ,C. A. Osasuna ,Alfonso Pérez ,10 de noviembre ,18:30 ,10558,Soto Grado ,6,0
+2019,13,Real Betis ,1 – 2 ,Sevilla F. C. ,Benito Villamarín ,10 de noviembre ,21:00 ,53110,Hernández Hernández ,5,0
+2019,14,Levante U. D. ,2 – 1 ,R. C. D. Mallorca ,Ciudad de València ,22 de noviembre ,21:00 ,15110,Pizarro Gómez ,1,1
+2019,14,C. D. Leganés ,1 – 2 ,F. C. Barcelona ,Butarque ,23 de noviembre ,13:00 ,12110,Jaime Latre ,3,0
+2019,14,Real Betis ,2 – 1 ,Valencia C. F. ,Benito Villamarín ,23 de noviembre ,16:00 ,45562,De Burgos Bengoetxea ,4,0
+2019,14,Granada C. F. ,1 – 1 ,Atlético de Madrid ,Los Cármenes ,23 de noviembre ,18:30 ,17003,Medié Jiménez ,7,0
+2019,14,Real Madrid C. F. ,3 – 1 ,Real Sociedad ,Santiago Bernabéu ,23 de noviembre ,21:00 ,69305,Gil Manzano ,2,0
+2019,14,R. C. D. Español ,1 – 1 ,Getafe C. F. ,RCDE Stadium ,24 de noviembre ,12:00 ,22031,González Fuertes ,7,0
+2019,14,C. A. Osasuna ,1 – 2 ,Athletic Club ,El Sadar ,24 de noviembre ,14:00 ,16145,Sánchez Martínez ,7,0
+2019,14,S. D. Eibar ,0 – 2 ,Deportivo Alavés ,Ipurúa ,24 de noviembre ,16:00 ,6317,Mateu Lahoz ,3,0
+2019,14,Villarreal C. F. ,1 – 3 ,R. C. Celta de Vigo ,La Cerámica ,24 de noviembre ,18:30 ,17241,Munuera Montero ,5,0
+2019,14,Real Valladolid C. F. ,0 – 1 ,Sevilla F. C. ,José Zorrilla ,24 de noviembre ,21:00 ,18288,Prieto Iglesias ,5,1
+2019,15,R. C. Celta de Vigo ,0 – 0 ,Real Valladolid C. F. ,Balaídos ,29 de noviembre ,21:00 ,16918,Alberola Rojas ,4,0
+2019,15,Deportivo Alavés ,1 – 2 ,Real Madrid C. F. ,Mendizorroza ,30 de noviembre ,13:00 ,19357,Cuadra Fernández ,7,0
+2019,15,Real Sociedad ,4 – 1 ,S. D. Eibar ,Reale Arena ,30 de noviembre ,16:00 ,28612,Del Cerro Grande ,5,0
+2019,15,R. C. D. Mallorca ,1 – 2 ,Real Betis ,Estadio de Son Moix ,30 de noviembre ,18:30 ,16810,Martínez Munuera ,5,1
+2019,15,Valencia C. F. ,2 – 1 ,Villarreal C. F. ,Mestalla ,30 de noviembre ,21:00 ,38521,Soto Grado ,3,0
+2019,15,Sevilla F. C. ,1 – 0 ,C. D. Leganés ,Sánchez-Pizjuán ,1 de diciembre ,12:00 ,33648,De Burgos Bengoetxea ,6,0
+2019,15,Athletic Club ,2 – 0 ,Granada C. F. ,San Mamés ,1 de diciembre ,14:00 ,37974,Cordero Vega ,9,0
+2019,15,R. C. D. Español ,2 – 4 ,C. A. Osasuna ,RCDE Stadium ,1 de diciembre ,16:00 ,21238,Melero López ,3,1
+2019,15,Getafe C. F. ,4 – 0 ,Levante U. D. ,Alfonso Pérez ,1 de diciembre ,18:30 ,6535,Estrada Fernández ,5,0
+2019,15,Atlético de Madrid ,0 – 1 ,F. C. Barcelona ,Wanda Metropolitano ,1 de diciembre ,21:00 ,64198,Mateu Lahoz ,8,0
+2019,16,Villarreal C. F. ,0 – 0 ,Atlético de Madrid ,La Cerámica ,6 de diciembre ,22:00 ,17964,Hernández Hernández ,3,0
+2019,16,Real Madrid C. F. ,2 – 0 ,R. C. D. Español ,Santiago Bernabéu ,7 de diciembre ,13:00 ,64125,Jaime Latre ,7,0
+2019,16,Granada C. F. ,3 – 0 ,Deportivo Alavés ,Los Cármenes ,7 de diciembre ,16:00 ,14773,Gil Manzano ,3,2
+2019,16,Levante U. D. ,2 – 4 ,Valencia C. F. ,Ciudad de València ,7 de diciembre ,18:30 ,23137,Medié Jiménez ,5,1
+2019,16,F. C. Barcelona ,5 – 2 ,R. C. D. Mallorca ,Camp Nou ,7 de diciembre ,21:00 ,71072,Munuera Montero ,3,0
+2019,16,S. D. Eibar ,0 – 1 ,Getafe C. F. ,Ipurúa ,8 de diciembre ,12:00 ,5969,Prieto Iglesias ,6,1
+2019,16,Real Betis ,3 – 2 ,Athletic Club ,Benito Villamarín ,8 de diciembre ,14:00 ,46106,Pizarro Gómez ,6,0
+2019,16,Real Valladolid C. F. ,0 – 0 ,Real Sociedad ,José Zorrilla ,8 de diciembre ,16:00 ,18654,González Fuertes ,4,0
+2019,16,C. D. Leganés ,3 – 2 ,R. C. Celta de Vigo ,Butarque ,8 de diciembre ,18:30 ,7115,Sánchez Martínez ,8,1
+2019,16,C. A. Osasuna ,1 – 1 ,Sevilla F. C. ,El Sadar ,8 de diciembre ,21:00 ,15045,Estrada Fernández ,8,1
+2019,17,Deportivo Alavés ,1 – 1 ,C. D. Leganés ,Mendizorroza ,13 de diciembre ,21:00 ,15567,Soto Grado ,5,0
+2019,17,Granada C. F. ,1 – 2 ,Levante U. D. ,Los Cármenes ,14 de diciembre ,13:00 ,14127,Del Cerro Grande ,4,0
+2019,17,Real Sociedad ,2 – 2 ,F. C. Barcelona ,Reale Arena ,14 de diciembre ,16:00 ,36639,Alberola Rojas ,1,0
+2019,17,Athletic Club ,0 – 0 ,S. D. Eibar ,San Mamés ,14 de diciembre ,18:30 ,43203,Melero López ,6,0
+2019,17,Atlético de Madrid ,2 – 0 ,C. A. Osasuna ,Wanda Metropolitano ,14 de diciembre ,21:00 ,46033,Munuera Montero ,2,0
+2019,17,Getafe C. F. ,2 – 0 ,Real Valladolid C. F. ,Alfonso Pérez ,15 de diciembre ,12:00 ,10816,Mateu Lahoz ,6,0
+2019,17,R. C. Celta de Vigo ,2 – 2 ,R. C. D. Mallorca ,Balaídos ,15 de diciembre ,14:00 ,13247,De Burgos Bengoetxea ,6,1
+2019,17,R. C. D. Español ,2 – 2 ,Real Betis ,RCDE Stadium ,15 de diciembre ,16:00 ,22248,Cuadra Fernández ,5,0
+2019,17,Sevilla F. C. ,1 – 2 ,Villarreal C. F. ,Sánchez-Pizjuán ,15 de diciembre ,18:30 ,36521,Cordero Vega ,2,0
+2019,17,Valencia C. F. ,1 – 1 ,Real Madrid C. F. ,Mestalla ,15 de diciembre ,21:00 ,44265,Sánchez Martínez ,3,0
+2019,18,S. D. Eibar ,3 – 0 ,Granada C. F. ,Ipurúa ,20 de diciembre ,21:00 ,5341,González Fuertes ,6,0
+2019,18,R. C. D. Mallorca ,0 – 2 ,Sevilla F. C. ,Estadio de Son Moix ,21 de diciembre ,13:00 ,14321,Gil Manzano ,8,0
+2019,18,F. C. Barcelona ,4 – 1 ,Deportivo Alavés ,Camp Nou ,21 de diciembre ,16:00 ,63054,Melero López ,6,0
+2019,18,Villarreal C. F. ,1 – 0 ,Getafe C. F. ,La Cerámica ,21 de diciembre ,18:30 ,14526,Jaime Latre ,5,1
+2019,18,Real Valladolid C. F. ,1 – 1 ,Valencia C. F. ,José Zorrilla ,21 de diciembre ,21:00 ,16295,Pizarro Gómez ,3,0
+2019,18,C. D. Leganés ,2 – 0 ,R. C. D. Español ,Butarque ,22 de diciembre ,12:00 ,10183,Alberola Rojas ,7,0
+2019,18,C. A. Osasuna ,3 – 4 ,Real Sociedad ,El Sadar ,22 de diciembre ,14:00 ,16197,Medié Jiménez ,8,1
+2019,18,Real Betis ,1 – 2 ,Atlético de Madrid ,Benito Villamarín ,22 de diciembre ,16:00 ,52017,Estrada Fernández ,6,0
+2019,18,Levante U. D. ,3 – 1 ,R. C. Celta de Vigo ,Ciudad de València ,22 de diciembre ,18:30 ,18653,Prieto Iglesias ,9,0
+2019,18,Real Madrid C. F. ,0 – 0 ,Athletic Club ,Santiago Bernabéu ,22 de diciembre ,21:00 ,71306,Cordero Vega ,1,0
+2019,19,Real Valladolid C. F. ,2 – 2 ,C. D. Leganés ,José Zorrilla ,3 de enero ,19:00 ,21492,Martínez Munuera ,5,0
+2019,19,Sevilla F. C. ,1 – 1 ,Athletic Club ,Sánchez-Pizjuán ,3 de enero ,21:00 ,37972,González González ,6,0
+2019,19,Valencia C. F. ,1 – 0 ,S. D. Eibar ,Mestalla ,4 de enero ,13:00 ,39856,Hernández Hernández ,2,1
+2019,19,Getafe C. F. ,0 – 3 ,Real Madrid C. F. ,Alfonso Pérez ,4 de enero ,16:00 ,15426,Munuera Montero ,5,0
+2019,19,Atlético de Madrid ,2 – 1 ,Levante U. D. ,Wanda Metropolitano ,4 de enero ,18:30 ,58711,De Burgos Bengoetxea ,4,0
+2019,19,R. C. D. Español ,2 – 2 ,F. C. Barcelona ,RCDE Stadium ,4 de enero ,21:00 ,31233,Del Cerro Grande ,4,0
+2019,19,Granada C. F. ,1 – 0 ,R. C. D. Mallorca ,Los Cármenes ,5 de enero ,12:00 ,16428,Soto Grado ,6,0
+2019,19,Real Sociedad ,1 – 2 ,Villarreal C. F. ,Reale Arena ,5 de enero ,14:00 ,31486,Sánchez Martínez ,9,0
+2019,19,Deportivo Alavés ,1 – 1 ,Real Betis ,Mendizorroza ,5 de enero ,16:00 ,13875,Mateu Lahoz ,10,1
+2019,19,R. C. Celta de Vigo ,1 – 1 ,C. A. Osasuna ,Balaídos ,5 de enero ,21:00 ,11983,Cuadra Fernández ,6,0
