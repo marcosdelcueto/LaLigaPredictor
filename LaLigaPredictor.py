@@ -11,7 +11,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 
 ### START CUSTOMIZABLE PARAMETERS ###
-MLPtimes = 3              # Number of times MLP is run: use large numbers (e.g. 100) to average over random_state
+MLPtimes = 100              # Number of times MLP is run: use large numbers (e.g. 100) to average over random_state
 threshold = 0.6             # When final averaged predictions are given: assign N/A if probability is under threshold value
 nodes_list = [(120,120)]    # Each tuple contains number of nodes per hidden layer. More than one layer will try them in turn
 predict_samples = 10        # Number of samples at the end of data.csv that are predicted
@@ -48,8 +48,12 @@ def main():
     # Create list with teams that play in the matches whose outcome we will try to predict
     list_TeamHome = df_results['TeamHome'].values.tolist()[-predict_samples:]
     list_TeamAway = df_results['TeamAway'].values.tolist()[-predict_samples:]
+    # From RatingHome and RatingHome to AverageHome and AverageAway
+    df_results['AverageHome']=df_results.apply(get_AverageHome,axis=1)
+    df_results['AverageAway']=df_results.apply(get_AverageAway,axis=1)
     # Drop unnecessary columns
     #lists_columns_to_drop = ['Result','Spectators','TimeHour','TimeMinute','Date','Stadium','YellowCards','RedCards','GoalsHome','GoalsAway','TeamHome','TeamAway','Referee']
+    #lists_columns_to_drop = ['Result','TimeHour','TimeMinute','Date','Stadium','GoalsHome','GoalsAway','TeamHome','TeamAway','Referee','PlayersHome','RatingHome','PotentialHome','PlayersAway','RatingAway','PotentialAway','AverageHome','AverageAway']
     lists_columns_to_drop = ['Result','TimeHour','TimeMinute','Date','Stadium','GoalsHome','GoalsAway','TeamHome','TeamAway','Referee','PlayersHome','RatingHome','PotentialHome','PlayersAway','RatingAway','PotentialAway']
     df_results  = drop_columns(df_results,lists_columns_to_drop)
     # Assign descriptors X and target y
@@ -75,9 +79,9 @@ def drop_columns(df_results,list_columns_to_drop):
 def MLP(X,y,list_TeamHome,list_TeamAway):
     # Scale Season and Round
     #scaler = StandardScaler().fit(X[['Season','Round']])
-    scaler = MinMaxScaler().fit(X[['Season','Round','Time']])
-    X[['Season','Round','Time']]=scaler.transform(X[['Season','Round','Time']])
-    X = X.drop('Time',axis = 1)
+    scaler = MinMaxScaler().fit(X[['Season','Round','Time','AverageHome','AverageAway']])
+    X[['Season','Round','Time','AverageHome','AverageAway']]=scaler.transform(X[['Season','Round','Time','AverageHome','AverageAway']])
+    #X = X.drop('Time',axis = 1)
     #print('SCALED X:')
     #print(X)
     #print('y:')
@@ -181,6 +185,48 @@ def MLP(X,y,list_TeamHome,list_TeamAway):
         print('# Bet accuracy: %.0f %s'  %(100*correct_bets/(correct_bets+incorrect_bets),'%'))
 ### End function MLP
 ########################
+
+########################
+### Start function get_AverageHome
+def get_AverageHome(row):
+    val = row['RatingHome']
+    val = re.findall(r'[\[]+(.*?)\]',val)
+    players = val[0]
+    substitutes = val[1]
+    players = players.split(",")
+    players = list(map(int, players))
+    substitutes = substitutes.split(",")
+    substitutes = list(map(int, substitutes))
+    average_players = sum(players)/len(players)
+    average_substitutes = sum(substitutes)/len(substitutes)
+    #print('players:',players,average_players,'substitutes:',substitutes,average_substitutes)
+    val = average_players + average_substitutes/3
+    return val
+### End function get_ResultHome
+########################
+
+########################
+### Start function get_AverageAway
+def get_AverageAway(row):
+    val = row['RatingAway']
+    val = re.findall(r'[\[]+(.*?)\]',val)
+    players = val[0]
+    substitutes = val[1]
+    players = players.split(",")
+    players = list(map(int, players))
+    substitutes = substitutes.split(",")
+    substitutes = list(map(int, substitutes))
+    average_players = sum(players)/len(players)
+    average_substitutes = sum(substitutes)/len(substitutes)
+    #print('players:',players,average_players,'substitutes:',substitutes,average_substitutes)
+    val = average_players + average_substitutes/3
+    return val
+### End function get_ResultAway
+########################
+
+
+
+
 
 ########################
 ### Start function get_ResultHome
