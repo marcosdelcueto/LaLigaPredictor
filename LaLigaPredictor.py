@@ -11,7 +11,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 
 ### START CUSTOMIZABLE PARAMETERS ###
-MLPtimes = 10              # Number of times MLP is run: use large numbers (e.g. 100) to average over random_state
+MLPtimes = 3              # Number of times MLP is run: use large numbers (e.g. 100) to average over random_state
 threshold = 0.6             # When final averaged predictions are given: assign N/A if probability is under threshold value
 nodes_list = [(120,120)]    # Each tuple contains number of nodes per hidden layer. More than one layer will try them in turn
 predict_samples = 10        # Number of samples at the end of data.csv that are predicted
@@ -25,7 +25,7 @@ def main():
     df_results = pd.read_csv('data.csv')
     # From X-Y result, transform to {1,0,-1}
     df_results['GoalsHome']=df_results['Result'].astype(str).str[0]
-    df_results['GoalsAway']=df_results['Result'].astype(str).str[4]
+    df_results['GoalsAway']=df_results['Result'].astype(str).str[2]
     df_results['ResultHome']=df_results.apply(get_ResultHome,axis=1)
     # Make data uniform: remove special characters and acronyms
     for column in ['Stadium','Referee','TeamHome','TeamAway']:
@@ -49,11 +49,13 @@ def main():
     list_TeamHome = df_results['TeamHome'].values.tolist()[-predict_samples:]
     list_TeamAway = df_results['TeamAway'].values.tolist()[-predict_samples:]
     # Drop unnecessary columns
-    lists_columns_to_drop = ['Result','Spectators','TimeHour','TimeMinute','Date','Stadium','YellowCards','RedCards','GoalsHome','GoalsAway','TeamHome','TeamAway','Referee']
+    #lists_columns_to_drop = ['Result','Spectators','TimeHour','TimeMinute','Date','Stadium','YellowCards','RedCards','GoalsHome','GoalsAway','TeamHome','TeamAway','Referee']
+    lists_columns_to_drop = ['Result','TimeHour','TimeMinute','Date','Stadium','GoalsHome','GoalsAway','TeamHome','TeamAway','Referee','PlayersHome','RatingHome','PotentialHome','PlayersAway','RatingAway','PotentialAway']
     df_results  = drop_columns(df_results,lists_columns_to_drop)
     # Assign descriptors X and target y
     X = df_results.drop('ResultHome',axis = 1)
     y = df_results[['ResultHome']]
+    #print(X.head(10).to_string())
     # Call MLP function
     MLP(X,y,list_TeamHome,list_TeamAway)
 ### End function main
@@ -176,7 +178,7 @@ def MLP(X,y,list_TeamHome,list_TeamAway):
         print('#############################################')
         print('# Correct bets:', correct_bets)
         print('# Incorrect bets:', incorrect_bets)
-        print('# Bet accuracy: %.0f \%'  %(100*correct_bets/(correct_bets+incorrect_bets)))
+        print('# Bet accuracy: %.0f %s'  %(100*correct_bets/(correct_bets+incorrect_bets),'%'))
 ### End function MLP
 ########################
 
