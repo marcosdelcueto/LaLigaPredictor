@@ -48,7 +48,6 @@ Then, I combined these two databases:
 **Final database**. It contains information of all matches and players from 2010 to 2019. The descriptors used so far are:
 - Season
 - Round
-- Date
 - Time
 - TeamHome
 - Result
