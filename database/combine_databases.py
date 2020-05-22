@@ -12,7 +12,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 
 
-csv_file_name = 'final_database.csv'
+csv_file_name = 'database_final.csv'
 
 ########################
 ### Start function get_Month
@@ -135,15 +135,18 @@ for n in range(N_sofifa):
         d1 = pd.DataFrame(df_sofifa.iloc[[n],[0,1,2,3,4,5]])
         d2 = pd.DataFrame(df_laliga.iloc[[m],[0,1,6,2,3,4]])
         is_same = np.array_equal(d1.values,d2.values)
-        #is_same = df_sofifa.iloc[[n],[0,1,2,3]].equals(df_laliga.iloc[[m],[0,1,6,2]])
         #print(df_sofifa.iloc[[n],[0,1,2,3,4,5]])
         #print(df_laliga.iloc[[m],[0,1,6,2,3,4]])
         #print(is_same)
         #print('#############')
-        if is_same == True:
+        #if n ==50:
             #print('new m', m)
             #print(df_sofifa.iloc[[n],[0,1,2,3,4,5]].to_string(header=False))
             #print(df_laliga.iloc[[m],[0,1,6,2,3,4]].to_string(header=False))
+        if is_same == True:
+            print('new m', m)
+            print(df_sofifa.iloc[[n],[0,1,2,3,4,5]].to_string(header=False))
+            print(df_laliga.iloc[[m],[0,1,6,2,3,4]].to_string(header=False))
             #new_dataset = df_sofifa[['Season','Round','Date','TeamHome','Result','TeamAway','Referee','Stadium','PlayersHome','RatingHome','PotentialHome','PlayersAway','RatingAway','PotentialAway']].copy(deep=True)
             #new_dataset['Time'] = df_laliga.iloc['Time']
             if n==0:
