@@ -11,10 +11,10 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 
 ### START CUSTOMIZABLE PARAMETERS ###
-MLP_runs = 100              # Number of times MLP is run: use large numbers (e.g. 100) to average over random_state
-confidence_threshold = 0.6  # When final averaged predictions are given: assign N/A if probability is under confidence_threshold value
-MLP_nodes = [(120,120)]     # Each tuple contains number of nodes per hidden layer. More than one layer will try them in turn
-predict_matches = 10        # Number of samples at the end of data.csv that are predicted
+MLP_runs = 10              # Number of times MLP is run: use large numbers (e.g. 100) to average over random_state
+confidence_threshold = 0.6 # When final averaged predictions are given: assign N/A if probability is under confidence_threshold value
+MLP_nodes = [(16,16)]      # Each tuple contains number of nodes per hidden layer. More than one layer will try them in turn
+predict_matches = 70       # Number of samples at the end of data.csv that are predicted
 #### END CUSTOMIZABLE PARAMETERS ####
 
 ################################################################
@@ -41,25 +41,28 @@ def main():
     one_hot_TeamHome = pd.get_dummies(df_results['TeamHome'],prefix='TeamHome',sparse=True)
     one_hot_TeamAway = pd.get_dummies(df_results['TeamAway'],prefix='TeamAway',sparse=True)
     one_hot_Referee  = pd.get_dummies(df_results['Referee'], prefix='Referee', sparse=True)
+    #one_hot_Result  = pd.get_dummies(df_results['ResultHome'], prefix='Result', sparse=True)
     # Join the encoded dfs to main df
-    df_results = df_results.join(one_hot_TeamHome)
-    df_results = df_results.join(one_hot_TeamAway)
-    df_results = df_results.join(one_hot_Referee)
+    #df_results = df_results.join(one_hot_TeamHome)
+    #df_results = df_results.join(one_hot_TeamAway)
+    #df_results = df_results.join(one_hot_Referee)
+    #df_results = df_results.join(one_hot_Result)
     # Create list with teams that play in the matches whose outcome we will try to predict
     list_TeamHome = df_results['TeamHome'].values.tolist()[-predict_matches:]
     list_TeamAway = df_results['TeamAway'].values.tolist()[-predict_matches:]
-    # From RatingHome and RatingHome to AverageHome and AverageAway
+    # From RatingHome and RatingAway to AverageHome and AverageAway
     df_results['AverageHome']=df_results.apply(get_AverageHome,axis=1)
     df_results['AverageAway']=df_results.apply(get_AverageAway,axis=1)
+    # From PotentialHome and PotentialAway to AveragePotentialHome and AveragePotentialAway
+    df_results['AveragePotentialHome']=df_results.apply(get_AveragePotentialHome,axis=1)
+    df_results['AveragePotentialAway']=df_results.apply(get_AveragePotentialAway,axis=1)
     # Drop unnecessary columns
-    #lists_columns_to_drop = ['Result','Spectators','TimeHour','TimeMinute','Date','Stadium','YellowCards','RedCards','GoalsHome','GoalsAway','TeamHome','TeamAway','Referee']
-    #lists_columns_to_drop = ['Result','TimeHour','TimeMinute','Date','Stadium','GoalsHome','GoalsAway','TeamHome','TeamAway','Referee','PlayersHome','RatingHome','PotentialHome','PlayersAway','RatingAway','PotentialAway','AverageHome','AverageAway']
     lists_columns_to_drop = ['Result','TimeHour','TimeMinute','Date','Stadium','GoalsHome','GoalsAway','TeamHome','TeamAway','Referee','PlayersHome','RatingHome','PotentialHome','PlayersAway','RatingAway','PotentialAway']
     df_results  = drop_columns(df_results,lists_columns_to_drop)
     # Assign descriptors X and target y
     X = df_results.drop('ResultHome',axis = 1)
     y = df_results[['ResultHome']]
-    #print(X.head(10).to_string())
+    print(X.head(10))
     # Call MLP function
     MLP(X,y,list_TeamHome,list_TeamAway)
 ### End function main
@@ -78,14 +81,26 @@ def drop_columns(df_results,list_columns_to_drop):
 ### Start function MLP
 def MLP(X,y,list_TeamHome,list_TeamAway):
     # Scale Season and Round
-    #scaler = StandardScaler().fit(X[['Season','Round']])
-    scaler = MinMaxScaler().fit(X[['Season','Round','Time','AverageHome','AverageAway']])
-    X[['Season','Round','Time','AverageHome','AverageAway']]=scaler.transform(X[['Season','Round','Time','AverageHome','AverageAway']])
+    #scaler = StandardScaler().fit(X[['Season','Round','Time','AverageHome','AverageAway']])
+    scaler = MinMaxScaler().fit(X[['Season','Round','Time','AverageHome','AverageAway','AveragePotentialHome','AveragePotentialAway','TeamHomeRecentPointsHome','TeamAwayRecentPointsAway','TeamHomeRecentPoints','TeamAwayRecentPoints']])
+    X[['Season','Round','Time','AverageHome','AverageAway','AveragePotentialHome','AveragePotentialAway','TeamHomeRecentPointsHome','TeamAwayRecentPointsAway','TeamHomeRecentPoints','TeamAwayRecentPoints']] = scaler.transform(X[['Season','Round','Time','AverageHome','AverageAway','AveragePotentialHome','AveragePotentialAway','TeamHomeRecentPointsHome','TeamAwayRecentPointsAway','TeamHomeRecentPoints','TeamAwayRecentPoints']])
+    #print('Statistics in Complete data set:')
+    #print(y['ResultHome'].value_counts(normalize=True) * 100)
+    #X = X.drop('Season',axis = 1)
+    #X = X.drop('Round',axis = 1)
     #X = X.drop('Time',axis = 1)
-    #print('SCALED X:')
-    #print(X)
-    #print('y:')
-    #print(y)
+    #X = X.drop('AverageHome',axis = 1)
+    #X = X.drop('AverageAway',axis = 1)
+    #X = X.drop('AveragePotentialHome',axis = 1)
+    #X = X.drop('AveragePotentialAway',axis = 1)
+    #X = X.drop('TeamHomeRecentPointsHome',axis = 1)
+    #X = X.drop('TeamAwayRecentPointsAway',axis = 1)
+    #X = X.drop('TeamHomeRecentPoints',axis = 1)
+    #X = X.drop('TeamAwayRecentPoints',axis = 1)
+    print('SCALED X:')
+    print(X)
+    print('y:')
+    print(y)
     print('##################')
     print('## Input values ##')
     print('##################')
@@ -95,8 +110,11 @@ def MLP(X,y,list_TeamHome,list_TeamAway):
     print('predict_matches:',predict_matches)
     print('##################')
     X_train, X_test, y_train, y_test = train_test_split(X,y, test_size=predict_matches,shuffle=False)
+    #X_train, X_test, y_train, y_test = train_test_split(X,y, test_size=predict_matches,shuffle=True)
     #print('## Descriptors of matches to predict:')
     #print(X_test)
+    #print('Statistics in Test sample:')
+    #print(y_test['ResultHome'].value_counts(normalize=True) * 100)
     new_list_results = []
     list_result = y_test['ResultHome'].values.tolist()
     print('############################################################')
@@ -107,6 +125,9 @@ def MLP(X,y,list_TeamHome,list_TeamAway):
         if list_result[i] ==  1: new_list_results.append(1)
         if list_result[i] ==  0: new_list_results.append('X')
         if list_result[i] == -1: new_list_results.append(2)
+        #if list_result[i] ==  0.0: new_list_results.append(1)
+        #if list_result[i] ==  0.5: new_list_results.append('X')
+        #if list_result[i] ==  1.0: new_list_results.append(2)
         #print(list_TeamHome[i],'---',list_TeamAway[i],':',new_list_results[i])
         print('%25s %3s %25s %2s %1s' %(list_TeamHome[i],'---',list_TeamAway[i],': ',new_list_results[i]))
     #print(new_list_results)
@@ -118,6 +139,7 @@ def MLP(X,y,list_TeamHome,list_TeamAway):
         print('############################################################')
         print('### Starting MLP training -- It may take several minutes ###')
         print('############################################################')
+        print('Nodes:', nodes)
         print('Progress  %.1f%s' %(0.0, '%'))
         progress_count = 1
         accu_per_node=[]
@@ -125,8 +147,14 @@ def MLP(X,y,list_TeamHome,list_TeamAway):
         result_2 = [[] for j in range(len(y_test))] # TeamHome loses
         result_X = [[] for j in range(len(y_test))] # Draw
         for j in range(MLP_runs):
-            clf = MLPClassifier(hidden_layer_sizes=(nodes), max_iter=10000, alpha=1e-4, solver='adam',  random_state=None,tol=0.0001)
+            #clf = MLPClassifier(hidden_layer_sizes=(nodes), max_iter=10000, alpha=1e-4, solver='adam',  random_state=None,tol=0.0001)
+            clf = MLPClassifier(hidden_layer_sizes=(nodes), max_iter=100000, alpha=1e-4, solver='lbfgs',  random_state=None,tol=0.001, activation='identity')
             clf.fit(X_train, y_train.values.ravel())
+            #clf.fit(X_train, y_train)
+
+            #print("Training set score: %f" % clf.score(X_train, y_train))
+            #print("Test set score: %f" % clf.score(X_test, y_test))
+
             y_pred = clf.predict(X_test)
             #print('j, y_pred:', j, y_pred)
             prog = (j+1)*100/MLP_runs
@@ -137,6 +165,9 @@ def MLP(X,y,list_TeamHome,list_TeamAway):
                 if y_pred[i] ==  1: result_1[i].append(1)
                 if y_pred[i] == -1: result_2[i].append(1)
                 if y_pred[i] ==  0: result_X[i].append(1)
+                #if y_pred[i] ==  0.0: result_1[i].append(1)
+                #if y_pred[i] ==  1.0: result_2[i].append(1)
+                #if y_pred[i] ==  0.5: result_X[i].append(1)
             accu=accuracy_score(y_test, y_pred)
             accu_per_node.append(accu)
         #print('Nodes: %s. Mean: %.3f. Median: %.3f. Stdev: %.3f' % (str(nodes),statistics.mean(accu_per_node),statistics.median(accu_per_node),statistics.stdev(accu_per_node)))
@@ -154,25 +185,22 @@ def MLP(X,y,list_TeamHome,list_TeamAway):
             #print('TEST best:', best, type(best))
             #print('TEST list_result[i]:', list_result[i], type(list_result[i]))
             if best == '1':
-                if list_result[i] == 1:
-                    #print('I am correct', best)
+                if list_result[i] ==  1:
+                #if list_result[i] == 0.0:
                     correct_bets = correct_bets + 1
                 else:
-                    #print('I am incorrect', best)
                     incorrect_bets = incorrect_bets + 1
             if best == 'X':
                 if list_result[i] == 0:
-                    #print('I am correct', best)
+                #if list_result[i] == 0.5:
                     correct_bets = correct_bets + 1
                 else:
-                    #print('I am incorrect', best)
                     incorrect_bets = incorrect_bets + 1
             if best == '2':
                 if list_result[i] == -1:
-                    #print('I am correct', best)
+                #if list_result[i] == 1.0:
                     correct_bets = correct_bets + 1
                 else:
-                    #print('I am incorrect', best)
                     incorrect_bets = incorrect_bets + 1
             #print('Bet: %s. %s -- %s. %s (1: %.2f. X: %.2f. 2: %.2f)' %(best,list_TeamHome[i],list_TeamAway[i],'\t',sum(result_1[i])/MLP_runs,sum(result_X[i])/MLP_runs,sum(result_2[i])/MLP_runs))
             print('%4s %5s %25s %3s %25s  (1: %.2f. X: %.2f. 2: %.2f)' %('Bet:',best,list_TeamHome[i],'---',list_TeamAway[i],sum(result_1[i])/MLP_runs,sum(result_X[i])/MLP_runs,sum(result_2[i])/MLP_runs))
@@ -203,7 +231,7 @@ def get_AverageHome(row):
     #print('players:',players,average_players,'substitutes:',substitutes,average_substitutes)
     val = average_players + average_substitutes/3
     return val
-### End function get_ResultHome
+### End function get_AverageHome
 ########################
 
 ########################
@@ -225,6 +253,43 @@ def get_AverageAway(row):
 ### End function get_ResultAway
 ########################
 
+########################
+### Start function get_AveragePotentialHome
+def get_AveragePotentialHome(row):
+    val = row['PotentialHome']
+    val = re.findall(r'[\[]+(.*?)\]',val)
+    players = val[0]
+    substitutes = val[1]
+    players = players.split(",")
+    players = list(map(int, players))
+    substitutes = substitutes.split(",")
+    substitutes = list(map(int, substitutes))
+    average_players = sum(players)/len(players)
+    average_substitutes = sum(substitutes)/len(substitutes)
+    #print('players:',players,average_players,'substitutes:',substitutes,average_substitutes)
+    val = average_players + average_substitutes/3
+    return val
+### End function get_AveragePotentialHome
+########################
+
+########################
+### Start function get_AveragePotentialAway
+def get_AveragePotentialAway(row):
+    val = row['PotentialAway']
+    val = re.findall(r'[\[]+(.*?)\]',val)
+    players = val[0]
+    substitutes = val[1]
+    players = players.split(",")
+    players = list(map(int, players))
+    substitutes = substitutes.split(",")
+    substitutes = list(map(int, substitutes))
+    average_players = sum(players)/len(players)
+    average_substitutes = sum(substitutes)/len(substitutes)
+    #print('players:',players,average_players,'substitutes:',substitutes,average_substitutes)
+    val = average_players + average_substitutes/3
+    return val
+### End function get_AveragePotentialAway
+########################
 
 
 
@@ -234,12 +299,15 @@ def get_AverageAway(row):
 def get_ResultHome(row):
     # Function to assign victory value wrt local team
     # transform results from (GoalsHome -- GoalsAway) to {1,0,-1}
-    if row['GoalsHome']   < row['GoalsAway']:
-        val = -1
-    elif row['GoalsHome'] > row['GoalsAway']:
+    if int(row['GoalsHome'])   < int(row['GoalsAway']):
+        val =  -1
+        #val = 1.0
+    elif int(row['GoalsHome']) > int(row['GoalsAway']):
         val = 1
+        #val = 0.0
     else:
         val = 0
+        #val = 0.5
     return val
 ### End function get_ResultHome
 ########################
