@@ -11,10 +11,12 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 
 ### START CUSTOMIZABLE PARAMETERS ###
-MLP_runs = 10              # Number of times MLP is run: use large numbers (e.g. 100) to average over random_state
-confidence_threshold = 0.6 # When final averaged predictions are given: assign N/A if probability is under confidence_threshold value
-MLP_nodes = [(16,16)]      # Each tuple contains number of nodes per hidden layer. More than one layer will try them in turn
-predict_matches = 70       # Number of samples at the end of data.csv that are predicted
+MLP_runs =  50              # Number of times MLP is run: use large numbers (e.g. 100) to average over random_state
+confidence_threshold = 0.60 # When final averaged predictions are given: assign N/A if probability is under confidence_threshold value
+#MLP_nodes = [(19,38,57,76,95,76,57,38,19)]     # Each tuple contains number of nodes per hidden layer. More than one layer will try them in turn
+MLP_nodes = [(100,100)]   # Each tuple contains number of nodes per hidden layer. More than one layer will try them in turn
+ignore_last_matches = 190   # Ignore this number of matches at the end of data.csv
+predict_matches = 10        # Number of samples at the end of data.csv that are predicted (after last 'ignore_last_matches' have been deleted)
 #### END CUSTOMIZABLE PARAMETERS ####
 
 ################################################################
@@ -47,22 +49,36 @@ def main():
     #df_results = df_results.join(one_hot_TeamAway)
     #df_results = df_results.join(one_hot_Referee)
     #df_results = df_results.join(one_hot_Result)
+    ######################################################################
+    ######################################################################
+    # Drop some rows
+    if ignore_last_matches > 0: df_results = df_results.iloc[:-int(ignore_last_matches)]
+    ######################################################################
+    ######################################################################
     # Create list with teams that play in the matches whose outcome we will try to predict
     list_TeamHome = df_results['TeamHome'].values.tolist()[-predict_matches:]
     list_TeamAway = df_results['TeamAway'].values.tolist()[-predict_matches:]
     # From RatingHome and RatingAway to AverageHome and AverageAway
     df_results['AverageHome']=df_results.apply(get_AverageHome,axis=1)
     df_results['AverageAway']=df_results.apply(get_AverageAway,axis=1)
+    # From AverageHome and AverageAway to AverageRatingDiff
+    df_results['AverageRatingDiff']=df_results.apply(get_AverageRatingDiff,axis=1)
     # From PotentialHome and PotentialAway to AveragePotentialHome and AveragePotentialAway
     df_results['AveragePotentialHome']=df_results.apply(get_AveragePotentialHome,axis=1)
     df_results['AveragePotentialAway']=df_results.apply(get_AveragePotentialAway,axis=1)
+    # From AverageHome and AverageAway to AveragePotentialDiff
+    df_results['AveragePotentialDiff']=df_results.apply(get_AveragePotentialDiff,axis=1)
+    # From TeamHomeCurrentTotalPoints and TeamAwayCurrentTotalPoints to CurrentTotalPointsDiff
+    df_results['CurrentTotalPointsDiff']=df_results.apply(get_CurrentTotalPointsDiff,axis=1)
+    # From 
+    df_results['AverageRecentGoals']=df_results.apply(get_AverageRecentGoals,axis=1)
     # Drop unnecessary columns
     lists_columns_to_drop = ['Result','TimeHour','TimeMinute','Date','Stadium','GoalsHome','GoalsAway','TeamHome','TeamAway','Referee','PlayersHome','RatingHome','PotentialHome','PlayersAway','RatingAway','PotentialAway']
     df_results  = drop_columns(df_results,lists_columns_to_drop)
     # Assign descriptors X and target y
     X = df_results.drop('ResultHome',axis = 1)
     y = df_results[['ResultHome']]
-    print(X.head(10))
+    print(X.tail(10).to_string())
     # Call MLP function
     MLP(X,y,list_TeamHome,list_TeamAway)
 ### End function main
@@ -81,22 +97,37 @@ def drop_columns(df_results,list_columns_to_drop):
 ### Start function MLP
 def MLP(X,y,list_TeamHome,list_TeamAway):
     # Scale Season and Round
-    #scaler = StandardScaler().fit(X[['Season','Round','Time','AverageHome','AverageAway']])
-    scaler = MinMaxScaler().fit(X[['Season','Round','Time','AverageHome','AverageAway','AveragePotentialHome','AveragePotentialAway','TeamHomeRecentPointsHome','TeamAwayRecentPointsAway','TeamHomeRecentPoints','TeamAwayRecentPoints']])
-    X[['Season','Round','Time','AverageHome','AverageAway','AveragePotentialHome','AveragePotentialAway','TeamHomeRecentPointsHome','TeamAwayRecentPointsAway','TeamHomeRecentPoints','TeamAwayRecentPoints']] = scaler.transform(X[['Season','Round','Time','AverageHome','AverageAway','AveragePotentialHome','AveragePotentialAway','TeamHomeRecentPointsHome','TeamAwayRecentPointsAway','TeamHomeRecentPoints','TeamAwayRecentPoints']])
+    scaler = MinMaxScaler().fit(X[['Season','Round','Time','AverageHome','AverageAway','AveragePotentialHome','AveragePotentialAway','TeamHomeRecentPointsHome','TeamAwayRecentPointsAway','TeamHomeRecentPoints','TeamAwayRecentPoints','TeamHomeRecentPointsh2h','TeamHomeRecentTiedMatches','TeamHomeRecentTiedMatches','AverageRatingDiff','AveragePotentialDiff','TeamHomeCurrentTotalPoints','TeamAwayCurrentTotalPoints','CurrentTotalPointsDiff','TeamHomeRecentGoalsScored','TeamAwayRecentGoalsScored','AverageRecentGoals']])
+    X[['Season','Round','Time','AverageHome','AverageAway','AveragePotentialHome','AveragePotentialAway','TeamHomeRecentPointsHome','TeamAwayRecentPointsAway','TeamHomeRecentPoints','TeamAwayRecentPoints','TeamHomeRecentPointsh2h','TeamHomeRecentTiedMatches','TeamHomeRecentTiedMatches','AverageRatingDiff','AveragePotentialDiff','TeamHomeCurrentTotalPoints','TeamAwayCurrentTotalPoints','CurrentTotalPointsDiff','TeamHomeRecentGoalsScored','TeamAwayRecentGoalsScored','AverageRecentGoals']] = scaler.transform(X[['Season','Round','Time','AverageHome','AverageAway','AveragePotentialHome','AveragePotentialAway','TeamHomeRecentPointsHome','TeamAwayRecentPointsAway','TeamHomeRecentPoints','TeamAwayRecentPoints','TeamHomeRecentPointsh2h','TeamHomeRecentTiedMatches','TeamHomeRecentTiedMatches','AverageRatingDiff','AveragePotentialDiff','TeamHomeCurrentTotalPoints','TeamAwayCurrentTotalPoints','CurrentTotalPointsDiff','TeamHomeRecentGoalsScored','TeamAwayRecentGoalsScored','AverageRecentGoals']])
     #print('Statistics in Complete data set:')
     #print(y['ResultHome'].value_counts(normalize=True) * 100)
+    ##############################################
+    ############# Drop extra columns #############
+    X = X.drop('AverageHome',axis = 1)
+    #X = X.drop('AverageAway',axis = 1)##
+    X = X.drop('AveragePotentialHome',axis = 1)
+    #X = X.drop('AveragePotentialAway',axis = 1)##
+    X = X.drop('TeamHomeCurrentTotalPoints',axis = 1)
+    #X = X.drop('TeamAwayCurrentTotalPoints',axis = 1)##
     #X = X.drop('Season',axis = 1)
     #X = X.drop('Round',axis = 1)
     #X = X.drop('Time',axis = 1)
-    #X = X.drop('AverageHome',axis = 1)
-    #X = X.drop('AverageAway',axis = 1)
-    #X = X.drop('AveragePotentialHome',axis = 1)
-    #X = X.drop('AveragePotentialAway',axis = 1)
     #X = X.drop('TeamHomeRecentPointsHome',axis = 1)
     #X = X.drop('TeamAwayRecentPointsAway',axis = 1)
     #X = X.drop('TeamHomeRecentPoints',axis = 1)
     #X = X.drop('TeamAwayRecentPoints',axis = 1)
+    #X = X.drop('TeamHomeRecentPointsh2h',axis = 1)
+    #X = X.drop('TeamHomeRecentTiedMatches',axis = 1)
+    #X = X.drop('TeamAwayRecentTiedMatches',axis = 1)
+    #X = X.drop('AverageRatingDiff',axis = 1)
+    #X = X.drop('AveragePotentialDiff',axis = 1)
+    #X = X.drop('CurrentTotalPointsDiff',axis = 1)
+    #X = X.drop('TeamHomeRecentGoalsScored',axis = 1)
+    #X = X.drop('TeamAwayRecentGoalsScored',axis = 1)
+    #X = X.drop('AverageRecentGoals',axis = 1)
+    ##############################################
+    #X = X.iloc[:-10]
+    #y = y.iloc[:-10]
     print('SCALED X:')
     print(X)
     print('y:')
@@ -147,16 +178,16 @@ def MLP(X,y,list_TeamHome,list_TeamAway):
         result_2 = [[] for j in range(len(y_test))] # TeamHome loses
         result_X = [[] for j in range(len(y_test))] # Draw
         for j in range(MLP_runs):
-            #clf = MLPClassifier(hidden_layer_sizes=(nodes), max_iter=10000, alpha=1e-4, solver='adam',  random_state=None,tol=0.0001)
-            clf = MLPClassifier(hidden_layer_sizes=(nodes), max_iter=100000, alpha=1e-4, solver='lbfgs',  random_state=None,tol=0.001, activation='identity')
+            clf = MLPClassifier(hidden_layer_sizes=(nodes), max_iter=100000, alpha=1e-4, solver='lbfgs',  random_state=None, tol=0.001, activation='identity')
+            #clf = MLPClassifier(hidden_layer_sizes=(nodes), max_iter=100000, alpha=1e-4, solver='lbfgs',  random_state=None, tol=0.001, activation='relu')
             clf.fit(X_train, y_train.values.ravel())
             #clf.fit(X_train, y_train)
 
-            #print("Training set score: %f" % clf.score(X_train, y_train))
-            #print("Test set score: %f" % clf.score(X_test, y_test))
+            print("Training set score: %f" % clf.score(X_train, y_train))
+            print("Test set score: %f" % clf.score(X_test, y_test))
 
             y_pred = clf.predict(X_test)
-            #print('j, y_pred:', j, y_pred)
+            print('j, y_pred:', j, y_pred)
             prog = (j+1)*100/MLP_runs
             if prog >= 10*progress_count:
                 print('Progress %.1f%s' %(prog, '%'))
@@ -254,6 +285,14 @@ def get_AverageAway(row):
 ########################
 
 ########################
+### Start function get_AverageRatingDiff
+def get_AverageRatingDiff(row):
+    val = int(row['AverageHome']) - int(row['AverageAway'])
+    return val
+### End function get_AverageRatingDiff
+########################
+
+########################
 ### Start function get_AveragePotentialHome
 def get_AveragePotentialHome(row):
     val = row['PotentialHome']
@@ -291,8 +330,30 @@ def get_AveragePotentialAway(row):
 ### End function get_AveragePotentialAway
 ########################
 
+########################
+### Start function get_AveragePotentialDiff
+def get_AveragePotentialDiff(row):
+    val = int(row['AveragePotentialHome']) - int(row['AveragePotentialAway'])
+    return val
+### End function get_AveragePotentialDiff
+########################
 
+########################
+### Start function get_CurrentTotalPointsDiff
+def get_CurrentTotalPointsDiff(row):
+    val = int(row['TeamHomeCurrentTotalPoints']) - int(row['TeamAwayCurrentTotalPoints'])
+    return val
+### End function get_CurrentTotalPointsDiff
+########################
 
+########################
+### Start function get_AverageRecentGoals
+def get_AverageRecentGoals(row):
+    val = int(row['AverageHome']) - int(row['AverageAway'])
+    val = (int(row['TeamHomeRecentGoalsScored']) + int(row['TeamAwayRecentGoalsScored'])) / 2.0
+    return val
+### End function get_AverageRecentGoals
+########################
 
 ########################
 ### Start function get_ResultHome
