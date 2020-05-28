@@ -50,25 +50,25 @@ Then, I combined these two databases:
 ### Expanded database
 
 We used the information in the basic database to create new descriptors that would help improve the MLP accuracy. The descriptors used so far include:
-- Season								(season year)
-- Round 								(season round)
-- Time 								(time when match started)
-- Result 							(final result of match)
-- AverageRatingAway 				(average player rating of TeamAway)
-- AverageRatingDifference 		(difference of average player rating between the two teams)
-- AveragePotentialAway 			(average player potential of TeamAway)
-- AveragePotentialDiff 			(difference of average player potential between the two teams)
-- TeamHomeRecentPointsHome 	(points obtained by TeamHome in last 5 matches played home)
-- TeamAwayRecentPointsAway 	(points obtained by TeamAway in last 5 matches played away)
-- TeamHomeRecentPoints 			(points obtained by TeamHome in last 5 matches)
-- TeamAwayRecentPoints 			(points obtained by TeamAway in last 5 matches)
-- TeamHomeRecentTiedMatches 	(number of matches tied in last 5 matches played by TeamHome)
-- TeamAwayRecentTiedMatches 	(number of matches tied in last 5 matches played by TeamAway)
-- TeamHomeRecentGoalsScored 	(number of goals scored by TeamHome in last 5 matches)
-- TeamAwayRecentGoalsScored 	(number of goals scored by TeamAway in last 5 matches)
-- TeamHomeRecentPointsh2h 		(number of points obtained by TeamHome in last two matches against TeamAway)
-- TeamAwayCurrentTotalPoints 	(total points obtained at this points of the season by TeamAway)
-- CurrentTotalPointsDiff 		(difference of total points obtained at this points of the season by TeamHome and TeamAway)
+- Season								_(season year)_
+- Round 								_(season round)_
+- Time 								_(time when match started)_
+- Result 							_(final result of match)_
+- AverageRatingAway 				_(average player rating of TeamAway)_
+- AverageRatingDifference 		_(difference of average player rating between the two teams)_
+- AveragePotentialAway 			_(average player potential of TeamAway)_
+- AveragePotentialDiff 			_(difference of average player potential between the two teams)_
+- TeamHomeRecentPointsHome 	_(points obtained by TeamHome in last 5 matches played home)_
+- TeamAwayRecentPointsAway 	_(points obtained by TeamAway in last 5 matches played away)_
+- TeamHomeRecentPoints 			_(points obtained by TeamHome in last 5 matches)_
+- TeamAwayRecentPoints 			_(points obtained by TeamAway in last 5 matches)_
+- TeamHomeRecentTiedMatches 	_(number of matches tied in last 5 matches played by TeamHome)_
+- TeamAwayRecentTiedMatches 	_(number of matches tied in last 5 matches played by TeamAway)_
+- TeamHomeRecentGoalsScored 	_(number of goals scored by TeamHome in last 5 matches)_
+- TeamAwayRecentGoalsScored 	_(number of goals scored by TeamAway in last 5 matches)_
+- TeamHomeRecentPointsh2h 		_(number of points obtained by TeamHome in last two matches against TeamAway)_
+- TeamAwayCurrentTotalPoints 	_(total points obtained at this points of the season by TeamAway)_
+- CurrentTotalPointsDiff 		_(difference of total points obtained at this points of the season by TeamHome and TeamAway)_
 
 --- 
 
