@@ -13,7 +13,7 @@ from sklearn.metrics import confusion_matrix
 #####################################
 ### START CUSTOMIZABLE PARAMETERS ###
 ### Select matches to predict
-ignore_last_matches = 20    # Ignore this number of matches at the end of data.csv
+ignore_last_matches = 0     # Ignore this number of matches at the end of data.csv
 predict_matches = 10        # Number of samples at the end of data.csv that are predicted (after last 'ignore_last_matches' have been deleted)
 ### MLP parameters
 MLP_runs =  50              # Number of times MLP is run: use large numbers (e.g. 100) to average over random_state
@@ -239,14 +239,16 @@ def get_AverageRatingHome(row):
     val = row['RatingHome']
     val = re.findall(r'[\[]+(.*?)\]',val)
     players = val[0]
-    substitutes = val[1]
     players = players.split(",")
     players = list(map(int, players))
-    substitutes = substitutes.split(",")
-    substitutes = list(map(int, substitutes))
     average_players = sum(players)/len(players)
-    average_substitutes = sum(substitutes)/len(substitutes)
-    val = average_players + average_substitutes/3
+    val = average_players
+    #if len(val) == 2:
+        #substitutes = val[1]
+        #substitutes = substitutes.split(",")
+        #substitutes = list(map(int, substitutes))
+        #average_substitutes = sum(substitutes)/len(substitutes)
+        #val = average_players + average_substitutes/3
     return val
 ### End function get_AverageRatingHome
 ########################
@@ -257,14 +259,16 @@ def get_AverageRatingAway(row):
     val = row['RatingAway']
     val = re.findall(r'[\[]+(.*?)\]',val)
     players = val[0]
-    substitutes = val[1]
     players = players.split(",")
     players = list(map(int, players))
-    substitutes = substitutes.split(",")
-    substitutes = list(map(int, substitutes))
     average_players = sum(players)/len(players)
-    average_substitutes = sum(substitutes)/len(substitutes)
-    val = average_players + average_substitutes/3
+    val = average_players
+    #if len(val) == 2:
+        #substitutes = val[1]
+        #substitutes = substitutes.split(",")
+        #substitutes = list(map(int, substitutes))
+        #average_substitutes = sum(substitutes)/len(substitutes)
+        #val = average_players + average_substitutes/3
     return val
 ### End function get_ResultAway
 ########################
@@ -283,15 +287,16 @@ def get_AveragePotentialHome(row):
     val = row['PotentialHome']
     val = re.findall(r'[\[]+(.*?)\]',val)
     players = val[0]
-    substitutes = val[1]
     players = players.split(",")
     players = list(map(int, players))
-    substitutes = substitutes.split(",")
-    substitutes = list(map(int, substitutes))
     average_players = sum(players)/len(players)
-    average_substitutes = sum(substitutes)/len(substitutes)
-    #print('players:',players,average_players,'substitutes:',substitutes,average_substitutes)
-    val = average_players + average_substitutes/3
+    val = average_players
+    #if len(val) == 2:
+        #substitutes = val[1]
+        #substitutes = substitutes.split(",")
+        #substitutes = list(map(int, substitutes))
+        #average_substitutes = sum(substitutes)/len(substitutes)
+        #val = average_players + average_substitutes/3
     return val
 ### End function get_AveragePotentialHome
 ########################
@@ -302,15 +307,16 @@ def get_AveragePotentialAway(row):
     val = row['PotentialAway']
     val = re.findall(r'[\[]+(.*?)\]',val)
     players = val[0]
-    substitutes = val[1]
     players = players.split(",")
     players = list(map(int, players))
-    substitutes = substitutes.split(",")
-    substitutes = list(map(int, substitutes))
     average_players = sum(players)/len(players)
-    average_substitutes = sum(substitutes)/len(substitutes)
-    #print('players:',players,average_players,'substitutes:',substitutes,average_substitutes)
-    val = average_players + average_substitutes/3
+    val = average_players
+    #if len(val) == 2:
+        #substitutes = val[1]
+        #substitutes = substitutes.split(",")
+        #substitutes = list(map(int, substitutes))
+        #average_substitutes = sum(substitutes)/len(substitutes)
+        #val = average_players + average_substitutes/3
     return val
 ### End function get_AveragePotentialAway
 ########################
