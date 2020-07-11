@@ -15,7 +15,7 @@ import urllib.request
 #########################################
 ##### START CUSTOMIZABLE PARAMETERS #####
 Season = 2019
-Round = 35
+Round = 36
 list_of_match_no = [0,1,2,3,4,5,6,7,8,9] # indeces within a round go from 0 to 9 (10 matches in total)
 #list_of_TeamHome = ['Betis','Getafe','Villarreal','Barcelona','Eibar','Valladolid','Osasuna','Alavés','Real Madrid']
 #list_of_TeamAway = ['Granada','Espanyol','Mallorca','Leganés','Athletic Club','Celta de Vigo','Atlético de Madrid','Real Sociedad','Valencia']
@@ -29,9 +29,10 @@ list_of_match_no = [0,1,2,3,4,5,6,7,8,9] # indeces within a round go from 0 to 9
 #list_of_TeamAway = ['Atlético de Madrid','Granada','Osasuna','Sevilla','Celta de Vigo','Villarreal','Getafe','Espanyol','Levante','Athletic Club']
 #list_of_TeamHome = ['Athletic Club','Atlético de Madrid','Celta de Vigo','Espanyol','Granada','Levante','Osasuna','Valladolid','Sevilla','Villarreal']
 #list_of_TeamAway = ['Real Madrid','Mallorca','Betis','Leganés','Valencia','Real Sociedad','Getafe','Alavés','Eibar','Barcelona']
-list_of_TeamHome = ['Athletic Club','Barcelona','Celta de Vigo','Eibar','Getafe','Mallorca','Betis','Real Madrid','Real Sociedad','Valencia']
-list_of_TeamAway = ['Sevilla','Espanyol','Atlético de Madrid','Leganés','Villarreal','Levante','Osasuna','Alavés','Granada','Valladolid']
-
+#list_of_TeamHome = ['Athletic Club','Barcelona','Celta de Vigo','Eibar','Getafe','Mallorca','Betis','Real Madrid','Real Sociedad','Valencia']
+#list_of_TeamAway = ['Sevilla','Espanyol','Atlético de Madrid','Leganés','Villarreal','Levante','Osasuna','Alavés','Granada','Valladolid']
+list_of_TeamHome = ['Atlético de Madrid','Alavés','Espanyol','Granada','Leganés','Levante','Osasuna','Valladolid','Sevilla','Villarreal']
+list_of_TeamAway = ['Betis','Getafe','Eibar','Real Madrid','Valencia','Athletic Club','Celta de Vigo','Barcelona','Mallorca','Real Sociedad']
 
 csv_file_name = 'test_dataframe.csv'
 base_url = 'https://www.comuniate.com/alineaciones'
@@ -149,6 +150,7 @@ def main():
                         if new_w == 'Jacobo Gonzalez': new_w = 'jacobo&r=200024&set=true'
                         if new_w == 'Rober Pier': new_w = 'Pier'
                         if new_w == 'Abdallahi': new_w = 'Manu Garcia'
+                        if new_w == 'Bono': new_w = 'Bounou'
                         medium_name = new_w
                         #print('TEST name:',medium_name)
                         player_sofifa_id, final_team, player_rating, player_potential = get_id(medium_name)
