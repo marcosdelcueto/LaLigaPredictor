@@ -28,7 +28,7 @@ The following packages are used:
 One can select which matches will be predicted by tuning the variables 'ignore_last_matches' and 'predict_matches'. The program will try to predict the outcome of the last 'predict_matches' entries in _data.csv_, after ignoring the last 'ignore_last_matches' entries. One would need to edit customizable parameters in header of _LaLigaPredictor.py_ and adapt the database _data.csv_, if necessary. Then, go to the main _LaLigaPredictor_ directory and simply tun _LaLigaPredictor.py_:
 
 ```
-./LaLigaPredictor.py
+python LaLigaPredictor.py
 ```
 
 ---
